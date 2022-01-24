@@ -1,0 +1,580 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost'
+paths:
+  /api/publishers:
+    get:
+      summary: 'Fetch a list of all publishers'
+      description: "This endpoint will return a list of all publishers. You can sort the list by publisher name or founded year. You\nalso have the ability to filter the list by publisher name, country, founded year of between two years."
+      parameters:
+        -
+          in: query
+          name: sort
+          description: 'The field to sort the list by.'
+          example: name
+          required: false
+          schema:
+            type: string
+            description: 'The field to sort the list by.'
+            example: name
+        -
+          in: query
+          name: 'filter[name]'
+          description: 'Filter by publisher name.'
+          example: Marvel
+          required: false
+          schema:
+            type: string
+            description: 'Filter by publisher name.'
+            example: Marvel
+        -
+          in: query
+          name: 'filter[country]'
+          description: 'Filter by publisher country.'
+          example: USA
+          required: false
+          schema:
+            type: string
+            description: 'Filter by publisher country.'
+            example: USA
+        -
+          in: query
+          name: 'filter[founded-year]'
+          description: 'Filter by publisher founded year.'
+          example: 1940
+          required: false
+          schema:
+            type: integer
+            description: 'Filter by publisher founded year.'
+            example: 1940
+        -
+          in: query
+          name: 'filter[founded-year-between]'
+          description: 'Filter by publisher founded year in the given range.'
+          example: '1940,1990'
+          required: false
+          schema:
+            type: string
+            description: 'Filter by publisher founded year in the given range.'
+            example: '1940,1990'
+        -
+          in: query
+          name: 'page[number]'
+          description: 'The page number (default 1).'
+          example: 2
+          required: false
+          schema:
+            type: integer
+            description: 'The page number (default 1).'
+            example: 2
+        -
+          in: query
+          name: 'page[size]'
+          description: 'The page size (default 30).'
+          example: 10
+          required: false
+          schema:
+            type: integer
+            description: 'The page size (default 30).'
+            example: 10
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "{\n  \"data\": [\n    {\n      \"id\": 1,\n      \"name\": \"Publisher 1\",\n      \"founded-at\": \"1990\",\n      \"website-url\": \"http://www.publisher1.com\",\n      \"twitter-url\": \"http://www.twitter.com/publisher1\",\n      \"address\": \"Address 1\",\n      \"city\": \"City 1\",\n      \"state\": \"State 1\",\n      \"zip\": \"12345\",\n      \"country\": \"DEU\",\n      \"created-at\": \"2020-01-01T00:00:00+00:00\",\n      \"updated-at\": \"2020-01-01T00:00:00+00:00\"\n    },\n    {\n      \"id\": 2,\n      \"name\": \"Publisher 2\",\n      \"founded-at\": \"1990\",\n      \"website-url\": \"http://www.publisher2.com\",\n      \"twitter-url\": \"http://www.twitter.com/publisher2\",\n      \"address\": \"Address 2\",\n      \"city\": \"City 2\",\n      \"state\": \"State 2\",\n      \"zip\": \"12345\",\n      \"country\": \"DEU\",\n      \"created-at\": \"2020-01-01T00:00:00+00:00\",\n      \"updated-at\": \"2020-01-01T00:00:00+00:00\"\n    },\n  ],\n  \"links\": {\n    \"first\": \"http://localhost/api/publishers?page%5Bnumber%5D=1\",\n    \"last\": \"http://localhost/api/publishers?page%5Bnumber%5D=4\",\n    \"prev\": null,\n    \"next\": \"http://localhost/api/publishers?page%5Bnumber%5D=2\"\n  },\n  \"meta\": {\n     \"current_page\": 1,\n     \"from\": 1,\n     \"last_page\": 4,\n     \"links\": [\n       {\n         \"url\": null,\n         \"label\": \"&laquo; Previous\",\n         \"active\": false\n       },\n       {\n         \"url\": \"http://localhost/api/publishers?sort=name&page%5Bnumber%5D=1\",\n         \"label\": \"1\",\n         \"active\": true\n       },\n       {\n         \"url\": \"http://localhost/api/publishers?sort=name&page%5Bnumber%5D=2\",\n         \"label\": \"2\",\n         \"active\": false\n       },\n       {\n         \"url\": \"http://localhost/api/publishers?sort=name&page%5Bnumber%5D=2\",\n         \"label\": \"Next &raquo;\",\n         \"active\": false\n       }\n     ],\n     \"path\": \"http://localhost/api/publishers\",\n     \"per_page\": 30,\n     \"to\": 30,\n     \"total\": 100\n   }\n}"
+      tags:
+        - 'Publisher management'
+    post:
+      summary: 'Create a new publisher'
+      description: 'This endpoint will create a new publisher.'
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: 1
+                    name: 'Publisher 1'
+                    founded-at: '1990'
+                    website-url: 'http://www.publisher1.com'
+                    twitter-url: 'http://www.twitter.com/publisher1'
+                    address: 'Address 1'
+                    city: 'City 1'
+                    state: 'State 1'
+                    zip: '12345'
+                    country: DEU
+                    created-at: '2020-01-01T00:00:00+00:00'
+                    updated-at: '2020-01-01T00:00:00+00:00'
+                properties:
+                  data:
+                    type: object
+                    example:
+                      id: 1
+                      name: 'Publisher 1'
+                      founded-at: '1990'
+                      website-url: 'http://www.publisher1.com'
+                      twitter-url: 'http://www.twitter.com/publisher1'
+                      address: 'Address 1'
+                      city: 'City 1'
+                      state: 'State 1'
+                      zip: '12345'
+                      country: DEU
+                      created-at: '2020-01-01T00:00:00+00:00'
+                      updated-at: '2020-01-01T00:00:00+00:00'
+        422:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'The given data was invalid.'
+                  errors:
+                    field:
+                      - 'Error message'
+                properties:
+                  message:
+                    type: string
+                    example: 'The given data was invalid.'
+                  errors:
+                    type: object
+                    example:
+                      field:
+                        - 'Error message'
+      tags:
+        - 'Publisher management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'The name of the publisher.'
+                  example: soluta
+                founded_year:
+                  type: integer
+                  description: 'Must be at least 1900. Must not be greater than 2022.'
+                  example: 104
+                founded_month:
+                  type: integer
+                  description: 'Must be at least 1. Must not be greater than 12.'
+                  example: 4
+                founded_day:
+                  type: integer
+                  description: 'Must be at least 1. Must not be greater than 31.'
+                  example: 1
+                website_url:
+                  type: string
+                  description: 'Must be a valid URL. Must not be greater than 255 characters.'
+                  example: mlttstyyvmdvtbzwxfxqhpscwxlriyaydzxhwolqggsynwsvhejkhpjcvnxlvgdsyqfhjbeqvxzbmayvclhdyuphdjirkw
+                twitter_url:
+                  type: string
+                  description: 'Must be a valid URL. Must not be greater than 255 characters.'
+                  example: oivletfczkjwnjsevnnyauqfquqcuzuxlpjaxplbxgkxeqxmxgohbvdkbxmtdqosgmkwjdzjyguxoudmhzottauxhjnavmmhkfihhypqfosgctdqgvxuumqnvaoleqkwrr
+              required:
+                - name
+  '/api/publishers/{id}':
+    get:
+      summary: 'Fetch a single publisher'
+      description: 'This endpoint will return a single publisher specified by the id.'
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: 1
+                    name: 'Publisher 1'
+                    founded-at: '1990'
+                    website-url: 'http://www.publisher1.com'
+                    twitter-url: 'http://www.twitter.com/publisher1'
+                    address: 'Address 1'
+                    city: 'City 1'
+                    state: 'State 1'
+                    zip: '12345'
+                    country: DEU
+                    created-at: '2020-01-01T00:00:00+00:00'
+                    updated-at: '2020-01-01T00:00:00+00:00'
+                properties:
+                  data:
+                    type: object
+                    example:
+                      id: 1
+                      name: 'Publisher 1'
+                      founded-at: '1990'
+                      website-url: 'http://www.publisher1.com'
+                      twitter-url: 'http://www.twitter.com/publisher1'
+                      address: 'Address 1'
+                      city: 'City 1'
+                      state: 'State 1'
+                      zip: '12345'
+                      country: DEU
+                      created-at: '2020-01-01T00:00:00+00:00'
+                      updated-at: '2020-01-01T00:00:00+00:00'
+      tags:
+        - 'Publisher management'
+    put:
+      summary: 'Update an existing publisher'
+      description: 'This endpoint will update an existing publisher.'
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: 1
+                    name: 'Publisher 1'
+                    founded-at: '1990'
+                    website-url: 'http://www.publisher1.com'
+                    twitter-url: 'http://www.twitter.com/publisher1'
+                    address: 'Address 1'
+                    city: 'City 1'
+                    state: 'State 1'
+                    zip: '12345'
+                    country: DEU
+                    created-at: '2020-01-01T00:00:00+00:00'
+                    updated-at: '2020-01-01T00:00:00+00:00'
+                properties:
+                  data:
+                    type: object
+                    example:
+                      id: 1
+                      name: 'Publisher 1'
+                      founded-at: '1990'
+                      website-url: 'http://www.publisher1.com'
+                      twitter-url: 'http://www.twitter.com/publisher1'
+                      address: 'Address 1'
+                      city: 'City 1'
+                      state: 'State 1'
+                      zip: '12345'
+                      country: DEU
+                      created-at: '2020-01-01T00:00:00+00:00'
+                      updated-at: '2020-01-01T00:00:00+00:00'
+        422:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'The given data was invalid.'
+                  errors:
+                    field:
+                      - 'Error message'
+                properties:
+                  message:
+                    type: string
+                    example: 'The given data was invalid.'
+                  errors:
+                    type: object
+                    example:
+                      field:
+                        - 'Error message'
+      tags:
+        - 'Publisher management'
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 100 characters.'
+                  example: dd
+                founded_year:
+                  type: integer
+                  description: 'Must be at least 1900. Must not be greater than 2022.'
+                  example: 1705
+                founded_month:
+                  type: integer
+                  description: 'Must be at least 1. Must not be greater than 12.'
+                  example: 9
+                founded_day:
+                  type: integer
+                  description: 'Must be at least 1. Must not be greater than 31.'
+                  example: 24
+                website_url:
+                  type: string
+                  description: 'Must be a valid URL. Must not be greater than 255 characters.'
+                  example: gulpkrzrnwohrjckeqmiyhevcqfmlgobkxfhznzyutwohrromjpiurqtbugpphgaxcfqkmyxqwxpspubnefnlhliupwdghucusvpndtxmzavrnbekfnyikjawirwqosogxrmoejhszyaeyfwvzclrxywbptskdinaetrysartuncwujkajhnvgvcsqppdjwvgmfhnrhfiroezlgnrzaxncxbujimfucmbqhzcgkms
+                twitter_url:
+                  type: string
+                  description: 'Must be a valid URL. Must not be greater than 255 characters.'
+                  example: qhwfpynbnkkiea
+    delete:
+      summary: 'Delete an existing publisher'
+      description: 'This endpoint will delete an existing publisher.'
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: 1
+                    name: 'Publisher 1'
+                    founded-at: '1990'
+                    website-url: 'http://www.publisher1.com'
+                    twitter-url: 'http://www.twitter.com/publisher1'
+                    address: 'Address 1'
+                    city: 'City 1'
+                    state: 'State 1'
+                    zip: '12345'
+                    country: DEU
+                    created-at: '2020-01-01T00:00:00+00:00'
+                    updated-at: '2020-01-01T00:00:00+00:00'
+                properties:
+                  data:
+                    type: object
+                    example:
+                      id: 1
+                      name: 'Publisher 1'
+                      founded-at: '1990'
+                      website-url: 'http://www.publisher1.com'
+                      twitter-url: 'http://www.twitter.com/publisher1'
+                      address: 'Address 1'
+                      city: 'City 1'
+                      state: 'State 1'
+                      zip: '12345'
+                      country: DEU
+                      created-at: '2020-01-01T00:00:00+00:00'
+                      updated-at: '2020-01-01T00:00:00+00:00'
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Resource not found.'
+                properties:
+                  message:
+                    type: string
+                    example: 'Resource not found.'
+        422:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "{\n  \"message\": \"The given data was invalid.\",\n  \"errors\": {\n  \"name\": [\n     \"Error message\"\n  ]\n}"
+      tags:
+        - 'Publisher management'
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the publisher.'
+        example: 17
+        required: true
+        schema:
+          type: integer
+  /api/register:
+    post:
+      summary: 'Register a new user'
+      description: "This endpoint allows you to register a new user. The email address must be unique or you will get a 422 with an\nerror message that the email address has already been taken."
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "{\n    \"access_token\": \"token\",\n    \"token_type\": \"Bearer\",\n}"
+        422:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "{\n  \"message\": \"The given data was invalid.\",\n  \"errors\": {\n  \"name\": [\n    \"Error message.\"\n  ]\n}"
+      tags:
+        - 'User management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must be at least 8 characters. Must not be greater than 255 characters.'
+                  example: ccbtylfdmwaznloncencoxjxxhrxvhyknyvbmkiaruggrzgieoavqvqumuifihzmyilivqpickodhrnuywhdvucfoshwchheuwdawfmtxmycumzjjmvvogatmaexzaadcadpecqstwsheshswzrvuubllbamzkhnnoanjcgmfknertqkuukijdcnleqypacwqakvnkthhiqeokjftuzavpzftnamqxuazxmngagsfanlbtawylmvie
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: amcdermott@example.org
+                password:
+                  type: string
+                  description: 'Must be at least 8 characters. Must not be greater than 255 characters.'
+                  example: yfzngglkclqqndfsoztyauzhowwtdrdhholjigiclfvqfscvyvrdxsnrvroqiugrkbglgtntmmwspdlupoklptdcxnmlfvofpjvyexrnqztctfjptejyrugniekqtdkslglqgxdktmhnqhhbnkqljdqm
+              required:
+                - name
+                - email
+                - password
+      security: []
+tags:
+  -
+    name: 'Publisher management'
+    description: ''
+  -
+    name: 'User management'
+    description: ''
+components:
+  securitySchemes:
+    default:
+      type: http
+      scheme: bearer
+      description: ''
+security:
+  -
+    default: []

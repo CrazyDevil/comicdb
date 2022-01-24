@@ -1,0 +1,1225 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Laravel Documentation</title>
+
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../docs/css/theme-default.style.css" media="screen">
+    <link rel="stylesheet" href="../docs/css/theme-default.print.css" media="print">
+
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
+
+    <link rel="stylesheet"
+          href="https://unpkg.com/@highlightjs/cdn-assets@10.7.2/styles/obsidian.min.css">
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@10.7.2/highlight.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jets/0.14.1/jets.min.js"></script>
+
+    <style id="language-style">
+        /* starts out as display none and is replaced with js later  */
+                    body .content .bash-example code { display: none; }
+                    body .content .php-example code { display: none; }
+            </style>
+
+    <script>
+        var baseUrl = "http://localhost";
+        var useCsrf = Boolean();
+        var csrfUrl = "/sanctum/csrf-cookie";
+    </script>
+    <script src="../docs/js/tryitout-3.21.0.js"></script>
+
+    <script src="../docs/js/theme-default-3.21.0.js"></script>
+
+</head>
+
+<body data-languages="[&quot;bash&quot;,&quot;php&quot;]">
+
+<a href="#" id="nav-button">
+    <span>
+        MENU
+        <img src="../docs/images/navbar.png" alt="navbar-image" />
+    </span>
+</a>
+<div class="tocify-wrapper">
+    
+            <div class="lang-selector">
+                                            <button type="button" class="lang-button" data-language-name="bash">bash</button>
+                                            <button type="button" class="lang-button" data-language-name="php">php</button>
+                    </div>
+    
+    <div class="search">
+        <input type="text" class="search" id="input-search" placeholder="Search">
+    </div>
+
+    <div id="toc">
+                                                                            <ul id="tocify-header-0" class="tocify-header">
+                    <li class="tocify-item level-1" data-unique="introduction">
+                        <a href="#introduction">Introduction</a>
+                    </li>
+                                            
+                                                                    </ul>
+                                                <ul id="tocify-header-1" class="tocify-header">
+                    <li class="tocify-item level-1" data-unique="authenticating-requests">
+                        <a href="#authenticating-requests">Authenticating requests</a>
+                    </li>
+                                            
+                                                </ul>
+                    
+                    <ul id="tocify-header-2" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="publisher-management">
+                    <a href="#publisher-management">Publisher management</a>
+                </li>
+                                    <ul id="tocify-subheader-publisher-management" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="publisher-management-GETapi-publishers">
+                        <a href="#publisher-management-GETapi-publishers">Fetch a list of all publishers</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="publisher-management-POSTapi-publishers">
+                        <a href="#publisher-management-POSTapi-publishers">Create a new publisher</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="publisher-management-GETapi-publishers--id-">
+                        <a href="#publisher-management-GETapi-publishers--id-">Fetch a single publisher</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="publisher-management-PUTapi-publishers--id-">
+                        <a href="#publisher-management-PUTapi-publishers--id-">Update an existing publisher</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="publisher-management-DELETEapi-publishers--id-">
+                        <a href="#publisher-management-DELETEapi-publishers--id-">Delete an existing publisher</a>
+                    </li>
+                                                    </ul>
+                            </ul>
+                    <ul id="tocify-header-3" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="user-management">
+                    <a href="#user-management">User management</a>
+                </li>
+                                    <ul id="tocify-subheader-user-management" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="user-management-POSTapi-register">
+                        <a href="#user-management-POSTapi-register">Register a new user</a>
+                    </li>
+                                                    </ul>
+                            </ul>
+        
+                        
+            </div>
+
+            <ul class="toc-footer" id="toc-footer">
+                            <li><a href="../docs/collection.json">View Postman collection</a></li>
+                            <li><a href="../docs/openapi.yaml">View OpenAPI spec</a></li>
+                            <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
+                    </ul>
+        <ul class="toc-footer" id="last-updated">
+        <li>Last updated: January 24 2022</li>
+    </ul>
+</div>
+
+<div class="page-wrapper">
+    <div class="dark-box"></div>
+    <div class="content">
+        <h1 id="introduction">Introduction</h1>
+<p>This documentation aims to provide all the information you need to work with our API.</p>
+<aside>As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
+You can switch the language used with the tabs at the top right (or from the nav menu at the top left on mobile).</aside>
+<blockquote>
+<p>Base URL</p>
+</blockquote>
+<pre><code class="language-yaml">http://localhost</code></pre>
+
+        <h1 id="authenticating-requests">Authenticating requests</h1>
+<p>Authenticate requests to this API's endpoints by sending an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer {YOUR_AUTH_KEY}"</code></strong>.</p>
+<p>All authenticated endpoints are marked with a <code>requires authentication</code> badge in the documentation below.</p>
+<p>You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.</p>
+
+        <h1 id="publisher-management">Publisher management</h1>
+
+    
+
+            <h2 id="publisher-management-GETapi-publishers">Fetch a list of all publishers</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+<p>This endpoint will return a list of all publishers. You can sort the list by publisher name or founded year. You
+also have the ability to filter the list by publisher name, country, founded year of between two years.</p>
+
+<span id="example-requests-GETapi-publishers">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/api/publishers?sort=name&amp;filter[name]=Marvel&amp;filter[country]=USA&amp;filter[founded-year]=1940&amp;filter[founded-year-between]=1940%2C1990&amp;page[number]=2&amp;page[size]=10" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost/api/publishers',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+        'query' =&gt; [
+            'sort'=&gt; 'name',
+            'filter[name]'=&gt; 'Marvel',
+            'filter[country]'=&gt; 'USA',
+            'filter[founded-year]'=&gt; '1940',
+            'filter[founded-year-between]'=&gt; '1940,1990',
+            'page[number]'=&gt; '2',
+            'page[size]'=&gt; '10',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-publishers">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 1,
+      &quot;name&quot;: &quot;Publisher 1&quot;,
+      &quot;founded-at&quot;: &quot;1990&quot;,
+      &quot;website-url&quot;: &quot;http://www.publisher1.com&quot;,
+      &quot;twitter-url&quot;: &quot;http://www.twitter.com/publisher1&quot;,
+      &quot;address&quot;: &quot;Address 1&quot;,
+      &quot;city&quot;: &quot;City 1&quot;,
+      &quot;state&quot;: &quot;State 1&quot;,
+      &quot;zip&quot;: &quot;12345&quot;,
+      &quot;country&quot;: &quot;DEU&quot;,
+      &quot;created-at&quot;: &quot;2020-01-01T00:00:00+00:00&quot;,
+      &quot;updated-at&quot;: &quot;2020-01-01T00:00:00+00:00&quot;
+    },
+    {
+      &quot;id&quot;: 2,
+      &quot;name&quot;: &quot;Publisher 2&quot;,
+      &quot;founded-at&quot;: &quot;1990&quot;,
+      &quot;website-url&quot;: &quot;http://www.publisher2.com&quot;,
+      &quot;twitter-url&quot;: &quot;http://www.twitter.com/publisher2&quot;,
+      &quot;address&quot;: &quot;Address 2&quot;,
+      &quot;city&quot;: &quot;City 2&quot;,
+      &quot;state&quot;: &quot;State 2&quot;,
+      &quot;zip&quot;: &quot;12345&quot;,
+      &quot;country&quot;: &quot;DEU&quot;,
+      &quot;created-at&quot;: &quot;2020-01-01T00:00:00+00:00&quot;,
+      &quot;updated-at&quot;: &quot;2020-01-01T00:00:00+00:00&quot;
+    },
+  ],
+  &quot;links&quot;: {
+    &quot;first&quot;: &quot;http://localhost/api/publishers?page%5Bnumber%5D=1&quot;,
+    &quot;last&quot;: &quot;http://localhost/api/publishers?page%5Bnumber%5D=4&quot;,
+    &quot;prev&quot;: null,
+    &quot;next&quot;: &quot;http://localhost/api/publishers?page%5Bnumber%5D=2&quot;
+  },
+  &quot;meta&quot;: {
+     &quot;current_page&quot;: 1,
+     &quot;from&quot;: 1,
+     &quot;last_page&quot;: 4,
+     &quot;links&quot;: [
+       {
+         &quot;url&quot;: null,
+         &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
+         &quot;active&quot;: false
+       },
+       {
+         &quot;url&quot;: &quot;http://localhost/api/publishers?sort=name&amp;page%5Bnumber%5D=1&quot;,
+         &quot;label&quot;: &quot;1&quot;,
+         &quot;active&quot;: true
+       },
+       {
+         &quot;url&quot;: &quot;http://localhost/api/publishers?sort=name&amp;page%5Bnumber%5D=2&quot;,
+         &quot;label&quot;: &quot;2&quot;,
+         &quot;active&quot;: false
+       },
+       {
+         &quot;url&quot;: &quot;http://localhost/api/publishers?sort=name&amp;page%5Bnumber%5D=2&quot;,
+         &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
+         &quot;active&quot;: false
+       }
+     ],
+     &quot;path&quot;: &quot;http://localhost/api/publishers&quot;,
+     &quot;per_page&quot;: 30,
+     &quot;to&quot;: 30,
+     &quot;total&quot;: 100
+   }
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-publishers" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-publishers"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-publishers"></code></pre>
+</span>
+<span id="execution-error-GETapi-publishers" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-publishers"></code></pre>
+</span>
+<form id="form-GETapi-publishers" data-method="GET"
+      data-path="api/publishers"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-publishers', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-publishers"
+                    onclick="tryItOut('GETapi-publishers');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-publishers"
+                    onclick="cancelTryOut('GETapi-publishers');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-publishers" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/publishers</code></b>
+        </p>
+                <p>
+            <label id="auth-GETapi-publishers" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="GETapi-publishers"
+                                                                data-component="header"></label>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
+                    <p>
+                <b><code>sort</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="sort"
+               data-endpoint="GETapi-publishers"
+               value="name"
+               data-component="query" hidden>
+    <br>
+<p>The field to sort the list by.</p>
+            </p>
+                    <p>
+                <b><code>filter[name]</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="filter[name]"
+               data-endpoint="GETapi-publishers"
+               value="Marvel"
+               data-component="query" hidden>
+    <br>
+<p>Filter by publisher name.</p>
+            </p>
+                    <p>
+                <b><code>filter[country]</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="filter[country]"
+               data-endpoint="GETapi-publishers"
+               value="USA"
+               data-component="query" hidden>
+    <br>
+<p>Filter by publisher country.</p>
+            </p>
+                    <p>
+                <b><code>filter[founded-year]</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="filter[founded-year]"
+               data-endpoint="GETapi-publishers"
+               value="1940"
+               data-component="query" hidden>
+    <br>
+<p>Filter by publisher founded year.</p>
+            </p>
+                    <p>
+                <b><code>filter[founded-year-between]</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="filter[founded-year-between]"
+               data-endpoint="GETapi-publishers"
+               value="1940,1990"
+               data-component="query" hidden>
+    <br>
+<p>Filter by publisher founded year in the given range.</p>
+            </p>
+                    <p>
+                <b><code>page[number]</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="page[number]"
+               data-endpoint="GETapi-publishers"
+               value="2"
+               data-component="query" hidden>
+    <br>
+<p>The page number (default 1).</p>
+            </p>
+                    <p>
+                <b><code>page[size]</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="page[size]"
+               data-endpoint="GETapi-publishers"
+               value="10"
+               data-component="query" hidden>
+    <br>
+<p>The page size (default 30).</p>
+            </p>
+                </form>
+
+            <h2 id="publisher-management-POSTapi-publishers">Create a new publisher</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+<p>This endpoint will create a new publisher.</p>
+
+<span id="example-requests-POSTapi-publishers">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost/api/publishers" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"name\": \"soluta\",
+    \"founded_year\": 104,
+    \"founded_month\": 4,
+    \"founded_day\": 1,
+    \"website_url\": \"mlttstyyvmdvtbzwxfxqhpscwxlriyaydzxhwolqggsynwsvhejkhpjcvnxlvgdsyqfhjbeqvxzbmayvclhdyuphdjirkw\",
+    \"twitter_url\": \"oivletfczkjwnjsevnnyauqfquqcuzuxlpjaxplbxgkxeqxmxgohbvdkbxmtdqosgmkwjdzjyguxoudmhzottauxhjnavmmhkfihhypqfosgctdqgvxuumqnvaoleqkwrr\"
+}"
+</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;post(
+    'http://localhost/api/publishers',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+        'json' =&gt; [
+            'name' =&gt; 'soluta',
+            'founded_year' =&gt; 104,
+            'founded_month' =&gt; 4,
+            'founded_day' =&gt; 1,
+            'website_url' =&gt; 'mlttstyyvmdvtbzwxfxqhpscwxlriyaydzxhwolqggsynwsvhejkhpjcvnxlvgdsyqfhjbeqvxzbmayvclhdyuphdjirkw',
+            'twitter_url' =&gt; 'oivletfczkjwnjsevnnyauqfquqcuzuxlpjaxplbxgkxeqxmxgohbvdkbxmtdqosgmkwjdzjyguxoudmhzottauxhjnavmmhkfihhypqfosgctdqgvxuumqnvaoleqkwrr',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-publishers">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;data&quot;: {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;Publisher 1&quot;,
+        &quot;founded-at&quot;: &quot;1990&quot;,
+        &quot;website-url&quot;: &quot;http://www.publisher1.com&quot;,
+        &quot;twitter-url&quot;: &quot;http://www.twitter.com/publisher1&quot;,
+        &quot;address&quot;: &quot;Address 1&quot;,
+        &quot;city&quot;: &quot;City 1&quot;,
+        &quot;state&quot;: &quot;State 1&quot;,
+        &quot;zip&quot;: &quot;12345&quot;,
+        &quot;country&quot;: &quot;DEU&quot;,
+        &quot;created-at&quot;: &quot;2020-01-01T00:00:00+00:00&quot;,
+        &quot;updated-at&quot;: &quot;2020-01-01T00:00:00+00:00&quot;
+    }
+}</code>
+ </pre>
+            <blockquote>
+            <p>Example response (422):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;message&quot;: &quot;The given data was invalid.&quot;,
+    &quot;errors&quot;: {
+        &quot;field&quot;: [
+            &quot;Error message&quot;
+        ]
+    }
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-publishers" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-publishers"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-publishers"></code></pre>
+</span>
+<span id="execution-error-POSTapi-publishers" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-publishers"></code></pre>
+</span>
+<form id="form-POSTapi-publishers" data-method="POST"
+      data-path="api/publishers"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-publishers', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-publishers"
+                    onclick="tryItOut('POSTapi-publishers');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-publishers"
+                    onclick="cancelTryOut('POSTapi-publishers');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-publishers" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/publishers</code></b>
+        </p>
+                <p>
+            <label id="auth-POSTapi-publishers" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="POSTapi-publishers"
+                                                                data-component="header"></label>
+        </p>
+                        <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="name"
+               data-endpoint="POSTapi-publishers"
+               value="soluta"
+               data-component="body" hidden>
+    <br>
+<p>The name of the publisher.</p>
+        </p>
+                <p>
+            <b><code>founded_year</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="founded_year"
+               data-endpoint="POSTapi-publishers"
+               value="104"
+               data-component="body" hidden>
+    <br>
+<p>Must be at least 1900. Must not be greater than 2022.</p>
+        </p>
+                <p>
+            <b><code>founded_month</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="founded_month"
+               data-endpoint="POSTapi-publishers"
+               value="4"
+               data-component="body" hidden>
+    <br>
+<p>Must be at least 1. Must not be greater than 12.</p>
+        </p>
+                <p>
+            <b><code>founded_day</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="founded_day"
+               data-endpoint="POSTapi-publishers"
+               value="1"
+               data-component="body" hidden>
+    <br>
+<p>Must be at least 1. Must not be greater than 31.</p>
+        </p>
+                <p>
+            <b><code>website_url</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="website_url"
+               data-endpoint="POSTapi-publishers"
+               value="mlttstyyvmdvtbzwxfxqhpscwxlriyaydzxhwolqggsynwsvhejkhpjcvnxlvgdsyqfhjbeqvxzbmayvclhdyuphdjirkw"
+               data-component="body" hidden>
+    <br>
+<p>Must be a valid URL. Must not be greater than 255 characters.</p>
+        </p>
+                <p>
+            <b><code>twitter_url</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="twitter_url"
+               data-endpoint="POSTapi-publishers"
+               value="oivletfczkjwnjsevnnyauqfquqcuzuxlpjaxplbxgkxeqxmxgohbvdkbxmtdqosgmkwjdzjyguxoudmhzottauxhjnavmmhkfihhypqfosgctdqgvxuumqnvaoleqkwrr"
+               data-component="body" hidden>
+    <br>
+<p>Must be a valid URL. Must not be greater than 255 characters.</p>
+        </p>
+        </form>
+
+            <h2 id="publisher-management-GETapi-publishers--id-">Fetch a single publisher</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+<p>This endpoint will return a single publisher specified by the id.</p>
+
+<span id="example-requests-GETapi-publishers--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/api/publishers/17" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost/api/publishers/17',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-publishers--id-">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;data&quot;: {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;Publisher 1&quot;,
+        &quot;founded-at&quot;: &quot;1990&quot;,
+        &quot;website-url&quot;: &quot;http://www.publisher1.com&quot;,
+        &quot;twitter-url&quot;: &quot;http://www.twitter.com/publisher1&quot;,
+        &quot;address&quot;: &quot;Address 1&quot;,
+        &quot;city&quot;: &quot;City 1&quot;,
+        &quot;state&quot;: &quot;State 1&quot;,
+        &quot;zip&quot;: &quot;12345&quot;,
+        &quot;country&quot;: &quot;DEU&quot;,
+        &quot;created-at&quot;: &quot;2020-01-01T00:00:00+00:00&quot;,
+        &quot;updated-at&quot;: &quot;2020-01-01T00:00:00+00:00&quot;
+    }
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-publishers--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-publishers--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-publishers--id-"></code></pre>
+</span>
+<span id="execution-error-GETapi-publishers--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-publishers--id-"></code></pre>
+</span>
+<form id="form-GETapi-publishers--id-" data-method="GET"
+      data-path="api/publishers/{id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-publishers--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-publishers--id-"
+                    onclick="tryItOut('GETapi-publishers--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-publishers--id-"
+                    onclick="cancelTryOut('GETapi-publishers--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-publishers--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/publishers/{id}</code></b>
+        </p>
+                <p>
+            <label id="auth-GETapi-publishers--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="GETapi-publishers--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="GETapi-publishers--id-"
+               value="17"
+               data-component="url" hidden>
+    <br>
+<p>The ID of the publisher.</p>
+            </p>
+                    </form>
+
+            <h2 id="publisher-management-PUTapi-publishers--id-">Update an existing publisher</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+<p>This endpoint will update an existing publisher.</p>
+
+<span id="example-requests-PUTapi-publishers--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request PUT \
+    "http://localhost/api/publishers/12" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"name\": \"dd\",
+    \"founded_year\": 1705,
+    \"founded_month\": 9,
+    \"founded_day\": 24,
+    \"website_url\": \"gulpkrzrnwohrjckeqmiyhevcqfmlgobkxfhznzyutwohrromjpiurqtbugpphgaxcfqkmyxqwxpspubnefnlhliupwdghucusvpndtxmzavrnbekfnyikjawirwqosogxrmoejhszyaeyfwvzclrxywbptskdinaetrysartuncwujkajhnvgvcsqppdjwvgmfhnrhfiroezlgnrzaxncxbujimfucmbqhzcgkms\",
+    \"twitter_url\": \"qhwfpynbnkkiea\"
+}"
+</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;put(
+    'http://localhost/api/publishers/12',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+        'json' =&gt; [
+            'name' =&gt; 'dd',
+            'founded_year' =&gt; 1705,
+            'founded_month' =&gt; 9,
+            'founded_day' =&gt; 24,
+            'website_url' =&gt; 'gulpkrzrnwohrjckeqmiyhevcqfmlgobkxfhznzyutwohrromjpiurqtbugpphgaxcfqkmyxqwxpspubnefnlhliupwdghucusvpndtxmzavrnbekfnyikjawirwqosogxrmoejhszyaeyfwvzclrxywbptskdinaetrysartuncwujkajhnvgvcsqppdjwvgmfhnrhfiroezlgnrzaxncxbujimfucmbqhzcgkms',
+            'twitter_url' =&gt; 'qhwfpynbnkkiea',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+</span>
+
+<span id="example-responses-PUTapi-publishers--id-">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;data&quot;: {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;Publisher 1&quot;,
+        &quot;founded-at&quot;: &quot;1990&quot;,
+        &quot;website-url&quot;: &quot;http://www.publisher1.com&quot;,
+        &quot;twitter-url&quot;: &quot;http://www.twitter.com/publisher1&quot;,
+        &quot;address&quot;: &quot;Address 1&quot;,
+        &quot;city&quot;: &quot;City 1&quot;,
+        &quot;state&quot;: &quot;State 1&quot;,
+        &quot;zip&quot;: &quot;12345&quot;,
+        &quot;country&quot;: &quot;DEU&quot;,
+        &quot;created-at&quot;: &quot;2020-01-01T00:00:00+00:00&quot;,
+        &quot;updated-at&quot;: &quot;2020-01-01T00:00:00+00:00&quot;
+    }
+}</code>
+ </pre>
+            <blockquote>
+            <p>Example response (422):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;message&quot;: &quot;The given data was invalid.&quot;,
+    &quot;errors&quot;: {
+        &quot;field&quot;: [
+            &quot;Error message&quot;
+        ]
+    }
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-PUTapi-publishers--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-PUTapi-publishers--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-PUTapi-publishers--id-"></code></pre>
+</span>
+<span id="execution-error-PUTapi-publishers--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-PUTapi-publishers--id-"></code></pre>
+</span>
+<form id="form-PUTapi-publishers--id-" data-method="PUT"
+      data-path="api/publishers/{id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('PUTapi-publishers--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-PUTapi-publishers--id-"
+                    onclick="tryItOut('PUTapi-publishers--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-PUTapi-publishers--id-"
+                    onclick="cancelTryOut('PUTapi-publishers--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-PUTapi-publishers--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-darkblue">PUT</small>
+            <b><code>api/publishers/{id}</code></b>
+        </p>
+            <p>
+            <small class="badge badge-purple">PATCH</small>
+            <b><code>api/publishers/{id}</code></b>
+        </p>
+                <p>
+            <label id="auth-PUTapi-publishers--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="PUTapi-publishers--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="PUTapi-publishers--id-"
+               value="12"
+               data-component="url" hidden>
+    <br>
+<p>The ID of the publisher.</p>
+            </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>name</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="name"
+               data-endpoint="PUTapi-publishers--id-"
+               value="dd"
+               data-component="body" hidden>
+    <br>
+<p>Must not be greater than 100 characters.</p>
+        </p>
+                <p>
+            <b><code>founded_year</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="founded_year"
+               data-endpoint="PUTapi-publishers--id-"
+               value="1705"
+               data-component="body" hidden>
+    <br>
+<p>Must be at least 1900. Must not be greater than 2022.</p>
+        </p>
+                <p>
+            <b><code>founded_month</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="founded_month"
+               data-endpoint="PUTapi-publishers--id-"
+               value="9"
+               data-component="body" hidden>
+    <br>
+<p>Must be at least 1. Must not be greater than 12.</p>
+        </p>
+                <p>
+            <b><code>founded_day</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="founded_day"
+               data-endpoint="PUTapi-publishers--id-"
+               value="24"
+               data-component="body" hidden>
+    <br>
+<p>Must be at least 1. Must not be greater than 31.</p>
+        </p>
+                <p>
+            <b><code>website_url</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="website_url"
+               data-endpoint="PUTapi-publishers--id-"
+               value="gulpkrzrnwohrjckeqmiyhevcqfmlgobkxfhznzyutwohrromjpiurqtbugpphgaxcfqkmyxqwxpspubnefnlhliupwdghucusvpndtxmzavrnbekfnyikjawirwqosogxrmoejhszyaeyfwvzclrxywbptskdinaetrysartuncwujkajhnvgvcsqppdjwvgmfhnrhfiroezlgnrzaxncxbujimfucmbqhzcgkms"
+               data-component="body" hidden>
+    <br>
+<p>Must be a valid URL. Must not be greater than 255 characters.</p>
+        </p>
+                <p>
+            <b><code>twitter_url</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="twitter_url"
+               data-endpoint="PUTapi-publishers--id-"
+               value="qhwfpynbnkkiea"
+               data-component="body" hidden>
+    <br>
+<p>Must be a valid URL. Must not be greater than 255 characters.</p>
+        </p>
+        </form>
+
+            <h2 id="publisher-management-DELETEapi-publishers--id-">Delete an existing publisher</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+<p>This endpoint will delete an existing publisher.</p>
+
+<span id="example-requests-DELETEapi-publishers--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request DELETE \
+    "http://localhost/api/publishers/16" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;delete(
+    'http://localhost/api/publishers/16',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+</span>
+
+<span id="example-responses-DELETEapi-publishers--id-">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;data&quot;: {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;Publisher 1&quot;,
+        &quot;founded-at&quot;: &quot;1990&quot;,
+        &quot;website-url&quot;: &quot;http://www.publisher1.com&quot;,
+        &quot;twitter-url&quot;: &quot;http://www.twitter.com/publisher1&quot;,
+        &quot;address&quot;: &quot;Address 1&quot;,
+        &quot;city&quot;: &quot;City 1&quot;,
+        &quot;state&quot;: &quot;State 1&quot;,
+        &quot;zip&quot;: &quot;12345&quot;,
+        &quot;country&quot;: &quot;DEU&quot;,
+        &quot;created-at&quot;: &quot;2020-01-01T00:00:00+00:00&quot;,
+        &quot;updated-at&quot;: &quot;2020-01-01T00:00:00+00:00&quot;
+    }
+}</code>
+ </pre>
+            <blockquote>
+            <p>Example response (404):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;message&quot;: &quot;Resource not found.&quot;
+}</code>
+ </pre>
+            <blockquote>
+            <p>Example response (422):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+  &quot;message&quot;: &quot;The given data was invalid.&quot;,
+  &quot;errors&quot;: {
+  &quot;name&quot;: [
+     &quot;Error message&quot;
+  ]
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-DELETEapi-publishers--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-DELETEapi-publishers--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-DELETEapi-publishers--id-"></code></pre>
+</span>
+<span id="execution-error-DELETEapi-publishers--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-DELETEapi-publishers--id-"></code></pre>
+</span>
+<form id="form-DELETEapi-publishers--id-" data-method="DELETE"
+      data-path="api/publishers/{id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('DELETEapi-publishers--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-DELETEapi-publishers--id-"
+                    onclick="tryItOut('DELETEapi-publishers--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-DELETEapi-publishers--id-"
+                    onclick="cancelTryOut('DELETEapi-publishers--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-DELETEapi-publishers--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-red">DELETE</small>
+            <b><code>api/publishers/{id}</code></b>
+        </p>
+                <p>
+            <label id="auth-DELETEapi-publishers--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="DELETEapi-publishers--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="DELETEapi-publishers--id-"
+               value="16"
+               data-component="url" hidden>
+    <br>
+<p>The ID of the publisher.</p>
+            </p>
+                    </form>
+
+        <h1 id="user-management">User management</h1>
+
+    
+
+            <h2 id="user-management-POSTapi-register">Register a new user</h2>
+
+<p>
+</p>
+
+<p>This endpoint allows you to register a new user. The email address must be unique or you will get a 422 with an
+error message that the email address has already been taken.</p>
+
+<span id="example-requests-POSTapi-register">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost/api/register" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"name\": \"ccbtylfdmwaznloncencoxjxxhrxvhyknyvbmkiaruggrzgieoavqvqumuifihzmyilivqpickodhrnuywhdvucfoshwchheuwdawfmtxmycumzjjmvvogatmaexzaadcadpecqstwsheshswzrvuubllbamzkhnnoanjcgmfknertqkuukijdcnleqypacwqakvnkthhiqeokjftuzavpzftnamqxuazxmngagsfanlbtawylmvie\",
+    \"email\": \"amcdermott@example.org\",
+    \"password\": \"yfzngglkclqqndfsoztyauzhowwtdrdhholjigiclfvqfscvyvrdxsnrvroqiugrkbglgtntmmwspdlupoklptdcxnmlfvofpjvyexrnqztctfjptejyrugniekqtdkslglqgxdktmhnqhhbnkqljdqm\"
+}"
+</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;post(
+    'http://localhost/api/register',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+        'json' =&gt; [
+            'name' =&gt; 'ccbtylfdmwaznloncencoxjxxhrxvhyknyvbmkiaruggrzgieoavqvqumuifihzmyilivqpickodhrnuywhdvucfoshwchheuwdawfmtxmycumzjjmvvogatmaexzaadcadpecqstwsheshswzrvuubllbamzkhnnoanjcgmfknertqkuukijdcnleqypacwqakvnkthhiqeokjftuzavpzftnamqxuazxmngagsfanlbtawylmvie',
+            'email' =&gt; 'amcdermott@example.org',
+            'password' =&gt; 'yfzngglkclqqndfsoztyauzhowwtdrdhholjigiclfvqfscvyvrdxsnrvroqiugrkbglgtntmmwspdlupoklptdcxnmlfvofpjvyexrnqztctfjptejyrugniekqtdkslglqgxdktmhnqhhbnkqljdqm',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-register">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;access_token&quot;: &quot;token&quot;,
+    &quot;token_type&quot;: &quot;Bearer&quot;,
+}</code>
+ </pre>
+            <blockquote>
+            <p>Example response (422):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+  &quot;message&quot;: &quot;The given data was invalid.&quot;,
+  &quot;errors&quot;: {
+  &quot;name&quot;: [
+    &quot;Error message.&quot;
+  ]
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-register" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-register"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-register"></code></pre>
+</span>
+<span id="execution-error-POSTapi-register" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-register"></code></pre>
+</span>
+<form id="form-POSTapi-register" data-method="POST"
+      data-path="api/register"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-register', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-register"
+                    onclick="tryItOut('POSTapi-register');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-register"
+                    onclick="cancelTryOut('POSTapi-register');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-register" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/register</code></b>
+        </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="name"
+               data-endpoint="POSTapi-register"
+               value="ccbtylfdmwaznloncencoxjxxhrxvhyknyvbmkiaruggrzgieoavqvqumuifihzmyilivqpickodhrnuywhdvucfoshwchheuwdawfmtxmycumzjjmvvogatmaexzaadcadpecqstwsheshswzrvuubllbamzkhnnoanjcgmfknertqkuukijdcnleqypacwqakvnkthhiqeokjftuzavpzftnamqxuazxmngagsfanlbtawylmvie"
+               data-component="body" hidden>
+    <br>
+<p>Must be at least 8 characters. Must not be greater than 255 characters.</p>
+        </p>
+                <p>
+            <b><code>email</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="email"
+               data-endpoint="POSTapi-register"
+               value="amcdermott@example.org"
+               data-component="body" hidden>
+    <br>
+<p>Must be a valid email address.</p>
+        </p>
+                <p>
+            <b><code>password</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="password"
+               data-endpoint="POSTapi-register"
+               value="yfzngglkclqqndfsoztyauzhowwtdrdhholjigiclfvqfscvyvrdxsnrvroqiugrkbglgtntmmwspdlupoklptdcxnmlfvofpjvyexrnqztctfjptejyrugniekqtdkslglqgxdktmhnqhhbnkqljdqm"
+               data-component="body" hidden>
+    <br>
+<p>Must be at least 8 characters. Must not be greater than 255 characters.</p>
+        </p>
+        </form>
+
+    
+
+        
+    </div>
+    <div class="dark-box">
+                    <div class="lang-selector">
+                                                        <button type="button" class="lang-button" data-language-name="bash">bash</button>
+                                                        <button type="button" class="lang-button" data-language-name="php">php</button>
+                            </div>
+            </div>
+</div>
+</body>
+</html>
