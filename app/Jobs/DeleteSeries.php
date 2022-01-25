@@ -2,26 +2,26 @@
 
 namespace App\Jobs;
 
-use App\Models\Publisher;
+use App\Models\Series;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 
-class CreatePublisher implements ShouldQueue
+class DeleteSeries implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-    private array $requestData;
+    private Series $series;
 
-    public function __construct(array $requestData)
+    public function __construct(Series $series)
     {
-        $this->requestData = $requestData;
+        $this->series = $series;
     }
 
     public function handle()
     {
-        Publisher::create($this->requestData);
+        $this->series->delete();
     }
 }

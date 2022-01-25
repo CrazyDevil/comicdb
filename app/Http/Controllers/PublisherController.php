@@ -128,14 +128,6 @@ class PublisherController extends Controller
      * @response 404 {
      *  "message": "Resource not found."
      * }
-     *
-     * @response 422 {
-     *   "message": "The given data was invalid.",
-     *   "errors": {
-     *   "name": [
-     *      "Error message"
-     *   ]
-     * }
      */
     public function destroy(Publisher $publisher): JsonResponse
     {

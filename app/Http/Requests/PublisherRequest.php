@@ -14,10 +14,10 @@ class PublisherRequest extends FormRequest
 
     public function rules(): array
     {
-        $nameRule = $this->method() === 'POST' ? 'required' : 'sometimes';
+        $requiredRule = $this->method() === 'POST' ? 'required' : 'sometimes';
 
         return [
-            'name' => [$nameRule, 'string', 'max:100', 'unique:publishers'],
+            'name' => [$requiredRule, 'string', 'max:100', 'unique:publishers'],
             'founded_year' => ['nullable', 'integer', 'min:1900', 'max:' . date('Y')],
             'founded_month' => ['nullable', 'integer', 'min:1', 'max:12'],
             'founded_day' => ['nullable', 'integer', 'min:1', 'max:31'],

@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "8497f083-5beb-47d4-bb86-6d9b71024202",
+        "_postman_id": "a4e42060-296f-4c0d-907f-0d6bf2a1bae6",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -89,7 +89,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\"data\":[{\"id\":243,\"name\":\"Hammes-Ritchie\",\"founded-at\":\"2001\",\"website-url\":\"http:\\\/\\\/www.cormier.com\\\/eos-blanditiis-architecto-id-molestiae-quisquam-nisi-aut\",\"twitter-url\":\"http:\\\/\\\/www.lesch.com\\\/\",\"address\":\"230 Krajcik Locks Apt. 181\\nNew Gussiehaven, MD 81233-6458\",\"city\":\"North D'angelo\",\"state\":\"\",\"zip\":\"05624-0612\",\"country\":\"HUN\",\"created-at\":\"2022-01-25T18:06:14+00:00\",\"updated-at\":\"2022-01-25T18:06:14+00:00\"},{\"id\":244,\"name\":\"Langworth, Pouros and Mayer\",\"founded-at\":\"2015\",\"website-url\":\"http:\\\/\\\/anderson.biz\\\/aliquam-sit-ducimus-et-atque-aut.html\",\"twitter-url\":\"http:\\\/\\\/kihn.com\\\/sint-nobis-ratione-optio-tempora-nulla-nobis-eos-autem.html\",\"address\":\"6625 Macejkovic Mews\\nCarolinaview, TX 86253-4458\",\"city\":\"Kiehnchester\",\"state\":\"\",\"zip\":\"19450\",\"country\":\"FSM\",\"created-at\":\"2022-01-25T18:06:14+00:00\",\"updated-at\":\"2022-01-25T18:06:14+00:00\"}],\"links\":{\"first\":\"\\\/?page=1\",\"last\":\"\\\/?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"\\\/?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"\\\/\",\"per_page\":\"30\",\"to\":2,\"total\":2}}",
+                            "body": "{\"data\":[{\"id\":327,\"name\":\"Beatty-Yost\",\"founded-at\":\"2003\",\"website-url\":\"http:\\\/\\\/lindgren.com\\\/ipsum-et-voluptatem-ut-harum-amet\",\"twitter-url\":\"https:\\\/\\\/www.feest.com\\\/illo-molestiae-laboriosam-rerum-incidunt-iusto-expedita\",\"address\":\"8611 Jacobi Crest Suite 934\\nGislasonfurt, NY 47888-3407\",\"city\":\"North Berniefort\",\"state\":\"\",\"zip\":\"89335\",\"country\":\"BVT\",\"created-at\":\"2022-01-25T19:59:07+00:00\",\"updated-at\":\"2022-01-25T19:59:07+00:00\"},{\"id\":328,\"name\":\"Shields, Blick and Murray\",\"founded-at\":\"1990\",\"website-url\":\"https:\\\/\\\/www.nolan.net\\\/nostrum-facere-dolorem-et-et\",\"twitter-url\":\"http:\\\/\\\/www.christiansen.org\\\/praesentium-et-sapiente-non-quibusdam.html\",\"address\":\"94554 Tillman Centers Apt. 616\\nEast Carmelberg, ME 97868-5739\",\"city\":\"Port Marilieview\",\"state\":\"\",\"zip\":\"96720\",\"country\":\"KIR\",\"created-at\":\"2022-01-25T19:59:07+00:00\",\"updated-at\":\"2022-01-25T19:59:07+00:00\"}],\"links\":{\"first\":\"\\\/?page=1\",\"last\":\"\\\/?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"\\\/?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"\\\/\",\"per_page\":\"30\",\"to\":2,\"total\":2}}",
                             "name": ""
                         }
                     ]
@@ -116,7 +116,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"quis\",\"founded_year\":893,\"founded_month\":11,\"founded_day\":16,\"website_url\":\"xcudyxjhixhwtndjpzxnguqjvqqbafaizsjddvlgyzimgheyvuysgdgtjqumdmdpmcjyeatlwddcwizuhwmfwhpmhppsmqdrjcssmsmzzfaqsqurmsbbxvuirlgmxlmwawgh\",\"twitter_url\":\"mytgicvnodqwolquaqdgrmkmoroaqqwswyintdloslsnptzvwjxzvikzjaemtrcvggezethypwhjkgkyath\"}"
+                            "raw": "{\"name\":\"ullam\",\"founded_year\":564,\"founded_month\":7,\"founded_day\":13,\"website_url\":\"prjmqxcffcrhdpdjpqisgbatuuyvtgjehvvwfrdahrvvbbljyszwokjhfkxzuuxqehtsncnpvkkaybyzsdr\",\"twitter_url\":\"frrlxvvoetvmgzwejlhtzwrfqcckizndrlmybceclfvohmkbrderyckokleoxqugnobtyzadjugbbfjctpdertkqhqomrrklcqrmncrgfvtyobmtwwqpkwicczzlivxba\"}"
                         },
                         "description": ""
                     },
@@ -147,7 +147,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "16",
+                                    "value": "18",
                                     "description": "The ID of the publisher."
                                 }
                             ]
@@ -170,7 +170,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\"data\":{\"id\":245,\"name\":\"Block-Schuppe\",\"founded-at\":\"2016\",\"website-url\":\"https:\\\/\\\/www.nitzsche.com\\\/ipsam-atque-iure-eius-nesciunt-non-at-et-iste\",\"twitter-url\":\"http:\\\/\\\/purdy.biz\\\/et-nam-et-sit-sunt.html\",\"address\":\"26939 Adolf Walk Apt. 779\\nPort Hermanland, AR 29755\",\"city\":\"Stammshire\",\"state\":\"\",\"zip\":\"66493-3912\",\"country\":\"SXM\",\"created-at\":\"2022-01-25T18:06:14+00:00\",\"updated-at\":\"2022-01-25T18:06:14+00:00\"}}",
+                            "body": "{\"data\":{\"id\":329,\"name\":\"Hickle, Erdman and Jerde\",\"founded-at\":\"1989\",\"website-url\":\"http:\\\/\\\/www.moore.com\\\/\",\"twitter-url\":\"http:\\\/\\\/www.hettinger.biz\\\/assumenda-dignissimos-tempora-quaerat-libero-aut-sint-et\",\"address\":\"4715 Bernhard Pines\\nSouth Madyson, GA 76347\",\"city\":\"Oberbrunnerhaven\",\"state\":\"\",\"zip\":\"70236-8006\",\"country\":\"ECU\",\"created-at\":\"2022-01-25T19:59:08+00:00\",\"updated-at\":\"2022-01-25T19:59:08+00:00\"}}",
                             "name": ""
                         }
                     ]
@@ -187,7 +187,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "14",
+                                    "value": "16",
                                     "description": "The ID of the publisher."
                                 }
                             ]
@@ -205,7 +205,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"cwppekgrjziqnzdxgspkxfrpypmidbeajkrumxftjvlofgfpxdsnleozsznnyviuzsshypxjqjelgelidjpqq\",\"founded_year\":1477,\"founded_month\":12,\"founded_day\":25,\"website_url\":\"fjewfnskuqdiqklmucsulmlxznrwhgykrzldwjtmjaovwiaofjrmxoimfmvmzeuvmoyiisksbwmeppnbythtzurrvedidieobeghkuhhkv\",\"twitter_url\":\"vlqkadv\"}"
+                            "raw": "{\"name\":\"oqqkhmqojjeljhsrgvfwjekpvzxzthrdnafjghdgkpzblseqjjlyjdytmyicftyiagsovnceq\",\"founded_year\":1494,\"founded_month\":9,\"founded_day\":10,\"website_url\":\"zbbigovhvhohwpdegqbkoopjmwrevxleabrklhgdbxpaapcnylzeodauaeyoiavnqkkqcmqjxjnumrffexddrnfdyoatrlsweqcjxgcvtqohrtxqqsijktutiucnzlrwcwfnuiqgetfgahmlwjzlfqqbunukeqgijfzdprfmeduxofmnwqgsngqpjleztgmvcmveqvhamfjaqbubmtjtpnmhvyzmsqe\",\"twitter_url\":\"bwmzkefuzqguycbzzlqfiqhqakwwqgrkbfqhusojbuchatmcruumgucmmcituvbjixabteutjxmipxxpnpwtodifeoeokvdjzayeognfcdhjzujbhfhwfpfh\"}"
                         },
                         "description": ""
                     },
@@ -236,7 +236,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "12",
+                                    "value": "20",
                                     "description": "The ID of the publisher."
                                 }
                             ]
@@ -267,19 +267,13 @@
                             "code": 404,
                             "body": "{\n \"message\": \"Resource not found.\"\n}",
                             "name": ""
-                        },
-                        {
-                            "header": [],
-                            "code": 422,
-                            "body": "{\n  \"message\": \"The given data was invalid.\",\n  \"errors\": {\n  \"name\": [\n     \"Error message\"\n  ]\n}",
-                            "name": ""
                         }
                     ]
                 }
             ]
         },
         {
-            "name": "Serie",
+            "name": "Series",
             "description": "",
             "item": [
                 {
@@ -328,7 +322,191 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\"data\":[{\"id\":4,\"title\":\"Denis Steuber\",\"volume\":71,\"description\":\"Adipisci corrupti minima repudiandae quo corporis. Quae voluptas et beatae accusantium. Et nesciunt sed sit et. Ut facere voluptates cumque nostrum exercitationem est ut.\",\"start-year\":\"2011\",\"end-year\":\"2020\",\"rating\":\"perspiciatis\",\"created-at\":\"2016-04-26T21:15:06+00:00\",\"updated-at\":\"1983-05-22T15:09:21+00:00\",\"publisher\":{\"id\":246,\"name\":\"Sporer-Predovic\",\"founded-at\":\"1971\",\"website-url\":\"http:\\\/\\\/roberts.com\\\/minima-dolores-magnam-laborum-unde\",\"twitter-url\":\"http:\\\/\\\/www.sipes.net\\\/qui-in-quidem-deserunt-ut\",\"address\":\"618 Koelpin Trace\\nLake Timothyport, IA 00708-0685\",\"city\":\"Lake Shakiratown\",\"state\":\"\",\"zip\":\"01768-7098\",\"country\":\"MNG\",\"created-at\":\"2022-01-25T18:06:14+00:00\",\"updated-at\":\"2022-01-25T18:06:14+00:00\"}},{\"id\":5,\"title\":\"Mrs. Kathryne Flatley\",\"volume\":20,\"description\":\"Enim quas nostrum pariatur a ut. Est et numquam ex consequatur repudiandae. Ab id et neque aut sed enim.\",\"start-year\":\"2010\",\"end-year\":\"2008\",\"rating\":\"aliquid\",\"created-at\":\"1992-05-02T11:36:56+00:00\",\"updated-at\":\"2005-06-04T12:39:24+00:00\",\"publisher\":{\"id\":247,\"name\":\"Rogahn, Gerlach and Stoltenberg\",\"founded-at\":\"2005\",\"website-url\":\"http:\\\/\\\/gutmann.biz\\\/\",\"twitter-url\":\"http:\\\/\\\/www.collier.net\\\/quas-cum-et-qui-rerum-est-iure-sit-non.html\",\"address\":\"7236 Beatty Vista\\nJoanneport, NV 09103-8279\",\"city\":\"Jonathonville\",\"state\":\"\",\"zip\":\"28869-0540\",\"country\":\"ALA\",\"created-at\":\"2022-01-25T18:06:14+00:00\",\"updated-at\":\"2022-01-25T18:06:14+00:00\"}}],\"links\":{\"first\":\"\\\/?page=1\",\"last\":\"\\\/?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"\\\/?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"\\\/\",\"per_page\":\"30\",\"to\":2,\"total\":2}}",
+                            "body": "{\"data\":[{\"id\":41,\"title\":\"Gage Runolfsdottir\",\"volume\":98,\"description\":\"Soluta a esse laborum similique ad voluptate quas. Accusantium at pariatur deserunt ut nemo ipsa velit. Labore qui at eligendi. Suscipit nemo assumenda iusto est.\",\"start-year\":\"1977\",\"end-year\":\"1976\",\"rating\":\"est\",\"created-at\":\"2011-06-22T21:41:22+00:00\",\"updated-at\":\"1985-02-10T14:56:58+00:00\",\"publisher\":{\"id\":330,\"name\":\"Harvey-Gottlieb\",\"founded-at\":\"2006\",\"website-url\":\"http:\\\/\\\/www.vonrueden.com\\\/\",\"twitter-url\":\"http:\\\/\\\/www.hill.com\\\/\",\"address\":\"9318 Curtis Falls\\nSouth Jeromytown, IL 37412-9730\",\"city\":\"Devonburgh\",\"state\":\"\",\"zip\":\"57952-8236\",\"country\":\"BLZ\",\"created-at\":\"2022-01-25T19:59:08+00:00\",\"updated-at\":\"2022-01-25T19:59:08+00:00\"}},{\"id\":42,\"title\":\"Christ Rodriguez\",\"volume\":4,\"description\":\"Cumque eos corporis voluptates harum quaerat culpa ex laudantium. Porro magni ipsam esse molestiae provident. Et voluptatum sunt voluptatem vitae.\",\"start-year\":\"2000\",\"end-year\":\"1995\",\"rating\":\"consequatur\",\"created-at\":\"1982-01-12T07:00:32+00:00\",\"updated-at\":\"1991-11-27T17:52:19+00:00\",\"publisher\":{\"id\":331,\"name\":\"Nikolaus-Hansen\",\"founded-at\":\"2021\",\"website-url\":\"https:\\\/\\\/emard.org\\\/eligendi-ut-molestias-est-non.html\",\"twitter-url\":\"http:\\\/\\\/www.hessel.com\\\/dolor-hic-sed-qui-quas-repellat-libero-quos\",\"address\":\"555 Cremin Walks\\nWehnerfurt, RI 03091\",\"city\":\"Crystelstad\",\"state\":\"\",\"zip\":\"31959\",\"country\":\"ZAF\",\"created-at\":\"2022-01-25T19:59:08+00:00\",\"updated-at\":\"2022-01-25T19:59:08+00:00\"}}],\"links\":{\"first\":\"\\\/?page=1\",\"last\":\"\\\/?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"\\\/?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"\\\/\",\"per_page\":\"30\",\"to\":2,\"total\":2}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/v1\/series\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/series\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/series\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "11",
+                                    "description": "The ID of the series."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":{\"id\":43,\"title\":\"Mrs. Ciara Maggio\",\"volume\":42,\"description\":\"Omnis quo harum facere. Qui quaerat inventore voluptas at fugit ex quo. Ut et alias voluptas et. Ullam sed laborum architecto dolores nostrum.\",\"start-year\":\"2009\",\"end-year\":\"2008\",\"rating\":\"est\",\"created-at\":\"1982-08-25T13:38:35+00:00\",\"updated-at\":\"1992-11-17T06:13:04+00:00\",\"publisher\":{\"id\":332,\"name\":\"Connelly Ltd\",\"founded-at\":\"1994\",\"website-url\":\"http:\\\/\\\/www.erdman.com\\\/\",\"twitter-url\":\"http:\\\/\\\/mckenzie.com\\\/\",\"address\":\"182 Schuster Shoals Apt. 566\\nEast Rory, MO 74860\",\"city\":\"Larkinside\",\"state\":\"\",\"zip\":\"56643\",\"country\":\"LCA\",\"created-at\":\"2022-01-25T19:59:08+00:00\",\"updated-at\":\"2022-01-25T19:59:08+00:00\"}}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/v1\/publishers\/{publisher}\/series",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/publishers\/:publisher\/series",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/publishers\/:publisher\/series",
+                            "variable": [
+                                {
+                                    "id": "publisher",
+                                    "key": "publisher",
+                                    "value": "8",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"title\":\"hnvbjutxvwnonwfbmkgaiuezpozehrkeygmhrzyryuergbudpfumpbknrcgiuguwphelbwriyqugqfshitimcbyhxntdlwrjwkuitikeakipsdlgfmqtsb\",\"volume\":1,\"description\":\"xjrsacyvchofybxoynnhcpzjznajtjxozbktnklqupxivhxiprjlcpswinxtdqiscsnslxgnalpcfoixgnnvkkoznojzigszbvfycjaqoqwxrdlvhegehxxjkoasyc\",\"start_year\":1069,\"end_year\":477,\"rating\":\"ighqzxihbd\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 202,
+                            "body": "{\n    \"message\": \"Accepted\"\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 422,
+                            "body": "{\n    \"message\": \"The given data was invalid.\",\n    \"errors\": {\n        \"field\": [\n            \"Error message\"\n        ]\n    }\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/v1\/series\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/series\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/series\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "3",
+                                    "description": "The ID of the series."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"title\":\"cnfwvgexjpylidfrciyiptjzyclizxtlug\",\"volume\":0,\"description\":\"xuvmnvwkghtomteyxgpnunwzobfhavbhwriskwulbpzrcjndfoffqlsnyhvwirrbldutndprsdskxosxbfngyanwxbqqwnrfxdxcrgmnwhprfhibflzhyzljhsfxijrpexbfacjaamyvdiqvxtskgluannfxskbqrsnyvotlcsyyaausfdkhefaemwhzicgvaecatlpjlorpiodsywqxywaxegugcntmyuozygyxqvixxacjbgqfddjpgjluccgqnkcsilcjsmxidkyrehzywkkkvlwabwbrbbwazjscffomydrbwilsabgpqkxsnpriaggarxpdilndmygdkafpssjmstpdmhpkxcrlcigileyujkwbnodocavoftbisndpwcuzvj\",\"start_year\":1017,\"end_year\":219,\"rating\":\"ageibnwvwcoeasnzcclthonxdru\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 202,
+                            "body": "{\n    \"message\": \"Accepted\"\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 422,
+                            "body": "{\n    \"message\": \"The given data was invalid.\",\n    \"errors\": {\n        \"field\": [\n            \"Error message\"\n        ]\n    }\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/v1\/series\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/series\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/series\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "15",
+                                    "description": "The ID of the series."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 202,
+                            "body": "{\n    \"message\": \"Accepted\"\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n \"message\": \"Resource not found.\"\n}",
                             "name": ""
                         }
                     ]

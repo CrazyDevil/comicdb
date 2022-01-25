@@ -5,7 +5,7 @@ namespace Database\Factories;
 use App\Models\Publisher;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class SerieFactory extends Factory
+class SeriesFactory extends Factory
 {
     public function definition(): array
     {

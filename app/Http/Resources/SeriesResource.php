@@ -2,14 +2,14 @@
 
 namespace App\Http\Resources;
 
-use App\Models\Serie;
+use App\Models\Series;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class SerieResource extends JsonResource
+class SeriesResource extends JsonResource
 {
     public function toArray($request)
     {
-        /** @var Serie $serie */
+        /** @var Series $serie */
         $serie = $this;
 
         return [

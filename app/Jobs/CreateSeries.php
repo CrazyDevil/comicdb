@@ -2,14 +2,14 @@
 
 namespace App\Jobs;
 
-use App\Models\Publisher;
+use App\Models\Series;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 
-class CreatePublisher implements ShouldQueue
+class CreateSeries implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
@@ -22,6 +22,6 @@ class CreatePublisher implements ShouldQueue
 
     public function handle()
     {
-        Publisher::create($this->requestData);
+        Series::create($this->requestData);
     }
 }

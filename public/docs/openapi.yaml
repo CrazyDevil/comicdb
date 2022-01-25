@@ -113,31 +113,31 @@ paths:
                 example:
                   data:
                     -
-                      id: 243
-                      name: Hammes-Ritchie
-                      founded-at: '2001'
-                      website-url: 'http://www.cormier.com/eos-blanditiis-architecto-id-molestiae-quisquam-nisi-aut'
-                      twitter-url: 'http://www.lesch.com/'
-                      address: "230 Krajcik Locks Apt. 181\nNew Gussiehaven, MD 81233-6458"
-                      city: 'North D''angelo'
+                      id: 327
+                      name: Beatty-Yost
+                      founded-at: '2003'
+                      website-url: 'http://lindgren.com/ipsum-et-voluptatem-ut-harum-amet'
+                      twitter-url: 'https://www.feest.com/illo-molestiae-laboriosam-rerum-incidunt-iusto-expedita'
+                      address: "8611 Jacobi Crest Suite 934\nGislasonfurt, NY 47888-3407"
+                      city: 'North Berniefort'
                       state: ''
-                      zip: 05624-0612
-                      country: HUN
-                      created-at: '2022-01-25T18:06:14+00:00'
-                      updated-at: '2022-01-25T18:06:14+00:00'
+                      zip: '89335'
+                      country: BVT
+                      created-at: '2022-01-25T19:59:07+00:00'
+                      updated-at: '2022-01-25T19:59:07+00:00'
                     -
-                      id: 244
-                      name: 'Langworth, Pouros and Mayer'
-                      founded-at: '2015'
-                      website-url: 'http://anderson.biz/aliquam-sit-ducimus-et-atque-aut.html'
-                      twitter-url: 'http://kihn.com/sint-nobis-ratione-optio-tempora-nulla-nobis-eos-autem.html'
-                      address: "6625 Macejkovic Mews\nCarolinaview, TX 86253-4458"
-                      city: Kiehnchester
+                      id: 328
+                      name: 'Shields, Blick and Murray'
+                      founded-at: '1990'
+                      website-url: 'https://www.nolan.net/nostrum-facere-dolorem-et-et'
+                      twitter-url: 'http://www.christiansen.org/praesentium-et-sapiente-non-quibusdam.html'
+                      address: "94554 Tillman Centers Apt. 616\nEast Carmelberg, ME 97868-5739"
+                      city: 'Port Marilieview'
                       state: ''
-                      zip: '19450'
-                      country: FSM
-                      created-at: '2022-01-25T18:06:14+00:00'
-                      updated-at: '2022-01-25T18:06:14+00:00'
+                      zip: '96720'
+                      country: KIR
+                      created-at: '2022-01-25T19:59:07+00:00'
+                      updated-at: '2022-01-25T19:59:07+00:00'
                   links:
                     first: '/?page=1'
                     last: '/?page=1'
@@ -169,31 +169,31 @@ paths:
                     type: array
                     example:
                       -
-                        id: 243
-                        name: Hammes-Ritchie
-                        founded-at: '2001'
-                        website-url: 'http://www.cormier.com/eos-blanditiis-architecto-id-molestiae-quisquam-nisi-aut'
-                        twitter-url: 'http://www.lesch.com/'
-                        address: "230 Krajcik Locks Apt. 181\nNew Gussiehaven, MD 81233-6458"
-                        city: 'North D''angelo'
+                        id: 327
+                        name: Beatty-Yost
+                        founded-at: '2003'
+                        website-url: 'http://lindgren.com/ipsum-et-voluptatem-ut-harum-amet'
+                        twitter-url: 'https://www.feest.com/illo-molestiae-laboriosam-rerum-incidunt-iusto-expedita'
+                        address: "8611 Jacobi Crest Suite 934\nGislasonfurt, NY 47888-3407"
+                        city: 'North Berniefort'
                         state: ''
-                        zip: 05624-0612
-                        country: HUN
-                        created-at: '2022-01-25T18:06:14+00:00'
-                        updated-at: '2022-01-25T18:06:14+00:00'
+                        zip: '89335'
+                        country: BVT
+                        created-at: '2022-01-25T19:59:07+00:00'
+                        updated-at: '2022-01-25T19:59:07+00:00'
                       -
-                        id: 244
-                        name: 'Langworth, Pouros and Mayer'
-                        founded-at: '2015'
-                        website-url: 'http://anderson.biz/aliquam-sit-ducimus-et-atque-aut.html'
-                        twitter-url: 'http://kihn.com/sint-nobis-ratione-optio-tempora-nulla-nobis-eos-autem.html'
-                        address: "6625 Macejkovic Mews\nCarolinaview, TX 86253-4458"
-                        city: Kiehnchester
+                        id: 328
+                        name: 'Shields, Blick and Murray'
+                        founded-at: '1990'
+                        website-url: 'https://www.nolan.net/nostrum-facere-dolorem-et-et'
+                        twitter-url: 'http://www.christiansen.org/praesentium-et-sapiente-non-quibusdam.html'
+                        address: "94554 Tillman Centers Apt. 616\nEast Carmelberg, ME 97868-5739"
+                        city: 'Port Marilieview'
                         state: ''
-                        zip: '19450'
-                        country: FSM
-                        created-at: '2022-01-25T18:06:14+00:00'
-                        updated-at: '2022-01-25T18:06:14+00:00'
+                        zip: '96720'
+                        country: KIR
+                        created-at: '2022-01-25T19:59:07+00:00'
+                        updated-at: '2022-01-25T19:59:07+00:00'
                     items:
                       type: object
                   links:
@@ -298,27 +298,27 @@ paths:
                 name:
                   type: string
                   description: 'The name of the publisher.'
-                  example: quis
+                  example: ullam
                 founded_year:
                   type: integer
                   description: 'Must be at least 1900. Must not be greater than 2022.'
-                  example: 893
+                  example: 564
                 founded_month:
                   type: integer
                   description: 'Must be at least 1. Must not be greater than 12.'
-                  example: 11
+                  example: 7
                 founded_day:
                   type: integer
                   description: 'Must be at least 1. Must not be greater than 31.'
-                  example: 16
+                  example: 13
                 website_url:
                   type: string
                   description: 'Must be a valid URL. Must not be greater than 255 characters.'
-                  example: xcudyxjhixhwtndjpzxnguqjvqqbafaizsjddvlgyzimgheyvuysgdgtjqumdmdpmcjyeatlwddcwizuhwmfwhpmhppsmqdrjcssmsmzzfaqsqurmsbbxvuirlgmxlmwawgh
+                  example: prjmqxcffcrhdpdjpqisgbatuuyvtgjehvvwfrdahrvvbbljyszwokjhfkxzuuxqehtsncnpvkkaybyzsdr
                 twitter_url:
                   type: string
                   description: 'Must be a valid URL. Must not be greater than 255 characters.'
-                  example: mytgicvnodqwolquaqdgrmkmoroaqqwswyintdloslsnptzvwjxzvikzjaemtrcvggezethypwhjkgkyath
+                  example: frrlxvvoetvmgzwejlhtzwrfqcckizndrlmybceclfvohmkbrderyckokleoxqugnobtyzadjugbbfjctpdertkqhqomrrklcqrmncrgfvtyobmtwwqpkwicczzlivxba
               required:
                 - name
   '/api/v1/publishers/{id}':
@@ -356,34 +356,34 @@ paths:
                 type: object
                 example:
                   data:
-                    id: 245
-                    name: Block-Schuppe
-                    founded-at: '2016'
-                    website-url: 'https://www.nitzsche.com/ipsam-atque-iure-eius-nesciunt-non-at-et-iste'
-                    twitter-url: 'http://purdy.biz/et-nam-et-sit-sunt.html'
-                    address: "26939 Adolf Walk Apt. 779\nPort Hermanland, AR 29755"
-                    city: Stammshire
+                    id: 329
+                    name: 'Hickle, Erdman and Jerde'
+                    founded-at: '1989'
+                    website-url: 'http://www.moore.com/'
+                    twitter-url: 'http://www.hettinger.biz/assumenda-dignissimos-tempora-quaerat-libero-aut-sint-et'
+                    address: "4715 Bernhard Pines\nSouth Madyson, GA 76347"
+                    city: Oberbrunnerhaven
                     state: ''
-                    zip: 66493-3912
-                    country: SXM
-                    created-at: '2022-01-25T18:06:14+00:00'
-                    updated-at: '2022-01-25T18:06:14+00:00'
+                    zip: 70236-8006
+                    country: ECU
+                    created-at: '2022-01-25T19:59:08+00:00'
+                    updated-at: '2022-01-25T19:59:08+00:00'
                 properties:
                   data:
                     type: object
                     example:
-                      id: 245
-                      name: Block-Schuppe
-                      founded-at: '2016'
-                      website-url: 'https://www.nitzsche.com/ipsam-atque-iure-eius-nesciunt-non-at-et-iste'
-                      twitter-url: 'http://purdy.biz/et-nam-et-sit-sunt.html'
-                      address: "26939 Adolf Walk Apt. 779\nPort Hermanland, AR 29755"
-                      city: Stammshire
+                      id: 329
+                      name: 'Hickle, Erdman and Jerde'
+                      founded-at: '1989'
+                      website-url: 'http://www.moore.com/'
+                      twitter-url: 'http://www.hettinger.biz/assumenda-dignissimos-tempora-quaerat-libero-aut-sint-et'
+                      address: "4715 Bernhard Pines\nSouth Madyson, GA 76347"
+                      city: Oberbrunnerhaven
                       state: ''
-                      zip: 66493-3912
-                      country: SXM
-                      created-at: '2022-01-25T18:06:14+00:00'
-                      updated-at: '2022-01-25T18:06:14+00:00'
+                      zip: 70236-8006
+                      country: ECU
+                      created-at: '2022-01-25T19:59:08+00:00'
+                      updated-at: '2022-01-25T19:59:08+00:00'
       tags:
         - Publisher
     put:
@@ -456,27 +456,27 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: cwppekgrjziqnzdxgspkxfrpypmidbeajkrumxftjvlofgfpxdsnleozsznnyviuzsshypxjqjelgelidjpqq
+                  example: oqqkhmqojjeljhsrgvfwjekpvzxzthrdnafjghdgkpzblseqjjlyjdytmyicftyiagsovnceq
                 founded_year:
                   type: integer
                   description: 'Must be at least 1900. Must not be greater than 2022.'
-                  example: 1477
+                  example: 1494
                 founded_month:
                   type: integer
                   description: 'Must be at least 1. Must not be greater than 12.'
-                  example: 12
+                  example: 9
                 founded_day:
                   type: integer
                   description: 'Must be at least 1. Must not be greater than 31.'
-                  example: 25
+                  example: 10
                 website_url:
                   type: string
                   description: 'Must be a valid URL. Must not be greater than 255 characters.'
-                  example: fjewfnskuqdiqklmucsulmlxznrwhgykrzldwjtmjaovwiaofjrmxoimfmvmzeuvmoyiisksbwmeppnbythtzurrvedidieobeghkuhhkv
+                  example: zbbigovhvhohwpdegqbkoopjmwrevxleabrklhgdbxpaapcnylzeodauaeyoiavnqkkqcmqjxjnumrffexddrnfdyoatrlsweqcjxgcvtqohrtxqqsijktutiucnzlrwcwfnuiqgetfgahmlwjzlfqqbunukeqgijfzdprfmeduxofmnwqgsngqpjleztgmvcmveqvhamfjaqbubmtjtpnmhvyzmsqe
                 twitter_url:
                   type: string
                   description: 'Must be a valid URL. Must not be greater than 255 characters.'
-                  example: vlqkadv
+                  example: bwmzkefuzqguycbzzlqfiqhqakwwqgrkbfqhusojbuchatmcruumgucmmcituvbjixabteutjxmipxxpnpwtodifeoeokvdjzayeognfcdhjzujbhfhwfpfh
     delete:
       summary: ''
       description: ''
@@ -527,13 +527,6 @@ paths:
                   message:
                     type: string
                     example: 'Resource not found.'
-        422:
-          description: ''
-          content:
-            text/plain:
-              schema:
-                type: string
-                example: "{\n  \"message\": \"The given data was invalid.\",\n  \"errors\": {\n  \"name\": [\n     \"Error message\"\n  ]\n}"
       tags:
         - Publisher
     parameters:
@@ -541,7 +534,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the publisher.'
-        example: 16
+        example: 18
         required: true
         schema:
           type: integer
@@ -611,51 +604,51 @@ paths:
                 example:
                   data:
                     -
-                      id: 4
-                      title: 'Denis Steuber'
-                      volume: 71
-                      description: 'Adipisci corrupti minima repudiandae quo corporis. Quae voluptas et beatae accusantium. Et nesciunt sed sit et. Ut facere voluptates cumque nostrum exercitationem est ut.'
-                      start-year: '2011'
-                      end-year: '2020'
-                      rating: perspiciatis
-                      created-at: '2016-04-26T21:15:06+00:00'
-                      updated-at: '1983-05-22T15:09:21+00:00'
+                      id: 41
+                      title: 'Gage Runolfsdottir'
+                      volume: 98
+                      description: 'Soluta a esse laborum similique ad voluptate quas. Accusantium at pariatur deserunt ut nemo ipsa velit. Labore qui at eligendi. Suscipit nemo assumenda iusto est.'
+                      start-year: '1977'
+                      end-year: '1976'
+                      rating: est
+                      created-at: '2011-06-22T21:41:22+00:00'
+                      updated-at: '1985-02-10T14:56:58+00:00'
                       publisher:
-                        id: 246
-                        name: Sporer-Predovic
-                        founded-at: '1971'
-                        website-url: 'http://roberts.com/minima-dolores-magnam-laborum-unde'
-                        twitter-url: 'http://www.sipes.net/qui-in-quidem-deserunt-ut'
-                        address: "618 Koelpin Trace\nLake Timothyport, IA 00708-0685"
-                        city: 'Lake Shakiratown'
+                        id: 330
+                        name: Harvey-Gottlieb
+                        founded-at: '2006'
+                        website-url: 'http://www.vonrueden.com/'
+                        twitter-url: 'http://www.hill.com/'
+                        address: "9318 Curtis Falls\nSouth Jeromytown, IL 37412-9730"
+                        city: Devonburgh
                         state: ''
-                        zip: 01768-7098
-                        country: MNG
-                        created-at: '2022-01-25T18:06:14+00:00'
-                        updated-at: '2022-01-25T18:06:14+00:00'
+                        zip: 57952-8236
+                        country: BLZ
+                        created-at: '2022-01-25T19:59:08+00:00'
+                        updated-at: '2022-01-25T19:59:08+00:00'
                     -
-                      id: 5
-                      title: 'Mrs. Kathryne Flatley'
-                      volume: 20
-                      description: 'Enim quas nostrum pariatur a ut. Est et numquam ex consequatur repudiandae. Ab id et neque aut sed enim.'
-                      start-year: '2010'
-                      end-year: '2008'
-                      rating: aliquid
-                      created-at: '1992-05-02T11:36:56+00:00'
-                      updated-at: '2005-06-04T12:39:24+00:00'
+                      id: 42
+                      title: 'Christ Rodriguez'
+                      volume: 4
+                      description: 'Cumque eos corporis voluptates harum quaerat culpa ex laudantium. Porro magni ipsam esse molestiae provident. Et voluptatum sunt voluptatem vitae.'
+                      start-year: '2000'
+                      end-year: '1995'
+                      rating: consequatur
+                      created-at: '1982-01-12T07:00:32+00:00'
+                      updated-at: '1991-11-27T17:52:19+00:00'
                       publisher:
-                        id: 247
-                        name: 'Rogahn, Gerlach and Stoltenberg'
-                        founded-at: '2005'
-                        website-url: 'http://gutmann.biz/'
-                        twitter-url: 'http://www.collier.net/quas-cum-et-qui-rerum-est-iure-sit-non.html'
-                        address: "7236 Beatty Vista\nJoanneport, NV 09103-8279"
-                        city: Jonathonville
+                        id: 331
+                        name: Nikolaus-Hansen
+                        founded-at: '2021'
+                        website-url: 'https://emard.org/eligendi-ut-molestias-est-non.html'
+                        twitter-url: 'http://www.hessel.com/dolor-hic-sed-qui-quas-repellat-libero-quos'
+                        address: "555 Cremin Walks\nWehnerfurt, RI 03091"
+                        city: Crystelstad
                         state: ''
-                        zip: 28869-0540
-                        country: ALA
-                        created-at: '2022-01-25T18:06:14+00:00'
-                        updated-at: '2022-01-25T18:06:14+00:00'
+                        zip: '31959'
+                        country: ZAF
+                        created-at: '2022-01-25T19:59:08+00:00'
+                        updated-at: '2022-01-25T19:59:08+00:00'
                   links:
                     first: '/?page=1'
                     last: '/?page=1'
@@ -687,51 +680,51 @@ paths:
                     type: array
                     example:
                       -
-                        id: 4
-                        title: 'Denis Steuber'
-                        volume: 71
-                        description: 'Adipisci corrupti minima repudiandae quo corporis. Quae voluptas et beatae accusantium. Et nesciunt sed sit et. Ut facere voluptates cumque nostrum exercitationem est ut.'
-                        start-year: '2011'
-                        end-year: '2020'
-                        rating: perspiciatis
-                        created-at: '2016-04-26T21:15:06+00:00'
-                        updated-at: '1983-05-22T15:09:21+00:00'
+                        id: 41
+                        title: 'Gage Runolfsdottir'
+                        volume: 98
+                        description: 'Soluta a esse laborum similique ad voluptate quas. Accusantium at pariatur deserunt ut nemo ipsa velit. Labore qui at eligendi. Suscipit nemo assumenda iusto est.'
+                        start-year: '1977'
+                        end-year: '1976'
+                        rating: est
+                        created-at: '2011-06-22T21:41:22+00:00'
+                        updated-at: '1985-02-10T14:56:58+00:00'
                         publisher:
-                          id: 246
-                          name: Sporer-Predovic
-                          founded-at: '1971'
-                          website-url: 'http://roberts.com/minima-dolores-magnam-laborum-unde'
-                          twitter-url: 'http://www.sipes.net/qui-in-quidem-deserunt-ut'
-                          address: "618 Koelpin Trace\nLake Timothyport, IA 00708-0685"
-                          city: 'Lake Shakiratown'
+                          id: 330
+                          name: Harvey-Gottlieb
+                          founded-at: '2006'
+                          website-url: 'http://www.vonrueden.com/'
+                          twitter-url: 'http://www.hill.com/'
+                          address: "9318 Curtis Falls\nSouth Jeromytown, IL 37412-9730"
+                          city: Devonburgh
                           state: ''
-                          zip: 01768-7098
-                          country: MNG
-                          created-at: '2022-01-25T18:06:14+00:00'
-                          updated-at: '2022-01-25T18:06:14+00:00'
+                          zip: 57952-8236
+                          country: BLZ
+                          created-at: '2022-01-25T19:59:08+00:00'
+                          updated-at: '2022-01-25T19:59:08+00:00'
                       -
-                        id: 5
-                        title: 'Mrs. Kathryne Flatley'
-                        volume: 20
-                        description: 'Enim quas nostrum pariatur a ut. Est et numquam ex consequatur repudiandae. Ab id et neque aut sed enim.'
-                        start-year: '2010'
-                        end-year: '2008'
-                        rating: aliquid
-                        created-at: '1992-05-02T11:36:56+00:00'
-                        updated-at: '2005-06-04T12:39:24+00:00'
+                        id: 42
+                        title: 'Christ Rodriguez'
+                        volume: 4
+                        description: 'Cumque eos corporis voluptates harum quaerat culpa ex laudantium. Porro magni ipsam esse molestiae provident. Et voluptatum sunt voluptatem vitae.'
+                        start-year: '2000'
+                        end-year: '1995'
+                        rating: consequatur
+                        created-at: '1982-01-12T07:00:32+00:00'
+                        updated-at: '1991-11-27T17:52:19+00:00'
                         publisher:
-                          id: 247
-                          name: 'Rogahn, Gerlach and Stoltenberg'
-                          founded-at: '2005'
-                          website-url: 'http://gutmann.biz/'
-                          twitter-url: 'http://www.collier.net/quas-cum-et-qui-rerum-est-iure-sit-non.html'
-                          address: "7236 Beatty Vista\nJoanneport, NV 09103-8279"
-                          city: Jonathonville
+                          id: 331
+                          name: Nikolaus-Hansen
+                          founded-at: '2021'
+                          website-url: 'https://emard.org/eligendi-ut-molestias-est-non.html'
+                          twitter-url: 'http://www.hessel.com/dolor-hic-sed-qui-quas-repellat-libero-quos'
+                          address: "555 Cremin Walks\nWehnerfurt, RI 03091"
+                          city: Crystelstad
                           state: ''
-                          zip: 28869-0540
-                          country: ALA
-                          created-at: '2022-01-25T18:06:14+00:00'
-                          updated-at: '2022-01-25T18:06:14+00:00'
+                          zip: '31959'
+                          country: ZAF
+                          created-at: '2022-01-25T19:59:08+00:00'
+                          updated-at: '2022-01-25T19:59:08+00:00'
                     items:
                       type: object
                   links:
@@ -765,13 +758,351 @@ paths:
                       to: 2
                       total: 2
       tags:
-        - Serie
+        - Series
+  '/api/v1/series/{id}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: 43
+                    title: 'Mrs. Ciara Maggio'
+                    volume: 42
+                    description: 'Omnis quo harum facere. Qui quaerat inventore voluptas at fugit ex quo. Ut et alias voluptas et. Ullam sed laborum architecto dolores nostrum.'
+                    start-year: '2009'
+                    end-year: '2008'
+                    rating: est
+                    created-at: '1982-08-25T13:38:35+00:00'
+                    updated-at: '1992-11-17T06:13:04+00:00'
+                    publisher:
+                      id: 332
+                      name: 'Connelly Ltd'
+                      founded-at: '1994'
+                      website-url: 'http://www.erdman.com/'
+                      twitter-url: 'http://mckenzie.com/'
+                      address: "182 Schuster Shoals Apt. 566\nEast Rory, MO 74860"
+                      city: Larkinside
+                      state: ''
+                      zip: '56643'
+                      country: LCA
+                      created-at: '2022-01-25T19:59:08+00:00'
+                      updated-at: '2022-01-25T19:59:08+00:00'
+                properties:
+                  data:
+                    type: object
+                    example:
+                      id: 43
+                      title: 'Mrs. Ciara Maggio'
+                      volume: 42
+                      description: 'Omnis quo harum facere. Qui quaerat inventore voluptas at fugit ex quo. Ut et alias voluptas et. Ullam sed laborum architecto dolores nostrum.'
+                      start-year: '2009'
+                      end-year: '2008'
+                      rating: est
+                      created-at: '1982-08-25T13:38:35+00:00'
+                      updated-at: '1992-11-17T06:13:04+00:00'
+                      publisher:
+                        id: 332
+                        name: 'Connelly Ltd'
+                        founded-at: '1994'
+                        website-url: 'http://www.erdman.com/'
+                        twitter-url: 'http://mckenzie.com/'
+                        address: "182 Schuster Shoals Apt. 566\nEast Rory, MO 74860"
+                        city: Larkinside
+                        state: ''
+                        zip: '56643'
+                        country: LCA
+                        created-at: '2022-01-25T19:59:08+00:00'
+                        updated-at: '2022-01-25T19:59:08+00:00'
+      tags:
+        - Series
+    put:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        202:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Accepted
+                properties:
+                  message:
+                    type: string
+                    example: Accepted
+        422:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'The given data was invalid.'
+                  errors:
+                    field:
+                      - 'Error message'
+                properties:
+                  message:
+                    type: string
+                    example: 'The given data was invalid.'
+                  errors:
+                    type: object
+                    example:
+                      field:
+                        - 'Error message'
+      tags:
+        - Series
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: 'Must not be greater than 150 characters.'
+                  example: cnfwvgexjpylidfrciyiptjzyclizxtlug
+                volume:
+                  type: integer
+                  description: 'Must be at least 1.'
+                  example: 0
+                description:
+                  type: string
+                  description: 'Must not be greater than 1000 characters.'
+                  example: xuvmnvwkghtomteyxgpnunwzobfhavbhwriskwulbpzrcjndfoffqlsnyhvwirrbldutndprsdskxosxbfngyanwxbqqwnrfxdxcrgmnwhprfhibflzhyzljhsfxijrpexbfacjaamyvdiqvxtskgluannfxskbqrsnyvotlcsyyaausfdkhefaemwhzicgvaecatlpjlorpiodsywqxywaxegugcntmyuozygyxqvixxacjbgqfddjpgjluccgqnkcsilcjsmxidkyrehzywkkkvlwabwbrbbwazjscffomydrbwilsabgpqkxsnpriaggarxpdilndmygdkafpssjmstpdmhpkxcrlcigileyujkwbnodocavoftbisndpwcuzvj
+                start_year:
+                  type: integer
+                  description: 'Must be at least 1900. Must not be greater than 2023.'
+                  example: 1017
+                end_year:
+                  type: integer
+                  description: 'Must be at least 1900. Must not be greater than 2023.'
+                  example: 219
+                rating:
+                  type: string
+                  description: 'Must not be greater than 30 characters.'
+                  example: ageibnwvwcoeasnzcclthonxdru
+    delete:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        202:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Accepted
+                properties:
+                  message:
+                    type: string
+                    example: Accepted
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Resource not found.'
+                properties:
+                  message:
+                    type: string
+                    example: 'Resource not found.'
+      tags:
+        - Series
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the series.'
+        example: 11
+        required: true
+        schema:
+          type: integer
+  '/api/v1/publishers/{publisher}/series':
+    post:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        202:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Accepted
+                properties:
+                  message:
+                    type: string
+                    example: Accepted
+        422:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'The given data was invalid.'
+                  errors:
+                    field:
+                      - 'Error message'
+                properties:
+                  message:
+                    type: string
+                    example: 'The given data was invalid.'
+                  errors:
+                    type: object
+                    example:
+                      field:
+                        - 'Error message'
+      tags:
+        - Series
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: 'Must not be greater than 150 characters.'
+                  example: hnvbjutxvwnonwfbmkgaiuezpozehrkeygmhrzyryuergbudpfumpbknrcgiuguwphelbwriyqugqfshitimcbyhxntdlwrjwkuitikeakipsdlgfmqtsb
+                volume:
+                  type: integer
+                  description: 'Must be at least 1.'
+                  example: 1
+                description:
+                  type: string
+                  description: 'Must not be greater than 1000 characters.'
+                  example: xjrsacyvchofybxoynnhcpzjznajtjxozbktnklqupxivhxiprjlcpswinxtdqiscsnslxgnalpcfoixgnnvkkoznojzigszbvfycjaqoqwxrdlvhegehxxjkoasyc
+                start_year:
+                  type: integer
+                  description: 'Must be at least 1900. Must not be greater than 2023.'
+                  example: 1069
+                end_year:
+                  type: integer
+                  description: 'Must be at least 1900. Must not be greater than 2023.'
+                  example: 477
+                rating:
+                  type: string
+                  description: 'Must not be greater than 30 characters.'
+                  example: ighqzxihbd
+    parameters:
+      -
+        in: path
+        name: publisher
+        description: ''
+        example: 8
+        required: true
+        schema:
+          type: integer
 tags:
   -
     name: Publisher
     description: ''
   -
-    name: Serie
+    name: Series
     description: ''
 components:
   securitySchemes:

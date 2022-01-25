@@ -92,12 +92,24 @@
                                                     </ul>
                             </ul>
                     <ul id="tocify-header-3" class="tocify-header">
-                <li class="tocify-item level-1" data-unique="serie">
-                    <a href="#serie">Serie</a>
+                <li class="tocify-item level-1" data-unique="series">
+                    <a href="#series">Series</a>
                 </li>
-                                    <ul id="tocify-subheader-serie" class="tocify-subheader">
-                                                    <li class="tocify-item level-2" data-unique="serie-GETapi-v1-series">
-                        <a href="#serie-GETapi-v1-series">GET api/v1/series</a>
+                                    <ul id="tocify-subheader-series" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="series-GETapi-v1-series">
+                        <a href="#series-GETapi-v1-series">GET api/v1/series</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="series-GETapi-v1-series--id-">
+                        <a href="#series-GETapi-v1-series--id-">GET api/v1/series/{id}</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="series-POSTapi-v1-publishers--publisher--series">
+                        <a href="#series-POSTapi-v1-publishers--publisher--series">POST api/v1/publishers/{publisher}/series</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="series-PUTapi-v1-series--id-">
+                        <a href="#series-PUTapi-v1-series--id-">PUT api/v1/series/{id}</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="series-DELETEapi-v1-series--id-">
+                        <a href="#series-DELETEapi-v1-series--id-">DELETE api/v1/series/{id}</a>
                     </li>
                                                     </ul>
                             </ul>
@@ -128,7 +140,7 @@ You can switch the language used with the tabs at the top right (or from the nav
 <pre><code class="language-yaml">http://localhost</code></pre>
 
         <h1 id="authenticating-requests">Authenticating requests</h1>
-<p>Authenticate requests to this API's endpoints by sending an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer {YOUR_AUTH_KEY}"</code></strong>.</p>
+<p>This API is authenticated by sending an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer {YOUR_AUTH_KEY}"</code></strong>.</p>
 <p>All authenticated endpoints are marked with a <code>requires authentication</code> badge in the documentation below.</p>
 <p>You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.</p>
 
@@ -191,32 +203,32 @@ print_r(json_decode((string) $body));</code></pre></div>
 <code class="language-json">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: 243,
-            &quot;name&quot;: &quot;Hammes-Ritchie&quot;,
-            &quot;founded-at&quot;: &quot;2001&quot;,
-            &quot;website-url&quot;: &quot;http://www.cormier.com/eos-blanditiis-architecto-id-molestiae-quisquam-nisi-aut&quot;,
-            &quot;twitter-url&quot;: &quot;http://www.lesch.com/&quot;,
-            &quot;address&quot;: &quot;230 Krajcik Locks Apt. 181\nNew Gussiehaven, MD 81233-6458&quot;,
-            &quot;city&quot;: &quot;North D&#039;angelo&quot;,
+            &quot;id&quot;: 327,
+            &quot;name&quot;: &quot;Beatty-Yost&quot;,
+            &quot;founded-at&quot;: &quot;2003&quot;,
+            &quot;website-url&quot;: &quot;http://lindgren.com/ipsum-et-voluptatem-ut-harum-amet&quot;,
+            &quot;twitter-url&quot;: &quot;https://www.feest.com/illo-molestiae-laboriosam-rerum-incidunt-iusto-expedita&quot;,
+            &quot;address&quot;: &quot;8611 Jacobi Crest Suite 934\nGislasonfurt, NY 47888-3407&quot;,
+            &quot;city&quot;: &quot;North Berniefort&quot;,
             &quot;state&quot;: &quot;&quot;,
-            &quot;zip&quot;: &quot;05624-0612&quot;,
-            &quot;country&quot;: &quot;HUN&quot;,
-            &quot;created-at&quot;: &quot;2022-01-25T18:06:14+00:00&quot;,
-            &quot;updated-at&quot;: &quot;2022-01-25T18:06:14+00:00&quot;
+            &quot;zip&quot;: &quot;89335&quot;,
+            &quot;country&quot;: &quot;BVT&quot;,
+            &quot;created-at&quot;: &quot;2022-01-25T19:59:07+00:00&quot;,
+            &quot;updated-at&quot;: &quot;2022-01-25T19:59:07+00:00&quot;
         },
         {
-            &quot;id&quot;: 244,
-            &quot;name&quot;: &quot;Langworth, Pouros and Mayer&quot;,
-            &quot;founded-at&quot;: &quot;2015&quot;,
-            &quot;website-url&quot;: &quot;http://anderson.biz/aliquam-sit-ducimus-et-atque-aut.html&quot;,
-            &quot;twitter-url&quot;: &quot;http://kihn.com/sint-nobis-ratione-optio-tempora-nulla-nobis-eos-autem.html&quot;,
-            &quot;address&quot;: &quot;6625 Macejkovic Mews\nCarolinaview, TX 86253-4458&quot;,
-            &quot;city&quot;: &quot;Kiehnchester&quot;,
+            &quot;id&quot;: 328,
+            &quot;name&quot;: &quot;Shields, Blick and Murray&quot;,
+            &quot;founded-at&quot;: &quot;1990&quot;,
+            &quot;website-url&quot;: &quot;https://www.nolan.net/nostrum-facere-dolorem-et-et&quot;,
+            &quot;twitter-url&quot;: &quot;http://www.christiansen.org/praesentium-et-sapiente-non-quibusdam.html&quot;,
+            &quot;address&quot;: &quot;94554 Tillman Centers Apt. 616\nEast Carmelberg, ME 97868-5739&quot;,
+            &quot;city&quot;: &quot;Port Marilieview&quot;,
             &quot;state&quot;: &quot;&quot;,
-            &quot;zip&quot;: &quot;19450&quot;,
-            &quot;country&quot;: &quot;FSM&quot;,
-            &quot;created-at&quot;: &quot;2022-01-25T18:06:14+00:00&quot;,
-            &quot;updated-at&quot;: &quot;2022-01-25T18:06:14+00:00&quot;
+            &quot;zip&quot;: &quot;96720&quot;,
+            &quot;country&quot;: &quot;KIR&quot;,
+            &quot;created-at&quot;: &quot;2022-01-25T19:59:07+00:00&quot;,
+            &quot;updated-at&quot;: &quot;2022-01-25T19:59:07+00:00&quot;
         }
     ],
     &quot;links&quot;: {
@@ -393,12 +405,12 @@ print_r(json_decode((string) $body));</code></pre></div>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"quis\",
-    \"founded_year\": 893,
-    \"founded_month\": 11,
-    \"founded_day\": 16,
-    \"website_url\": \"xcudyxjhixhwtndjpzxnguqjvqqbafaizsjddvlgyzimgheyvuysgdgtjqumdmdpmcjyeatlwddcwizuhwmfwhpmhppsmqdrjcssmsmzzfaqsqurmsbbxvuirlgmxlmwawgh\",
-    \"twitter_url\": \"mytgicvnodqwolquaqdgrmkmoroaqqwswyintdloslsnptzvwjxzvikzjaemtrcvggezethypwhjkgkyath\"
+    \"name\": \"ullam\",
+    \"founded_year\": 564,
+    \"founded_month\": 7,
+    \"founded_day\": 13,
+    \"website_url\": \"prjmqxcffcrhdpdjpqisgbatuuyvtgjehvvwfrdahrvvbbljyszwokjhfkxzuuxqehtsncnpvkkaybyzsdr\",
+    \"twitter_url\": \"frrlxvvoetvmgzwejlhtzwrfqcckizndrlmybceclfvohmkbrderyckokleoxqugnobtyzadjugbbfjctpdertkqhqomrrklcqrmncrgfvtyobmtwwqpkwicczzlivxba\"
 }"
 </code></pre></div>
 
@@ -414,12 +426,12 @@ $response = $client-&gt;post(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'name' =&gt; 'quis',
-            'founded_year' =&gt; 893,
-            'founded_month' =&gt; 11,
-            'founded_day' =&gt; 16,
-            'website_url' =&gt; 'xcudyxjhixhwtndjpzxnguqjvqqbafaizsjddvlgyzimgheyvuysgdgtjqumdmdpmcjyeatlwddcwizuhwmfwhpmhppsmqdrjcssmsmzzfaqsqurmsbbxvuirlgmxlmwawgh',
-            'twitter_url' =&gt; 'mytgicvnodqwolquaqdgrmkmoroaqqwswyintdloslsnptzvwjxzvikzjaemtrcvggezethypwhjkgkyath',
+            'name' =&gt; 'ullam',
+            'founded_year' =&gt; 564,
+            'founded_month' =&gt; 7,
+            'founded_day' =&gt; 13,
+            'website_url' =&gt; 'prjmqxcffcrhdpdjpqisgbatuuyvtgjehvvwfrdahrvvbbljyszwokjhfkxzuuxqehtsncnpvkkaybyzsdr',
+            'twitter_url' =&gt; 'frrlxvvoetvmgzwejlhtzwrfqcckizndrlmybceclfvohmkbrderyckokleoxqugnobtyzadjugbbfjctpdertkqhqomrrklcqrmncrgfvtyobmtwwqpkwicczzlivxba',
         ],
     ]
 );
@@ -506,7 +518,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="text"
                name="name"
                data-endpoint="POSTapi-v1-publishers"
-               value="quis"
+               value="ullam"
                data-component="body" hidden>
     <br>
 <p>The name of the publisher.</p>
@@ -516,7 +528,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="number"
                name="founded_year"
                data-endpoint="POSTapi-v1-publishers"
-               value="893"
+               value="564"
                data-component="body" hidden>
     <br>
 <p>Must be at least 1900. Must not be greater than 2022.</p>
@@ -526,7 +538,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="number"
                name="founded_month"
                data-endpoint="POSTapi-v1-publishers"
-               value="11"
+               value="7"
                data-component="body" hidden>
     <br>
 <p>Must be at least 1. Must not be greater than 12.</p>
@@ -536,7 +548,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="number"
                name="founded_day"
                data-endpoint="POSTapi-v1-publishers"
-               value="16"
+               value="13"
                data-component="body" hidden>
     <br>
 <p>Must be at least 1. Must not be greater than 31.</p>
@@ -546,7 +558,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="text"
                name="website_url"
                data-endpoint="POSTapi-v1-publishers"
-               value="xcudyxjhixhwtndjpzxnguqjvqqbafaizsjddvlgyzimgheyvuysgdgtjqumdmdpmcjyeatlwddcwizuhwmfwhpmhppsmqdrjcssmsmzzfaqsqurmsbbxvuirlgmxlmwawgh"
+               value="prjmqxcffcrhdpdjpqisgbatuuyvtgjehvvwfrdahrvvbbljyszwokjhfkxzuuxqehtsncnpvkkaybyzsdr"
                data-component="body" hidden>
     <br>
 <p>Must be a valid URL. Must not be greater than 255 characters.</p>
@@ -556,7 +568,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="text"
                name="twitter_url"
                data-endpoint="POSTapi-v1-publishers"
-               value="mytgicvnodqwolquaqdgrmkmoroaqqwswyintdloslsnptzvwjxzvikzjaemtrcvggezethypwhjkgkyath"
+               value="frrlxvvoetvmgzwejlhtzwrfqcckizndrlmybceclfvohmkbrderyckokleoxqugnobtyzadjugbbfjctpdertkqhqomrrklcqrmncrgfvtyobmtwwqpkwicczzlivxba"
                data-component="body" hidden>
     <br>
 <p>Must be a valid URL. Must not be greater than 255 characters.</p>
@@ -577,7 +589,7 @@ print_r(json_decode((string) $body));</code></pre></div>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/v1/publishers/16" \
+    --get "http://localhost/api/v1/publishers/18" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -586,7 +598,7 @@ print_r(json_decode((string) $body));</code></pre></div>
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost/api/v1/publishers/16',
+    'http://localhost/api/v1/publishers/18',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
@@ -608,18 +620,18 @@ print_r(json_decode((string) $body));</code></pre></div>
 
 <code class="language-json">{
     &quot;data&quot;: {
-        &quot;id&quot;: 245,
-        &quot;name&quot;: &quot;Block-Schuppe&quot;,
-        &quot;founded-at&quot;: &quot;2016&quot;,
-        &quot;website-url&quot;: &quot;https://www.nitzsche.com/ipsam-atque-iure-eius-nesciunt-non-at-et-iste&quot;,
-        &quot;twitter-url&quot;: &quot;http://purdy.biz/et-nam-et-sit-sunt.html&quot;,
-        &quot;address&quot;: &quot;26939 Adolf Walk Apt. 779\nPort Hermanland, AR 29755&quot;,
-        &quot;city&quot;: &quot;Stammshire&quot;,
+        &quot;id&quot;: 329,
+        &quot;name&quot;: &quot;Hickle, Erdman and Jerde&quot;,
+        &quot;founded-at&quot;: &quot;1989&quot;,
+        &quot;website-url&quot;: &quot;http://www.moore.com/&quot;,
+        &quot;twitter-url&quot;: &quot;http://www.hettinger.biz/assumenda-dignissimos-tempora-quaerat-libero-aut-sint-et&quot;,
+        &quot;address&quot;: &quot;4715 Bernhard Pines\nSouth Madyson, GA 76347&quot;,
+        &quot;city&quot;: &quot;Oberbrunnerhaven&quot;,
         &quot;state&quot;: &quot;&quot;,
-        &quot;zip&quot;: &quot;66493-3912&quot;,
-        &quot;country&quot;: &quot;SXM&quot;,
-        &quot;created-at&quot;: &quot;2022-01-25T18:06:14+00:00&quot;,
-        &quot;updated-at&quot;: &quot;2022-01-25T18:06:14+00:00&quot;
+        &quot;zip&quot;: &quot;70236-8006&quot;,
+        &quot;country&quot;: &quot;ECU&quot;,
+        &quot;created-at&quot;: &quot;2022-01-25T19:59:08+00:00&quot;,
+        &quot;updated-at&quot;: &quot;2022-01-25T19:59:08+00:00&quot;
     }
 }</code>
  </pre>
@@ -677,7 +689,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="number"
                name="id"
                data-endpoint="GETapi-v1-publishers--id-"
-               value="16"
+               value="18"
                data-component="url" hidden>
     <br>
 <p>The ID of the publisher.</p>
@@ -698,17 +710,17 @@ print_r(json_decode((string) $body));</code></pre></div>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost/api/v1/publishers/14" \
+    "http://localhost/api/v1/publishers/16" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"cwppekgrjziqnzdxgspkxfrpypmidbeajkrumxftjvlofgfpxdsnleozsznnyviuzsshypxjqjelgelidjpqq\",
-    \"founded_year\": 1477,
-    \"founded_month\": 12,
-    \"founded_day\": 25,
-    \"website_url\": \"fjewfnskuqdiqklmucsulmlxznrwhgykrzldwjtmjaovwiaofjrmxoimfmvmzeuvmoyiisksbwmeppnbythtzurrvedidieobeghkuhhkv\",
-    \"twitter_url\": \"vlqkadv\"
+    \"name\": \"oqqkhmqojjeljhsrgvfwjekpvzxzthrdnafjghdgkpzblseqjjlyjdytmyicftyiagsovnceq\",
+    \"founded_year\": 1494,
+    \"founded_month\": 9,
+    \"founded_day\": 10,
+    \"website_url\": \"zbbigovhvhohwpdegqbkoopjmwrevxleabrklhgdbxpaapcnylzeodauaeyoiavnqkkqcmqjxjnumrffexddrnfdyoatrlsweqcjxgcvtqohrtxqqsijktutiucnzlrwcwfnuiqgetfgahmlwjzlfqqbunukeqgijfzdprfmeduxofmnwqgsngqpjleztgmvcmveqvhamfjaqbubmtjtpnmhvyzmsqe\",
+    \"twitter_url\": \"bwmzkefuzqguycbzzlqfiqhqakwwqgrkbfqhusojbuchatmcruumgucmmcituvbjixabteutjxmipxxpnpwtodifeoeokvdjzayeognfcdhjzujbhfhwfpfh\"
 }"
 </code></pre></div>
 
@@ -716,7 +728,7 @@ print_r(json_decode((string) $body));</code></pre></div>
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;put(
-    'http://localhost/api/v1/publishers/14',
+    'http://localhost/api/v1/publishers/16',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
@@ -724,12 +736,12 @@ $response = $client-&gt;put(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'name' =&gt; 'cwppekgrjziqnzdxgspkxfrpypmidbeajkrumxftjvlofgfpxdsnleozsznnyviuzsshypxjqjelgelidjpqq',
-            'founded_year' =&gt; 1477,
-            'founded_month' =&gt; 12,
-            'founded_day' =&gt; 25,
-            'website_url' =&gt; 'fjewfnskuqdiqklmucsulmlxznrwhgykrzldwjtmjaovwiaofjrmxoimfmvmzeuvmoyiisksbwmeppnbythtzurrvedidieobeghkuhhkv',
-            'twitter_url' =&gt; 'vlqkadv',
+            'name' =&gt; 'oqqkhmqojjeljhsrgvfwjekpvzxzthrdnafjghdgkpzblseqjjlyjdytmyicftyiagsovnceq',
+            'founded_year' =&gt; 1494,
+            'founded_month' =&gt; 9,
+            'founded_day' =&gt; 10,
+            'website_url' =&gt; 'zbbigovhvhohwpdegqbkoopjmwrevxleabrklhgdbxpaapcnylzeodauaeyoiavnqkkqcmqjxjnumrffexddrnfdyoatrlsweqcjxgcvtqohrtxqqsijktutiucnzlrwcwfnuiqgetfgahmlwjzlfqqbunukeqgijfzdprfmeduxofmnwqgsngqpjleztgmvcmveqvhamfjaqbubmtjtpnmhvyzmsqe',
+            'twitter_url' =&gt; 'bwmzkefuzqguycbzzlqfiqhqakwwqgrkbfqhusojbuchatmcruumgucmmcituvbjixabteutjxmipxxpnpwtodifeoeokvdjzayeognfcdhjzujbhfhwfpfh',
         ],
     ]
 );
@@ -820,7 +832,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="number"
                name="id"
                data-endpoint="PUTapi-v1-publishers--id-"
-               value="14"
+               value="16"
                data-component="url" hidden>
     <br>
 <p>The ID of the publisher.</p>
@@ -831,7 +843,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="text"
                name="name"
                data-endpoint="PUTapi-v1-publishers--id-"
-               value="cwppekgrjziqnzdxgspkxfrpypmidbeajkrumxftjvlofgfpxdsnleozsznnyviuzsshypxjqjelgelidjpqq"
+               value="oqqkhmqojjeljhsrgvfwjekpvzxzthrdnafjghdgkpzblseqjjlyjdytmyicftyiagsovnceq"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 100 characters.</p>
@@ -841,7 +853,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="number"
                name="founded_year"
                data-endpoint="PUTapi-v1-publishers--id-"
-               value="1477"
+               value="1494"
                data-component="body" hidden>
     <br>
 <p>Must be at least 1900. Must not be greater than 2022.</p>
@@ -851,7 +863,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="number"
                name="founded_month"
                data-endpoint="PUTapi-v1-publishers--id-"
-               value="12"
+               value="9"
                data-component="body" hidden>
     <br>
 <p>Must be at least 1. Must not be greater than 12.</p>
@@ -861,7 +873,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="number"
                name="founded_day"
                data-endpoint="PUTapi-v1-publishers--id-"
-               value="25"
+               value="10"
                data-component="body" hidden>
     <br>
 <p>Must be at least 1. Must not be greater than 31.</p>
@@ -871,7 +883,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="text"
                name="website_url"
                data-endpoint="PUTapi-v1-publishers--id-"
-               value="fjewfnskuqdiqklmucsulmlxznrwhgykrzldwjtmjaovwiaofjrmxoimfmvmzeuvmoyiisksbwmeppnbythtzurrvedidieobeghkuhhkv"
+               value="zbbigovhvhohwpdegqbkoopjmwrevxleabrklhgdbxpaapcnylzeodauaeyoiavnqkkqcmqjxjnumrffexddrnfdyoatrlsweqcjxgcvtqohrtxqqsijktutiucnzlrwcwfnuiqgetfgahmlwjzlfqqbunukeqgijfzdprfmeduxofmnwqgsngqpjleztgmvcmveqvhamfjaqbubmtjtpnmhvyzmsqe"
                data-component="body" hidden>
     <br>
 <p>Must be a valid URL. Must not be greater than 255 characters.</p>
@@ -881,7 +893,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="text"
                name="twitter_url"
                data-endpoint="PUTapi-v1-publishers--id-"
-               value="vlqkadv"
+               value="bwmzkefuzqguycbzzlqfiqhqakwwqgrkbfqhusojbuchatmcruumgucmmcituvbjixabteutjxmipxxpnpwtodifeoeokvdjzayeognfcdhjzujbhfhwfpfh"
                data-component="body" hidden>
     <br>
 <p>Must be a valid URL. Must not be greater than 255 characters.</p>
@@ -902,7 +914,7 @@ print_r(json_decode((string) $body));</code></pre></div>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/v1/publishers/12" \
+    "http://localhost/api/v1/publishers/20" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -911,7 +923,7 @@ print_r(json_decode((string) $body));</code></pre></div>
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;delete(
-    'http://localhost/api/v1/publishers/12',
+    'http://localhost/api/v1/publishers/20',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
@@ -942,19 +954,6 @@ print_r(json_decode((string) $body));</code></pre></div>
 
 <code class="language-json">{
     &quot;message&quot;: &quot;Resource not found.&quot;
-}</code>
- </pre>
-            <blockquote>
-            <p>Example response (422):</p>
-        </blockquote>
-                <pre>
-
-<code class="language-json">{
-  &quot;message&quot;: &quot;The given data was invalid.&quot;,
-  &quot;errors&quot;: {
-  &quot;name&quot;: [
-     &quot;Error message&quot;
-  ]
 }</code>
  </pre>
     </span>
@@ -1011,18 +1010,18 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="number"
                name="id"
                data-endpoint="DELETEapi-v1-publishers--id-"
-               value="12"
+               value="20"
                data-component="url" hidden>
     <br>
 <p>The ID of the publisher.</p>
             </p>
                     </form>
 
-        <h1 id="serie">Serie</h1>
+        <h1 id="series">Series</h1>
 
     
 
-            <h2 id="serie-GETapi-v1-series">GET api/v1/series</h2>
+            <h2 id="series-GETapi-v1-series">GET api/v1/series</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -1073,53 +1072,53 @@ print_r(json_decode((string) $body));</code></pre></div>
 <code class="language-json">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: 4,
-            &quot;title&quot;: &quot;Denis Steuber&quot;,
-            &quot;volume&quot;: 71,
-            &quot;description&quot;: &quot;Adipisci corrupti minima repudiandae quo corporis. Quae voluptas et beatae accusantium. Et nesciunt sed sit et. Ut facere voluptates cumque nostrum exercitationem est ut.&quot;,
-            &quot;start-year&quot;: &quot;2011&quot;,
-            &quot;end-year&quot;: &quot;2020&quot;,
-            &quot;rating&quot;: &quot;perspiciatis&quot;,
-            &quot;created-at&quot;: &quot;2016-04-26T21:15:06+00:00&quot;,
-            &quot;updated-at&quot;: &quot;1983-05-22T15:09:21+00:00&quot;,
+            &quot;id&quot;: 41,
+            &quot;title&quot;: &quot;Gage Runolfsdottir&quot;,
+            &quot;volume&quot;: 98,
+            &quot;description&quot;: &quot;Soluta a esse laborum similique ad voluptate quas. Accusantium at pariatur deserunt ut nemo ipsa velit. Labore qui at eligendi. Suscipit nemo assumenda iusto est.&quot;,
+            &quot;start-year&quot;: &quot;1977&quot;,
+            &quot;end-year&quot;: &quot;1976&quot;,
+            &quot;rating&quot;: &quot;est&quot;,
+            &quot;created-at&quot;: &quot;2011-06-22T21:41:22+00:00&quot;,
+            &quot;updated-at&quot;: &quot;1985-02-10T14:56:58+00:00&quot;,
             &quot;publisher&quot;: {
-                &quot;id&quot;: 246,
-                &quot;name&quot;: &quot;Sporer-Predovic&quot;,
-                &quot;founded-at&quot;: &quot;1971&quot;,
-                &quot;website-url&quot;: &quot;http://roberts.com/minima-dolores-magnam-laborum-unde&quot;,
-                &quot;twitter-url&quot;: &quot;http://www.sipes.net/qui-in-quidem-deserunt-ut&quot;,
-                &quot;address&quot;: &quot;618 Koelpin Trace\nLake Timothyport, IA 00708-0685&quot;,
-                &quot;city&quot;: &quot;Lake Shakiratown&quot;,
+                &quot;id&quot;: 330,
+                &quot;name&quot;: &quot;Harvey-Gottlieb&quot;,
+                &quot;founded-at&quot;: &quot;2006&quot;,
+                &quot;website-url&quot;: &quot;http://www.vonrueden.com/&quot;,
+                &quot;twitter-url&quot;: &quot;http://www.hill.com/&quot;,
+                &quot;address&quot;: &quot;9318 Curtis Falls\nSouth Jeromytown, IL 37412-9730&quot;,
+                &quot;city&quot;: &quot;Devonburgh&quot;,
                 &quot;state&quot;: &quot;&quot;,
-                &quot;zip&quot;: &quot;01768-7098&quot;,
-                &quot;country&quot;: &quot;MNG&quot;,
-                &quot;created-at&quot;: &quot;2022-01-25T18:06:14+00:00&quot;,
-                &quot;updated-at&quot;: &quot;2022-01-25T18:06:14+00:00&quot;
+                &quot;zip&quot;: &quot;57952-8236&quot;,
+                &quot;country&quot;: &quot;BLZ&quot;,
+                &quot;created-at&quot;: &quot;2022-01-25T19:59:08+00:00&quot;,
+                &quot;updated-at&quot;: &quot;2022-01-25T19:59:08+00:00&quot;
             }
         },
         {
-            &quot;id&quot;: 5,
-            &quot;title&quot;: &quot;Mrs. Kathryne Flatley&quot;,
-            &quot;volume&quot;: 20,
-            &quot;description&quot;: &quot;Enim quas nostrum pariatur a ut. Est et numquam ex consequatur repudiandae. Ab id et neque aut sed enim.&quot;,
-            &quot;start-year&quot;: &quot;2010&quot;,
-            &quot;end-year&quot;: &quot;2008&quot;,
-            &quot;rating&quot;: &quot;aliquid&quot;,
-            &quot;created-at&quot;: &quot;1992-05-02T11:36:56+00:00&quot;,
-            &quot;updated-at&quot;: &quot;2005-06-04T12:39:24+00:00&quot;,
+            &quot;id&quot;: 42,
+            &quot;title&quot;: &quot;Christ Rodriguez&quot;,
+            &quot;volume&quot;: 4,
+            &quot;description&quot;: &quot;Cumque eos corporis voluptates harum quaerat culpa ex laudantium. Porro magni ipsam esse molestiae provident. Et voluptatum sunt voluptatem vitae.&quot;,
+            &quot;start-year&quot;: &quot;2000&quot;,
+            &quot;end-year&quot;: &quot;1995&quot;,
+            &quot;rating&quot;: &quot;consequatur&quot;,
+            &quot;created-at&quot;: &quot;1982-01-12T07:00:32+00:00&quot;,
+            &quot;updated-at&quot;: &quot;1991-11-27T17:52:19+00:00&quot;,
             &quot;publisher&quot;: {
-                &quot;id&quot;: 247,
-                &quot;name&quot;: &quot;Rogahn, Gerlach and Stoltenberg&quot;,
-                &quot;founded-at&quot;: &quot;2005&quot;,
-                &quot;website-url&quot;: &quot;http://gutmann.biz/&quot;,
-                &quot;twitter-url&quot;: &quot;http://www.collier.net/quas-cum-et-qui-rerum-est-iure-sit-non.html&quot;,
-                &quot;address&quot;: &quot;7236 Beatty Vista\nJoanneport, NV 09103-8279&quot;,
-                &quot;city&quot;: &quot;Jonathonville&quot;,
+                &quot;id&quot;: 331,
+                &quot;name&quot;: &quot;Nikolaus-Hansen&quot;,
+                &quot;founded-at&quot;: &quot;2021&quot;,
+                &quot;website-url&quot;: &quot;https://emard.org/eligendi-ut-molestias-est-non.html&quot;,
+                &quot;twitter-url&quot;: &quot;http://www.hessel.com/dolor-hic-sed-qui-quas-repellat-libero-quos&quot;,
+                &quot;address&quot;: &quot;555 Cremin Walks\nWehnerfurt, RI 03091&quot;,
+                &quot;city&quot;: &quot;Crystelstad&quot;,
                 &quot;state&quot;: &quot;&quot;,
-                &quot;zip&quot;: &quot;28869-0540&quot;,
-                &quot;country&quot;: &quot;ALA&quot;,
-                &quot;created-at&quot;: &quot;2022-01-25T18:06:14+00:00&quot;,
-                &quot;updated-at&quot;: &quot;2022-01-25T18:06:14+00:00&quot;
+                &quot;zip&quot;: &quot;31959&quot;,
+                &quot;country&quot;: &quot;ZAF&quot;,
+                &quot;created-at&quot;: &quot;2022-01-25T19:59:08+00:00&quot;,
+                &quot;updated-at&quot;: &quot;2022-01-25T19:59:08+00:00&quot;
             }
         }
     ],
@@ -1237,6 +1236,659 @@ print_r(json_decode((string) $body));</code></pre></div>
 <p>The page size (default 30).</p>
             </p>
                 </form>
+
+            <h2 id="series-GETapi-v1-series--id-">GET api/v1/series/{id}</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-GETapi-v1-series--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/api/v1/series/11" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost/api/v1/series/11',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-v1-series--id-">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;data&quot;: {
+        &quot;id&quot;: 43,
+        &quot;title&quot;: &quot;Mrs. Ciara Maggio&quot;,
+        &quot;volume&quot;: 42,
+        &quot;description&quot;: &quot;Omnis quo harum facere. Qui quaerat inventore voluptas at fugit ex quo. Ut et alias voluptas et. Ullam sed laborum architecto dolores nostrum.&quot;,
+        &quot;start-year&quot;: &quot;2009&quot;,
+        &quot;end-year&quot;: &quot;2008&quot;,
+        &quot;rating&quot;: &quot;est&quot;,
+        &quot;created-at&quot;: &quot;1982-08-25T13:38:35+00:00&quot;,
+        &quot;updated-at&quot;: &quot;1992-11-17T06:13:04+00:00&quot;,
+        &quot;publisher&quot;: {
+            &quot;id&quot;: 332,
+            &quot;name&quot;: &quot;Connelly Ltd&quot;,
+            &quot;founded-at&quot;: &quot;1994&quot;,
+            &quot;website-url&quot;: &quot;http://www.erdman.com/&quot;,
+            &quot;twitter-url&quot;: &quot;http://mckenzie.com/&quot;,
+            &quot;address&quot;: &quot;182 Schuster Shoals Apt. 566\nEast Rory, MO 74860&quot;,
+            &quot;city&quot;: &quot;Larkinside&quot;,
+            &quot;state&quot;: &quot;&quot;,
+            &quot;zip&quot;: &quot;56643&quot;,
+            &quot;country&quot;: &quot;LCA&quot;,
+            &quot;created-at&quot;: &quot;2022-01-25T19:59:08+00:00&quot;,
+            &quot;updated-at&quot;: &quot;2022-01-25T19:59:08+00:00&quot;
+        }
+    }
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-v1-series--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-v1-series--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-v1-series--id-"></code></pre>
+</span>
+<span id="execution-error-GETapi-v1-series--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-v1-series--id-"></code></pre>
+</span>
+<form id="form-GETapi-v1-series--id-" data-method="GET"
+      data-path="api/v1/series/{id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-v1-series--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-v1-series--id-"
+                    onclick="tryItOut('GETapi-v1-series--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-v1-series--id-"
+                    onclick="cancelTryOut('GETapi-v1-series--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-v1-series--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/v1/series/{id}</code></b>
+        </p>
+                <p>
+            <label id="auth-GETapi-v1-series--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="GETapi-v1-series--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="GETapi-v1-series--id-"
+               value="11"
+               data-component="url" hidden>
+    <br>
+<p>The ID of the series.</p>
+            </p>
+                    </form>
+
+            <h2 id="series-POSTapi-v1-publishers--publisher--series">POST api/v1/publishers/{publisher}/series</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-POSTapi-v1-publishers--publisher--series">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost/api/v1/publishers/8/series" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"title\": \"hnvbjutxvwnonwfbmkgaiuezpozehrkeygmhrzyryuergbudpfumpbknrcgiuguwphelbwriyqugqfshitimcbyhxntdlwrjwkuitikeakipsdlgfmqtsb\",
+    \"volume\": 1,
+    \"description\": \"xjrsacyvchofybxoynnhcpzjznajtjxozbktnklqupxivhxiprjlcpswinxtdqiscsnslxgnalpcfoixgnnvkkoznojzigszbvfycjaqoqwxrdlvhegehxxjkoasyc\",
+    \"start_year\": 1069,
+    \"end_year\": 477,
+    \"rating\": \"ighqzxihbd\"
+}"
+</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;post(
+    'http://localhost/api/v1/publishers/8/series',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+        'json' =&gt; [
+            'title' =&gt; 'hnvbjutxvwnonwfbmkgaiuezpozehrkeygmhrzyryuergbudpfumpbknrcgiuguwphelbwriyqugqfshitimcbyhxntdlwrjwkuitikeakipsdlgfmqtsb',
+            'volume' =&gt; 1,
+            'description' =&gt; 'xjrsacyvchofybxoynnhcpzjznajtjxozbktnklqupxivhxiprjlcpswinxtdqiscsnslxgnalpcfoixgnnvkkoznojzigszbvfycjaqoqwxrdlvhegehxxjkoasyc',
+            'start_year' =&gt; 1069,
+            'end_year' =&gt; 477,
+            'rating' =&gt; 'ighqzxihbd',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-v1-publishers--publisher--series">
+            <blockquote>
+            <p>Example response (202):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;message&quot;: &quot;Accepted&quot;
+}</code>
+ </pre>
+            <blockquote>
+            <p>Example response (422):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;message&quot;: &quot;The given data was invalid.&quot;,
+    &quot;errors&quot;: {
+        &quot;field&quot;: [
+            &quot;Error message&quot;
+        ]
+    }
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-v1-publishers--publisher--series" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-v1-publishers--publisher--series"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-v1-publishers--publisher--series"></code></pre>
+</span>
+<span id="execution-error-POSTapi-v1-publishers--publisher--series" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-v1-publishers--publisher--series"></code></pre>
+</span>
+<form id="form-POSTapi-v1-publishers--publisher--series" data-method="POST"
+      data-path="api/v1/publishers/{publisher}/series"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-v1-publishers--publisher--series', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-v1-publishers--publisher--series"
+                    onclick="tryItOut('POSTapi-v1-publishers--publisher--series');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-v1-publishers--publisher--series"
+                    onclick="cancelTryOut('POSTapi-v1-publishers--publisher--series');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-v1-publishers--publisher--series" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/v1/publishers/{publisher}/series</code></b>
+        </p>
+                <p>
+            <label id="auth-POSTapi-v1-publishers--publisher--series" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="POSTapi-v1-publishers--publisher--series"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>publisher</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="publisher"
+               data-endpoint="POSTapi-v1-publishers--publisher--series"
+               value="8"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>title</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="title"
+               data-endpoint="POSTapi-v1-publishers--publisher--series"
+               value="hnvbjutxvwnonwfbmkgaiuezpozehrkeygmhrzyryuergbudpfumpbknrcgiuguwphelbwriyqugqfshitimcbyhxntdlwrjwkuitikeakipsdlgfmqtsb"
+               data-component="body" hidden>
+    <br>
+<p>Must not be greater than 150 characters.</p>
+        </p>
+                <p>
+            <b><code>volume</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="volume"
+               data-endpoint="POSTapi-v1-publishers--publisher--series"
+               value="1"
+               data-component="body" hidden>
+    <br>
+<p>Must be at least 1.</p>
+        </p>
+                <p>
+            <b><code>description</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="description"
+               data-endpoint="POSTapi-v1-publishers--publisher--series"
+               value="xjrsacyvchofybxoynnhcpzjznajtjxozbktnklqupxivhxiprjlcpswinxtdqiscsnslxgnalpcfoixgnnvkkoznojzigszbvfycjaqoqwxrdlvhegehxxjkoasyc"
+               data-component="body" hidden>
+    <br>
+<p>Must not be greater than 1000 characters.</p>
+        </p>
+                <p>
+            <b><code>start_year</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="start_year"
+               data-endpoint="POSTapi-v1-publishers--publisher--series"
+               value="1069"
+               data-component="body" hidden>
+    <br>
+<p>Must be at least 1900. Must not be greater than 2023.</p>
+        </p>
+                <p>
+            <b><code>end_year</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="end_year"
+               data-endpoint="POSTapi-v1-publishers--publisher--series"
+               value="477"
+               data-component="body" hidden>
+    <br>
+<p>Must be at least 1900. Must not be greater than 2023.</p>
+        </p>
+                <p>
+            <b><code>rating</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="rating"
+               data-endpoint="POSTapi-v1-publishers--publisher--series"
+               value="ighqzxihbd"
+               data-component="body" hidden>
+    <br>
+<p>Must not be greater than 30 characters.</p>
+        </p>
+        </form>
+
+            <h2 id="series-PUTapi-v1-series--id-">PUT api/v1/series/{id}</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-PUTapi-v1-series--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request PUT \
+    "http://localhost/api/v1/series/3" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"title\": \"cnfwvgexjpylidfrciyiptjzyclizxtlug\",
+    \"volume\": 0,
+    \"description\": \"xuvmnvwkghtomteyxgpnunwzobfhavbhwriskwulbpzrcjndfoffqlsnyhvwirrbldutndprsdskxosxbfngyanwxbqqwnrfxdxcrgmnwhprfhibflzhyzljhsfxijrpexbfacjaamyvdiqvxtskgluannfxskbqrsnyvotlcsyyaausfdkhefaemwhzicgvaecatlpjlorpiodsywqxywaxegugcntmyuozygyxqvixxacjbgqfddjpgjluccgqnkcsilcjsmxidkyrehzywkkkvlwabwbrbbwazjscffomydrbwilsabgpqkxsnpriaggarxpdilndmygdkafpssjmstpdmhpkxcrlcigileyujkwbnodocavoftbisndpwcuzvj\",
+    \"start_year\": 1017,
+    \"end_year\": 219,
+    \"rating\": \"ageibnwvwcoeasnzcclthonxdru\"
+}"
+</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;put(
+    'http://localhost/api/v1/series/3',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+        'json' =&gt; [
+            'title' =&gt; 'cnfwvgexjpylidfrciyiptjzyclizxtlug',
+            'volume' =&gt; 0,
+            'description' =&gt; 'xuvmnvwkghtomteyxgpnunwzobfhavbhwriskwulbpzrcjndfoffqlsnyhvwirrbldutndprsdskxosxbfngyanwxbqqwnrfxdxcrgmnwhprfhibflzhyzljhsfxijrpexbfacjaamyvdiqvxtskgluannfxskbqrsnyvotlcsyyaausfdkhefaemwhzicgvaecatlpjlorpiodsywqxywaxegugcntmyuozygyxqvixxacjbgqfddjpgjluccgqnkcsilcjsmxidkyrehzywkkkvlwabwbrbbwazjscffomydrbwilsabgpqkxsnpriaggarxpdilndmygdkafpssjmstpdmhpkxcrlcigileyujkwbnodocavoftbisndpwcuzvj',
+            'start_year' =&gt; 1017,
+            'end_year' =&gt; 219,
+            'rating' =&gt; 'ageibnwvwcoeasnzcclthonxdru',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+</span>
+
+<span id="example-responses-PUTapi-v1-series--id-">
+            <blockquote>
+            <p>Example response (202):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;message&quot;: &quot;Accepted&quot;
+}</code>
+ </pre>
+            <blockquote>
+            <p>Example response (422):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;message&quot;: &quot;The given data was invalid.&quot;,
+    &quot;errors&quot;: {
+        &quot;field&quot;: [
+            &quot;Error message&quot;
+        ]
+    }
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-PUTapi-v1-series--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-PUTapi-v1-series--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-PUTapi-v1-series--id-"></code></pre>
+</span>
+<span id="execution-error-PUTapi-v1-series--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-PUTapi-v1-series--id-"></code></pre>
+</span>
+<form id="form-PUTapi-v1-series--id-" data-method="PUT"
+      data-path="api/v1/series/{id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('PUTapi-v1-series--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-PUTapi-v1-series--id-"
+                    onclick="tryItOut('PUTapi-v1-series--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-PUTapi-v1-series--id-"
+                    onclick="cancelTryOut('PUTapi-v1-series--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-PUTapi-v1-series--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-darkblue">PUT</small>
+            <b><code>api/v1/series/{id}</code></b>
+        </p>
+            <p>
+            <small class="badge badge-purple">PATCH</small>
+            <b><code>api/v1/series/{id}</code></b>
+        </p>
+                <p>
+            <label id="auth-PUTapi-v1-series--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="PUTapi-v1-series--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="PUTapi-v1-series--id-"
+               value="3"
+               data-component="url" hidden>
+    <br>
+<p>The ID of the series.</p>
+            </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>title</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="title"
+               data-endpoint="PUTapi-v1-series--id-"
+               value="cnfwvgexjpylidfrciyiptjzyclizxtlug"
+               data-component="body" hidden>
+    <br>
+<p>Must not be greater than 150 characters.</p>
+        </p>
+                <p>
+            <b><code>volume</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="volume"
+               data-endpoint="PUTapi-v1-series--id-"
+               value="0"
+               data-component="body" hidden>
+    <br>
+<p>Must be at least 1.</p>
+        </p>
+                <p>
+            <b><code>description</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="description"
+               data-endpoint="PUTapi-v1-series--id-"
+               value="xuvmnvwkghtomteyxgpnunwzobfhavbhwriskwulbpzrcjndfoffqlsnyhvwirrbldutndprsdskxosxbfngyanwxbqqwnrfxdxcrgmnwhprfhibflzhyzljhsfxijrpexbfacjaamyvdiqvxtskgluannfxskbqrsnyvotlcsyyaausfdkhefaemwhzicgvaecatlpjlorpiodsywqxywaxegugcntmyuozygyxqvixxacjbgqfddjpgjluccgqnkcsilcjsmxidkyrehzywkkkvlwabwbrbbwazjscffomydrbwilsabgpqkxsnpriaggarxpdilndmygdkafpssjmstpdmhpkxcrlcigileyujkwbnodocavoftbisndpwcuzvj"
+               data-component="body" hidden>
+    <br>
+<p>Must not be greater than 1000 characters.</p>
+        </p>
+                <p>
+            <b><code>start_year</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="start_year"
+               data-endpoint="PUTapi-v1-series--id-"
+               value="1017"
+               data-component="body" hidden>
+    <br>
+<p>Must be at least 1900. Must not be greater than 2023.</p>
+        </p>
+                <p>
+            <b><code>end_year</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="end_year"
+               data-endpoint="PUTapi-v1-series--id-"
+               value="219"
+               data-component="body" hidden>
+    <br>
+<p>Must be at least 1900. Must not be greater than 2023.</p>
+        </p>
+                <p>
+            <b><code>rating</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="rating"
+               data-endpoint="PUTapi-v1-series--id-"
+               value="ageibnwvwcoeasnzcclthonxdru"
+               data-component="body" hidden>
+    <br>
+<p>Must not be greater than 30 characters.</p>
+        </p>
+        </form>
+
+            <h2 id="series-DELETEapi-v1-series--id-">DELETE api/v1/series/{id}</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-DELETEapi-v1-series--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request DELETE \
+    "http://localhost/api/v1/series/15" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;delete(
+    'http://localhost/api/v1/series/15',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+</span>
+
+<span id="example-responses-DELETEapi-v1-series--id-">
+            <blockquote>
+            <p>Example response (202):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;message&quot;: &quot;Accepted&quot;
+}</code>
+ </pre>
+            <blockquote>
+            <p>Example response (404):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;message&quot;: &quot;Resource not found.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-DELETEapi-v1-series--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-DELETEapi-v1-series--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-DELETEapi-v1-series--id-"></code></pre>
+</span>
+<span id="execution-error-DELETEapi-v1-series--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-DELETEapi-v1-series--id-"></code></pre>
+</span>
+<form id="form-DELETEapi-v1-series--id-" data-method="DELETE"
+      data-path="api/v1/series/{id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('DELETEapi-v1-series--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-DELETEapi-v1-series--id-"
+                    onclick="tryItOut('DELETEapi-v1-series--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-DELETEapi-v1-series--id-"
+                    onclick="cancelTryOut('DELETEapi-v1-series--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-DELETEapi-v1-series--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-red">DELETE</small>
+            <b><code>api/v1/series/{id}</code></b>
+        </p>
+                <p>
+            <label id="auth-DELETEapi-v1-series--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="DELETEapi-v1-series--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="DELETEapi-v1-series--id-"
+               value="15"
+               data-component="url" hidden>
+    <br>
+<p>The ID of the series.</p>
+            </p>
+                    </form>
 
     
 
