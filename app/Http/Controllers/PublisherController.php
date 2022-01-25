@@ -4,105 +4,35 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\PublisherRequest;
 use App\Http\Resources\PublisherResource;
+use App\Jobs\CreatePublisher;
+use App\Jobs\DeletePublisher;
+use App\Jobs\UpdatePublisher;
 use App\Models\Publisher;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Spatie\QueryBuilder\AllowedFilter;
 use Spatie\QueryBuilder\QueryBuilder;
 
 /**
- * @group Publisher management
+ * @group Publisher
  */
 class PublisherController extends Controller
 {
     /**
-     * Fetch a list of all publishers
-     *
-     * This endpoint will return a list of all publishers. You can sort the list by publisher name or founded year. You
-     * also have the ability to filter the list by publisher name, country, founded year of between two years.
-     *
-     *
      * @authenticated
      *
      * @header Accept application/json
      *
      * @queryParam sort The field to sort the list by. Example: name
-     * @queryParam filter[name] string Filter by publisher name. Example: Marvel
+     * @queryParam filter[name] string Filter by publisher name containing value. Example: comics
      * @queryParam filter[country] string Filter by publisher country. Example: USA
      * @queryParam filter[founded-year] int Filter by publisher founded year. Example: 1940
      * @queryParam filter[founded-year-between] string Filter by publisher founded year in the given range. Example: 1940,1990
      * @queryParam page[number] int The page number (default 1). Example: 2
      * @queryParam page[size] int The page size (default 30). Example: 10
      *
-     * @response {
-     *   "data": [
-     *     {
-     *       "id": 1,
-     *       "name": "Publisher 1",
-     *       "founded-at": "1990",
-     *       "website-url": "http://www.publisher1.com",
-     *       "twitter-url": "http://www.twitter.com/publisher1",
-     *       "address": "Address 1",
-     *       "city": "City 1",
-     *       "state": "State 1",
-     *       "zip": "12345",
-     *       "country": "DEU",
-     *       "created-at": "2020-01-01T00:00:00+00:00",
-     *       "updated-at": "2020-01-01T00:00:00+00:00"
-     *     },
-     *     {
-     *       "id": 2,
-     *       "name": "Publisher 2",
-     *       "founded-at": "1990",
-     *       "website-url": "http://www.publisher2.com",
-     *       "twitter-url": "http://www.twitter.com/publisher2",
-     *       "address": "Address 2",
-     *       "city": "City 2",
-     *       "state": "State 2",
-     *       "zip": "12345",
-     *       "country": "DEU",
-     *       "created-at": "2020-01-01T00:00:00+00:00",
-     *       "updated-at": "2020-01-01T00:00:00+00:00"
-     *     },
-     *   ],
-     *   "links": {
-     *     "first": "http://localhost/api/publishers?page%5Bnumber%5D=1",
-     *     "last": "http://localhost/api/publishers?page%5Bnumber%5D=4",
-     *     "prev": null,
-     *     "next": "http://localhost/api/publishers?page%5Bnumber%5D=2"
-     *   },
-     *   "meta": {
-     *      "current_page": 1,
-     *      "from": 1,
-     *      "last_page": 4,
-     *      "links": [
-     *        {
-     *          "url": null,
-     *          "label": "&laquo; Previous",
-     *          "active": false
-     *        },
-     *        {
-     *          "url": "http://localhost/api/publishers?sort=name&page%5Bnumber%5D=1",
-     *          "label": "1",
-     *          "active": true
-     *        },
-     *        {
-     *          "url": "http://localhost/api/publishers?sort=name&page%5Bnumber%5D=2",
-     *          "label": "2",
-     *          "active": false
-     *        },
-     *        {
-     *          "url": "http://localhost/api/publishers?sort=name&page%5Bnumber%5D=2",
-     *          "label": "Next &raquo;",
-     *          "active": false
-     *        }
-     *      ],
-     *      "path": "http://localhost/api/publishers",
-     *      "per_page": 30,
-     *      "to": 30,
-     *      "total": 100
-     *    }
-     * }
-     *
+     * @apiResourceCollection App\Http\Resources\PublisherResource
+     * @apiResourceModel App\Models\Publisher paginate=30
      */
     public function index(): AnonymousResourceCollection
     {
@@ -124,28 +54,10 @@ class PublisherController extends Controller
     }
 
     /**
-     * Fetch a single publisher
-     *
-     * This endpoint will return a single publisher specified by the id.
-     *
      * @authenticated
      *
-     * @response {
-     *   "data": {
-     *     "id": 1,
-     *     "name": "Publisher 1",
-     *     "founded-at": "1990",
-     *     "website-url": "http://www.publisher1.com",
-     *     "twitter-url": "http://www.twitter.com/publisher1",
-     *     "address": "Address 1",
-     *     "city": "City 1",
-     *     "state": "State 1",
-     *     "zip": "12345",
-     *     "country": "DEU",
-     *     "created-at": "2020-01-01T00:00:00+00:00",
-     *     "updated-at": "2020-01-01T00:00:00+00:00"
-     *   }
-     * }
+     * @apiResource App\Http\Resources\PublisherResource
+     * @apiResourceModel App\Models\Publisher
      */
     public function show(Publisher $publisher): PublisherResource
     {
@@ -153,31 +65,14 @@ class PublisherController extends Controller
     }
 
     /**
-     * Create a new publisher
-     *
-     * This endpoint will create a new publisher.
-     *
      * @authenticated
      *
      * @header Accept application/json
      *
      * @bodyParam name string required The name of the publisher.
      *
-     * @response {
-     *   "data": {
-     *     "id": 1,
-     *     "name": "Publisher 1",
-     *     "founded-at": "1990",
-     *     "website-url": "http://www.publisher1.com",
-     *     "twitter-url": "http://www.twitter.com/publisher1",
-     *     "address": "Address 1",
-     *     "city": "City 1",
-     *     "state": "State 1",
-     *     "zip": "12345",
-     *     "country": "DEU",
-     *     "created-at": "2020-01-01T00:00:00+00:00",
-     *     "updated-at": "2020-01-01T00:00:00+00:00"
-     *   }
+     * @response 202 {
+     *     "message": "Accepted"
      * }
      *
      * @response 422 {
@@ -189,37 +84,20 @@ class PublisherController extends Controller
      *     }
      * }
      */
-    public function store(PublisherRequest $request): PublisherResource
+    public function store(PublisherRequest $request): JsonResponse
     {
-        $publisher = Publisher::create($request->validated());
+        CreatePublisher::dispatch($request->validated());
 
-        return new PublisherResource($publisher);
+        return response()->json(['message' => 'Accepted'], 202);
     }
 
     /**
-     * Update an existing publisher
-     *
-     * This endpoint will update an existing publisher.
-     *
      * @authenticated
      *
      * @header Accept application/json
      *
-     * @response {
-     *   "data": {
-     *     "id": 1,
-     *     "name": "Publisher 1",
-     *     "founded-at": "1990",
-     *     "website-url": "http://www.publisher1.com",
-     *     "twitter-url": "http://www.twitter.com/publisher1",
-     *     "address": "Address 1",
-     *     "city": "City 1",
-     *     "state": "State 1",
-     *     "zip": "12345",
-     *     "country": "DEU",
-     *     "created-at": "2020-01-01T00:00:00+00:00",
-     *     "updated-at": "2020-01-01T00:00:00+00:00"
-     *   }
+     * @response 202 {
+     *     "message": "Accepted"
      * }
      *
      * @response 422 {
@@ -231,37 +109,20 @@ class PublisherController extends Controller
      *     }
      * }
      */
-    public function update(PublisherRequest $request, Publisher $publisher): PublisherResource
+    public function update(PublisherRequest $request, Publisher $publisher): JsonResponse
     {
-        $publisher->update($request->validated());
+        UpdatePublisher::dispatch($publisher, $request->validated());
 
-        return new PublisherResource($publisher);
+        return response()->json(['message' => 'Accepted'], 202);
     }
 
     /**
-     * Delete an existing publisher
-     *
-     * This endpoint will delete an existing publisher.
-     *
      * @authenticated
      *
      * @header Accept application/json
      *
-     * @response {
-     *   "data": {
-     *     "id": 1,
-     *     "name": "Publisher 1",
-     *     "founded-at": "1990",
-     *     "website-url": "http://www.publisher1.com",
-     *     "twitter-url": "http://www.twitter.com/publisher1",
-     *     "address": "Address 1",
-     *     "city": "City 1",
-     *     "state": "State 1",
-     *     "zip": "12345",
-     *     "country": "DEU",
-     *     "created-at": "2020-01-01T00:00:00+00:00",
-     *     "updated-at": "2020-01-01T00:00:00+00:00"
-     *   }
+     * @response 202 {
+     *     "message": "Accepted"
      * }
      *
      * @response 404 {
@@ -276,10 +137,10 @@ class PublisherController extends Controller
      *   ]
      * }
      */
-    public function destroy(Publisher $publisher): PublisherResource
+    public function destroy(Publisher $publisher): JsonResponse
     {
-        $publisher->delete();
+        DeletePublisher::dispatch($publisher);
 
-        return new PublisherResource($publisher);
+        return response()->json(['message' => 'Accepted'], 202);
     }
 }

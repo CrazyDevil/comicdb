@@ -7,10 +7,10 @@ servers:
   -
     url: 'http://localhost'
 paths:
-  /api/publishers:
+  /api/v1/publishers:
     get:
-      summary: 'Fetch a list of all publishers'
-      description: "This endpoint will return a list of all publishers. You can sort the list by publisher name or founded year. You\nalso have the ability to filter the list by publisher name, country, founded year of between two years."
+      summary: ''
+      description: ''
       parameters:
         -
           in: query
@@ -25,13 +25,13 @@ paths:
         -
           in: query
           name: 'filter[name]'
-          description: 'Filter by publisher name.'
-          example: Marvel
+          description: 'Filter by publisher name containing value.'
+          example: comics
           required: false
           schema:
             type: string
-            description: 'Filter by publisher name.'
-            example: Marvel
+            description: 'Filter by publisher name containing value.'
+            example: comics
         -
           in: query
           name: 'filter[country]'
@@ -107,15 +107,130 @@ paths:
         200:
           description: ''
           content:
-            text/plain:
+            application/json:
               schema:
-                type: string
-                example: "{\n  \"data\": [\n    {\n      \"id\": 1,\n      \"name\": \"Publisher 1\",\n      \"founded-at\": \"1990\",\n      \"website-url\": \"http://www.publisher1.com\",\n      \"twitter-url\": \"http://www.twitter.com/publisher1\",\n      \"address\": \"Address 1\",\n      \"city\": \"City 1\",\n      \"state\": \"State 1\",\n      \"zip\": \"12345\",\n      \"country\": \"DEU\",\n      \"created-at\": \"2020-01-01T00:00:00+00:00\",\n      \"updated-at\": \"2020-01-01T00:00:00+00:00\"\n    },\n    {\n      \"id\": 2,\n      \"name\": \"Publisher 2\",\n      \"founded-at\": \"1990\",\n      \"website-url\": \"http://www.publisher2.com\",\n      \"twitter-url\": \"http://www.twitter.com/publisher2\",\n      \"address\": \"Address 2\",\n      \"city\": \"City 2\",\n      \"state\": \"State 2\",\n      \"zip\": \"12345\",\n      \"country\": \"DEU\",\n      \"created-at\": \"2020-01-01T00:00:00+00:00\",\n      \"updated-at\": \"2020-01-01T00:00:00+00:00\"\n    },\n  ],\n  \"links\": {\n    \"first\": \"http://localhost/api/publishers?page%5Bnumber%5D=1\",\n    \"last\": \"http://localhost/api/publishers?page%5Bnumber%5D=4\",\n    \"prev\": null,\n    \"next\": \"http://localhost/api/publishers?page%5Bnumber%5D=2\"\n  },\n  \"meta\": {\n     \"current_page\": 1,\n     \"from\": 1,\n     \"last_page\": 4,\n     \"links\": [\n       {\n         \"url\": null,\n         \"label\": \"&laquo; Previous\",\n         \"active\": false\n       },\n       {\n         \"url\": \"http://localhost/api/publishers?sort=name&page%5Bnumber%5D=1\",\n         \"label\": \"1\",\n         \"active\": true\n       },\n       {\n         \"url\": \"http://localhost/api/publishers?sort=name&page%5Bnumber%5D=2\",\n         \"label\": \"2\",\n         \"active\": false\n       },\n       {\n         \"url\": \"http://localhost/api/publishers?sort=name&page%5Bnumber%5D=2\",\n         \"label\": \"Next &raquo;\",\n         \"active\": false\n       }\n     ],\n     \"path\": \"http://localhost/api/publishers\",\n     \"per_page\": 30,\n     \"to\": 30,\n     \"total\": 100\n   }\n}"
+                type: object
+                example:
+                  data:
+                    -
+                      id: 243
+                      name: Hammes-Ritchie
+                      founded-at: '2001'
+                      website-url: 'http://www.cormier.com/eos-blanditiis-architecto-id-molestiae-quisquam-nisi-aut'
+                      twitter-url: 'http://www.lesch.com/'
+                      address: "230 Krajcik Locks Apt. 181\nNew Gussiehaven, MD 81233-6458"
+                      city: 'North D''angelo'
+                      state: ''
+                      zip: 05624-0612
+                      country: HUN
+                      created-at: '2022-01-25T18:06:14+00:00'
+                      updated-at: '2022-01-25T18:06:14+00:00'
+                    -
+                      id: 244
+                      name: 'Langworth, Pouros and Mayer'
+                      founded-at: '2015'
+                      website-url: 'http://anderson.biz/aliquam-sit-ducimus-et-atque-aut.html'
+                      twitter-url: 'http://kihn.com/sint-nobis-ratione-optio-tempora-nulla-nobis-eos-autem.html'
+                      address: "6625 Macejkovic Mews\nCarolinaview, TX 86253-4458"
+                      city: Kiehnchester
+                      state: ''
+                      zip: '19450'
+                      country: FSM
+                      created-at: '2022-01-25T18:06:14+00:00'
+                      updated-at: '2022-01-25T18:06:14+00:00'
+                  links:
+                    first: '/?page=1'
+                    last: '/?page=1'
+                    prev: null
+                    next: null
+                  meta:
+                    current_page: 1
+                    from: 1
+                    last_page: 1
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: '/?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: null
+                        label: 'Next &raquo;'
+                        active: false
+                    path: /
+                    per_page: '30'
+                    to: 2
+                    total: 2
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 243
+                        name: Hammes-Ritchie
+                        founded-at: '2001'
+                        website-url: 'http://www.cormier.com/eos-blanditiis-architecto-id-molestiae-quisquam-nisi-aut'
+                        twitter-url: 'http://www.lesch.com/'
+                        address: "230 Krajcik Locks Apt. 181\nNew Gussiehaven, MD 81233-6458"
+                        city: 'North D''angelo'
+                        state: ''
+                        zip: 05624-0612
+                        country: HUN
+                        created-at: '2022-01-25T18:06:14+00:00'
+                        updated-at: '2022-01-25T18:06:14+00:00'
+                      -
+                        id: 244
+                        name: 'Langworth, Pouros and Mayer'
+                        founded-at: '2015'
+                        website-url: 'http://anderson.biz/aliquam-sit-ducimus-et-atque-aut.html'
+                        twitter-url: 'http://kihn.com/sint-nobis-ratione-optio-tempora-nulla-nobis-eos-autem.html'
+                        address: "6625 Macejkovic Mews\nCarolinaview, TX 86253-4458"
+                        city: Kiehnchester
+                        state: ''
+                        zip: '19450'
+                        country: FSM
+                        created-at: '2022-01-25T18:06:14+00:00'
+                        updated-at: '2022-01-25T18:06:14+00:00'
+                    items:
+                      type: object
+                  links:
+                    type: object
+                    example:
+                      first: '/?page=1'
+                      last: '/?page=1'
+                      prev: null
+                      next: null
+                  meta:
+                    type: object
+                    example:
+                      current_page: 1
+                      from: 1
+                      last_page: 1
+                      links:
+                        -
+                          url: null
+                          label: '&laquo; Previous'
+                          active: false
+                        -
+                          url: '/?page=1'
+                          label: '1'
+                          active: true
+                        -
+                          url: null
+                          label: 'Next &raquo;'
+                          active: false
+                      path: /
+                      per_page: '30'
+                      to: 2
+                      total: 2
       tags:
-        - 'Publisher management'
+        - Publisher
     post:
-      summary: 'Create a new publisher'
-      description: 'This endpoint will create a new publisher.'
+      summary: ''
+      description: ''
       parameters:
         -
           in: header
@@ -139,42 +254,18 @@ paths:
           schema:
             type: string
       responses:
-        200:
+        202:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  data:
-                    id: 1
-                    name: 'Publisher 1'
-                    founded-at: '1990'
-                    website-url: 'http://www.publisher1.com'
-                    twitter-url: 'http://www.twitter.com/publisher1'
-                    address: 'Address 1'
-                    city: 'City 1'
-                    state: 'State 1'
-                    zip: '12345'
-                    country: DEU
-                    created-at: '2020-01-01T00:00:00+00:00'
-                    updated-at: '2020-01-01T00:00:00+00:00'
+                  message: Accepted
                 properties:
-                  data:
-                    type: object
-                    example:
-                      id: 1
-                      name: 'Publisher 1'
-                      founded-at: '1990'
-                      website-url: 'http://www.publisher1.com'
-                      twitter-url: 'http://www.twitter.com/publisher1'
-                      address: 'Address 1'
-                      city: 'City 1'
-                      state: 'State 1'
-                      zip: '12345'
-                      country: DEU
-                      created-at: '2020-01-01T00:00:00+00:00'
-                      updated-at: '2020-01-01T00:00:00+00:00'
+                  message:
+                    type: string
+                    example: Accepted
         422:
           description: ''
           content:
@@ -196,7 +287,7 @@ paths:
                       field:
                         - 'Error message'
       tags:
-        - 'Publisher management'
+        - Publisher
       requestBody:
         required: true
         content:
@@ -207,33 +298,33 @@ paths:
                 name:
                   type: string
                   description: 'The name of the publisher.'
-                  example: soluta
+                  example: quis
                 founded_year:
                   type: integer
                   description: 'Must be at least 1900. Must not be greater than 2022.'
-                  example: 104
+                  example: 893
                 founded_month:
                   type: integer
                   description: 'Must be at least 1. Must not be greater than 12.'
-                  example: 4
+                  example: 11
                 founded_day:
                   type: integer
                   description: 'Must be at least 1. Must not be greater than 31.'
-                  example: 1
+                  example: 16
                 website_url:
                   type: string
                   description: 'Must be a valid URL. Must not be greater than 255 characters.'
-                  example: mlttstyyvmdvtbzwxfxqhpscwxlriyaydzxhwolqggsynwsvhejkhpjcvnxlvgdsyqfhjbeqvxzbmayvclhdyuphdjirkw
+                  example: xcudyxjhixhwtndjpzxnguqjvqqbafaizsjddvlgyzimgheyvuysgdgtjqumdmdpmcjyeatlwddcwizuhwmfwhpmhppsmqdrjcssmsmzzfaqsqurmsbbxvuirlgmxlmwawgh
                 twitter_url:
                   type: string
                   description: 'Must be a valid URL. Must not be greater than 255 characters.'
-                  example: oivletfczkjwnjsevnnyauqfquqcuzuxlpjaxplbxgkxeqxmxgohbvdkbxmtdqosgmkwjdzjyguxoudmhzottauxhjnavmmhkfihhypqfosgctdqgvxuumqnvaoleqkwrr
+                  example: mytgicvnodqwolquaqdgrmkmoroaqqwswyintdloslsnptzvwjxzvikzjaemtrcvggezethypwhjkgkyath
               required:
                 - name
-  '/api/publishers/{id}':
+  '/api/v1/publishers/{id}':
     get:
-      summary: 'Fetch a single publisher'
-      description: 'This endpoint will return a single publisher specified by the id.'
+      summary: ''
+      description: ''
       parameters:
         -
           in: header
@@ -265,39 +356,39 @@ paths:
                 type: object
                 example:
                   data:
-                    id: 1
-                    name: 'Publisher 1'
-                    founded-at: '1990'
-                    website-url: 'http://www.publisher1.com'
-                    twitter-url: 'http://www.twitter.com/publisher1'
-                    address: 'Address 1'
-                    city: 'City 1'
-                    state: 'State 1'
-                    zip: '12345'
-                    country: DEU
-                    created-at: '2020-01-01T00:00:00+00:00'
-                    updated-at: '2020-01-01T00:00:00+00:00'
+                    id: 245
+                    name: Block-Schuppe
+                    founded-at: '2016'
+                    website-url: 'https://www.nitzsche.com/ipsam-atque-iure-eius-nesciunt-non-at-et-iste'
+                    twitter-url: 'http://purdy.biz/et-nam-et-sit-sunt.html'
+                    address: "26939 Adolf Walk Apt. 779\nPort Hermanland, AR 29755"
+                    city: Stammshire
+                    state: ''
+                    zip: 66493-3912
+                    country: SXM
+                    created-at: '2022-01-25T18:06:14+00:00'
+                    updated-at: '2022-01-25T18:06:14+00:00'
                 properties:
                   data:
                     type: object
                     example:
-                      id: 1
-                      name: 'Publisher 1'
-                      founded-at: '1990'
-                      website-url: 'http://www.publisher1.com'
-                      twitter-url: 'http://www.twitter.com/publisher1'
-                      address: 'Address 1'
-                      city: 'City 1'
-                      state: 'State 1'
-                      zip: '12345'
-                      country: DEU
-                      created-at: '2020-01-01T00:00:00+00:00'
-                      updated-at: '2020-01-01T00:00:00+00:00'
+                      id: 245
+                      name: Block-Schuppe
+                      founded-at: '2016'
+                      website-url: 'https://www.nitzsche.com/ipsam-atque-iure-eius-nesciunt-non-at-et-iste'
+                      twitter-url: 'http://purdy.biz/et-nam-et-sit-sunt.html'
+                      address: "26939 Adolf Walk Apt. 779\nPort Hermanland, AR 29755"
+                      city: Stammshire
+                      state: ''
+                      zip: 66493-3912
+                      country: SXM
+                      created-at: '2022-01-25T18:06:14+00:00'
+                      updated-at: '2022-01-25T18:06:14+00:00'
       tags:
-        - 'Publisher management'
+        - Publisher
     put:
-      summary: 'Update an existing publisher'
-      description: 'This endpoint will update an existing publisher.'
+      summary: ''
+      description: ''
       parameters:
         -
           in: header
@@ -321,42 +412,18 @@ paths:
           schema:
             type: string
       responses:
-        200:
+        202:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  data:
-                    id: 1
-                    name: 'Publisher 1'
-                    founded-at: '1990'
-                    website-url: 'http://www.publisher1.com'
-                    twitter-url: 'http://www.twitter.com/publisher1'
-                    address: 'Address 1'
-                    city: 'City 1'
-                    state: 'State 1'
-                    zip: '12345'
-                    country: DEU
-                    created-at: '2020-01-01T00:00:00+00:00'
-                    updated-at: '2020-01-01T00:00:00+00:00'
+                  message: Accepted
                 properties:
-                  data:
-                    type: object
-                    example:
-                      id: 1
-                      name: 'Publisher 1'
-                      founded-at: '1990'
-                      website-url: 'http://www.publisher1.com'
-                      twitter-url: 'http://www.twitter.com/publisher1'
-                      address: 'Address 1'
-                      city: 'City 1'
-                      state: 'State 1'
-                      zip: '12345'
-                      country: DEU
-                      created-at: '2020-01-01T00:00:00+00:00'
-                      updated-at: '2020-01-01T00:00:00+00:00'
+                  message:
+                    type: string
+                    example: Accepted
         422:
           description: ''
           content:
@@ -378,7 +445,7 @@ paths:
                       field:
                         - 'Error message'
       tags:
-        - 'Publisher management'
+        - Publisher
       requestBody:
         required: false
         content:
@@ -389,30 +456,30 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: dd
+                  example: cwppekgrjziqnzdxgspkxfrpypmidbeajkrumxftjvlofgfpxdsnleozsznnyviuzsshypxjqjelgelidjpqq
                 founded_year:
                   type: integer
                   description: 'Must be at least 1900. Must not be greater than 2022.'
-                  example: 1705
+                  example: 1477
                 founded_month:
                   type: integer
                   description: 'Must be at least 1. Must not be greater than 12.'
-                  example: 9
+                  example: 12
                 founded_day:
                   type: integer
                   description: 'Must be at least 1. Must not be greater than 31.'
-                  example: 24
+                  example: 25
                 website_url:
                   type: string
                   description: 'Must be a valid URL. Must not be greater than 255 characters.'
-                  example: gulpkrzrnwohrjckeqmiyhevcqfmlgobkxfhznzyutwohrromjpiurqtbugpphgaxcfqkmyxqwxpspubnefnlhliupwdghucusvpndtxmzavrnbekfnyikjawirwqosogxrmoejhszyaeyfwvzclrxywbptskdinaetrysartuncwujkajhnvgvcsqppdjwvgmfhnrhfiroezlgnrzaxncxbujimfucmbqhzcgkms
+                  example: fjewfnskuqdiqklmucsulmlxznrwhgykrzldwjtmjaovwiaofjrmxoimfmvmzeuvmoyiisksbwmeppnbythtzurrvedidieobeghkuhhkv
                 twitter_url:
                   type: string
                   description: 'Must be a valid URL. Must not be greater than 255 characters.'
-                  example: qhwfpynbnkkiea
+                  example: vlqkadv
     delete:
-      summary: 'Delete an existing publisher'
-      description: 'This endpoint will delete an existing publisher.'
+      summary: ''
+      description: ''
       parameters:
         -
           in: header
@@ -436,42 +503,18 @@ paths:
           schema:
             type: string
       responses:
-        200:
+        202:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  data:
-                    id: 1
-                    name: 'Publisher 1'
-                    founded-at: '1990'
-                    website-url: 'http://www.publisher1.com'
-                    twitter-url: 'http://www.twitter.com/publisher1'
-                    address: 'Address 1'
-                    city: 'City 1'
-                    state: 'State 1'
-                    zip: '12345'
-                    country: DEU
-                    created-at: '2020-01-01T00:00:00+00:00'
-                    updated-at: '2020-01-01T00:00:00+00:00'
+                  message: Accepted
                 properties:
-                  data:
-                    type: object
-                    example:
-                      id: 1
-                      name: 'Publisher 1'
-                      founded-at: '1990'
-                      website-url: 'http://www.publisher1.com'
-                      twitter-url: 'http://www.twitter.com/publisher1'
-                      address: 'Address 1'
-                      city: 'City 1'
-                      state: 'State 1'
-                      zip: '12345'
-                      country: DEU
-                      created-at: '2020-01-01T00:00:00+00:00'
-                      updated-at: '2020-01-01T00:00:00+00:00'
+                  message:
+                    type: string
+                    example: Accepted
         404:
           description: ''
           content:
@@ -492,21 +535,58 @@ paths:
                 type: string
                 example: "{\n  \"message\": \"The given data was invalid.\",\n  \"errors\": {\n  \"name\": [\n     \"Error message\"\n  ]\n}"
       tags:
-        - 'Publisher management'
+        - Publisher
     parameters:
       -
         in: path
         name: id
         description: 'The ID of the publisher.'
-        example: 17
+        example: 16
         required: true
         schema:
           type: integer
-  /api/register:
-    post:
-      summary: 'Register a new user'
-      description: "This endpoint allows you to register a new user. The email address must be unique or you will get a 422 with an\nerror message that the email address has already been taken."
+  /api/v1/series:
+    get:
+      summary: ''
+      description: ''
       parameters:
+        -
+          in: query
+          name: sort
+          description: 'The field to sort the list by.'
+          example: title
+          required: false
+          schema:
+            type: string
+            description: 'The field to sort the list by.'
+            example: title
+        -
+          in: query
+          name: 'page[number]'
+          description: 'The page number (default 1).'
+          example: 2
+          required: false
+          schema:
+            type: integer
+            description: 'The page number (default 1).'
+            example: 2
+        -
+          in: query
+          name: 'page[size]'
+          description: 'The page size (default 30).'
+          example: 10
+          required: false
+          schema:
+            type: integer
+            description: 'The page size (default 30).'
+            example: 10
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
         -
           in: header
           name: Content-Type
@@ -525,49 +605,173 @@ paths:
         200:
           description: ''
           content:
-            text/plain:
+            application/json:
               schema:
-                type: string
-                example: "{\n    \"access_token\": \"token\",\n    \"token_type\": \"Bearer\",\n}"
-        422:
-          description: ''
-          content:
-            text/plain:
-              schema:
-                type: string
-                example: "{\n  \"message\": \"The given data was invalid.\",\n  \"errors\": {\n  \"name\": [\n    \"Error message.\"\n  ]\n}"
+                type: object
+                example:
+                  data:
+                    -
+                      id: 4
+                      title: 'Denis Steuber'
+                      volume: 71
+                      description: 'Adipisci corrupti minima repudiandae quo corporis. Quae voluptas et beatae accusantium. Et nesciunt sed sit et. Ut facere voluptates cumque nostrum exercitationem est ut.'
+                      start-year: '2011'
+                      end-year: '2020'
+                      rating: perspiciatis
+                      created-at: '2016-04-26T21:15:06+00:00'
+                      updated-at: '1983-05-22T15:09:21+00:00'
+                      publisher:
+                        id: 246
+                        name: Sporer-Predovic
+                        founded-at: '1971'
+                        website-url: 'http://roberts.com/minima-dolores-magnam-laborum-unde'
+                        twitter-url: 'http://www.sipes.net/qui-in-quidem-deserunt-ut'
+                        address: "618 Koelpin Trace\nLake Timothyport, IA 00708-0685"
+                        city: 'Lake Shakiratown'
+                        state: ''
+                        zip: 01768-7098
+                        country: MNG
+                        created-at: '2022-01-25T18:06:14+00:00'
+                        updated-at: '2022-01-25T18:06:14+00:00'
+                    -
+                      id: 5
+                      title: 'Mrs. Kathryne Flatley'
+                      volume: 20
+                      description: 'Enim quas nostrum pariatur a ut. Est et numquam ex consequatur repudiandae. Ab id et neque aut sed enim.'
+                      start-year: '2010'
+                      end-year: '2008'
+                      rating: aliquid
+                      created-at: '1992-05-02T11:36:56+00:00'
+                      updated-at: '2005-06-04T12:39:24+00:00'
+                      publisher:
+                        id: 247
+                        name: 'Rogahn, Gerlach and Stoltenberg'
+                        founded-at: '2005'
+                        website-url: 'http://gutmann.biz/'
+                        twitter-url: 'http://www.collier.net/quas-cum-et-qui-rerum-est-iure-sit-non.html'
+                        address: "7236 Beatty Vista\nJoanneport, NV 09103-8279"
+                        city: Jonathonville
+                        state: ''
+                        zip: 28869-0540
+                        country: ALA
+                        created-at: '2022-01-25T18:06:14+00:00'
+                        updated-at: '2022-01-25T18:06:14+00:00'
+                  links:
+                    first: '/?page=1'
+                    last: '/?page=1'
+                    prev: null
+                    next: null
+                  meta:
+                    current_page: 1
+                    from: 1
+                    last_page: 1
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: '/?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: null
+                        label: 'Next &raquo;'
+                        active: false
+                    path: /
+                    per_page: '30'
+                    to: 2
+                    total: 2
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 4
+                        title: 'Denis Steuber'
+                        volume: 71
+                        description: 'Adipisci corrupti minima repudiandae quo corporis. Quae voluptas et beatae accusantium. Et nesciunt sed sit et. Ut facere voluptates cumque nostrum exercitationem est ut.'
+                        start-year: '2011'
+                        end-year: '2020'
+                        rating: perspiciatis
+                        created-at: '2016-04-26T21:15:06+00:00'
+                        updated-at: '1983-05-22T15:09:21+00:00'
+                        publisher:
+                          id: 246
+                          name: Sporer-Predovic
+                          founded-at: '1971'
+                          website-url: 'http://roberts.com/minima-dolores-magnam-laborum-unde'
+                          twitter-url: 'http://www.sipes.net/qui-in-quidem-deserunt-ut'
+                          address: "618 Koelpin Trace\nLake Timothyport, IA 00708-0685"
+                          city: 'Lake Shakiratown'
+                          state: ''
+                          zip: 01768-7098
+                          country: MNG
+                          created-at: '2022-01-25T18:06:14+00:00'
+                          updated-at: '2022-01-25T18:06:14+00:00'
+                      -
+                        id: 5
+                        title: 'Mrs. Kathryne Flatley'
+                        volume: 20
+                        description: 'Enim quas nostrum pariatur a ut. Est et numquam ex consequatur repudiandae. Ab id et neque aut sed enim.'
+                        start-year: '2010'
+                        end-year: '2008'
+                        rating: aliquid
+                        created-at: '1992-05-02T11:36:56+00:00'
+                        updated-at: '2005-06-04T12:39:24+00:00'
+                        publisher:
+                          id: 247
+                          name: 'Rogahn, Gerlach and Stoltenberg'
+                          founded-at: '2005'
+                          website-url: 'http://gutmann.biz/'
+                          twitter-url: 'http://www.collier.net/quas-cum-et-qui-rerum-est-iure-sit-non.html'
+                          address: "7236 Beatty Vista\nJoanneport, NV 09103-8279"
+                          city: Jonathonville
+                          state: ''
+                          zip: 28869-0540
+                          country: ALA
+                          created-at: '2022-01-25T18:06:14+00:00'
+                          updated-at: '2022-01-25T18:06:14+00:00'
+                    items:
+                      type: object
+                  links:
+                    type: object
+                    example:
+                      first: '/?page=1'
+                      last: '/?page=1'
+                      prev: null
+                      next: null
+                  meta:
+                    type: object
+                    example:
+                      current_page: 1
+                      from: 1
+                      last_page: 1
+                      links:
+                        -
+                          url: null
+                          label: '&laquo; Previous'
+                          active: false
+                        -
+                          url: '/?page=1'
+                          label: '1'
+                          active: true
+                        -
+                          url: null
+                          label: 'Next &raquo;'
+                          active: false
+                      path: /
+                      per_page: '30'
+                      to: 2
+                      total: 2
       tags:
-        - 'User management'
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                name:
-                  type: string
-                  description: 'Must be at least 8 characters. Must not be greater than 255 characters.'
-                  example: ccbtylfdmwaznloncencoxjxxhrxvhyknyvbmkiaruggrzgieoavqvqumuifihzmyilivqpickodhrnuywhdvucfoshwchheuwdawfmtxmycumzjjmvvogatmaexzaadcadpecqstwsheshswzrvuubllbamzkhnnoanjcgmfknertqkuukijdcnleqypacwqakvnkthhiqeokjftuzavpzftnamqxuazxmngagsfanlbtawylmvie
-                email:
-                  type: string
-                  description: 'Must be a valid email address.'
-                  example: amcdermott@example.org
-                password:
-                  type: string
-                  description: 'Must be at least 8 characters. Must not be greater than 255 characters.'
-                  example: yfzngglkclqqndfsoztyauzhowwtdrdhholjigiclfvqfscvyvrdxsnrvroqiugrkbglgtntmmwspdlupoklptdcxnmlfvofpjvyexrnqztctfjptejyrugniekqtdkslglqgxdktmhnqhhbnkqljdqm
-              required:
-                - name
-                - email
-                - password
-      security: []
+        - Serie
 tags:
   -
-    name: 'Publisher management'
+    name: Publisher
     description: ''
   -
-    name: 'User management'
+    name: Serie
     description: ''
 components:
   securitySchemes:

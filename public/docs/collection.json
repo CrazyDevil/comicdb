@@ -10,21 +10,21 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "e1d02c6c-ec16-4e4a-9f80-13e10930273c",
+        "_postman_id": "8497f083-5beb-47d4-bb86-6d9b71024202",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
     "item": [
         {
-            "name": "Publisher management",
+            "name": "Publisher",
             "description": "",
             "item": [
                 {
-                    "name": "Fetch a list of all publishers",
+                    "name": "api\/v1\/publishers",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/publishers",
+                            "path": "api\/v1\/publishers",
                             "query": [
                                 {
                                     "key": "sort",
@@ -34,8 +34,8 @@
                                 },
                                 {
                                     "key": "filter%5Bname%5D",
-                                    "value": "Marvel",
-                                    "description": "Filter by publisher name.",
+                                    "value": "comics",
+                                    "description": "Filter by publisher name containing value.",
                                     "disabled": false
                                 },
                                 {
@@ -69,7 +69,7 @@
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/publishers?sort=name&filter%5Bname%5D=Marvel&filter%5Bcountry%5D=USA&filter%5Bfounded-year%5D=1940&filter%5Bfounded-year-between%5D=1940%2C1990&page%5Bnumber%5D=2&page%5Bsize%5D=10"
+                            "raw": "{{baseUrl}}\/api\/v1\/publishers?sort=name&filter%5Bname%5D=comics&filter%5Bcountry%5D=USA&filter%5Bfounded-year%5D=1940&filter%5Bfounded-year-between%5D=1940%2C1990&page%5Bnumber%5D=2&page%5Bsize%5D=10"
                         },
                         "method": "GET",
                         "header": [
@@ -83,25 +83,25 @@
                             }
                         ],
                         "body": null,
-                        "description": "This endpoint will return a list of all publishers. You can sort the list by publisher name or founded year. You\nalso have the ability to filter the list by publisher name, country, founded year of between two years."
+                        "description": ""
                     },
                     "response": [
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\n  \"data\": [\n    {\n      \"id\": 1,\n      \"name\": \"Publisher 1\",\n      \"founded-at\": \"1990\",\n      \"website-url\": \"http:\/\/www.publisher1.com\",\n      \"twitter-url\": \"http:\/\/www.twitter.com\/publisher1\",\n      \"address\": \"Address 1\",\n      \"city\": \"City 1\",\n      \"state\": \"State 1\",\n      \"zip\": \"12345\",\n      \"country\": \"DEU\",\n      \"created-at\": \"2020-01-01T00:00:00+00:00\",\n      \"updated-at\": \"2020-01-01T00:00:00+00:00\"\n    },\n    {\n      \"id\": 2,\n      \"name\": \"Publisher 2\",\n      \"founded-at\": \"1990\",\n      \"website-url\": \"http:\/\/www.publisher2.com\",\n      \"twitter-url\": \"http:\/\/www.twitter.com\/publisher2\",\n      \"address\": \"Address 2\",\n      \"city\": \"City 2\",\n      \"state\": \"State 2\",\n      \"zip\": \"12345\",\n      \"country\": \"DEU\",\n      \"created-at\": \"2020-01-01T00:00:00+00:00\",\n      \"updated-at\": \"2020-01-01T00:00:00+00:00\"\n    },\n  ],\n  \"links\": {\n    \"first\": \"http:\/\/localhost\/api\/publishers?page%5Bnumber%5D=1\",\n    \"last\": \"http:\/\/localhost\/api\/publishers?page%5Bnumber%5D=4\",\n    \"prev\": null,\n    \"next\": \"http:\/\/localhost\/api\/publishers?page%5Bnumber%5D=2\"\n  },\n  \"meta\": {\n     \"current_page\": 1,\n     \"from\": 1,\n     \"last_page\": 4,\n     \"links\": [\n       {\n         \"url\": null,\n         \"label\": \"&laquo; Previous\",\n         \"active\": false\n       },\n       {\n         \"url\": \"http:\/\/localhost\/api\/publishers?sort=name&page%5Bnumber%5D=1\",\n         \"label\": \"1\",\n         \"active\": true\n       },\n       {\n         \"url\": \"http:\/\/localhost\/api\/publishers?sort=name&page%5Bnumber%5D=2\",\n         \"label\": \"2\",\n         \"active\": false\n       },\n       {\n         \"url\": \"http:\/\/localhost\/api\/publishers?sort=name&page%5Bnumber%5D=2\",\n         \"label\": \"Next &raquo;\",\n         \"active\": false\n       }\n     ],\n     \"path\": \"http:\/\/localhost\/api\/publishers\",\n     \"per_page\": 30,\n     \"to\": 30,\n     \"total\": 100\n   }\n}",
+                            "body": "{\"data\":[{\"id\":243,\"name\":\"Hammes-Ritchie\",\"founded-at\":\"2001\",\"website-url\":\"http:\\\/\\\/www.cormier.com\\\/eos-blanditiis-architecto-id-molestiae-quisquam-nisi-aut\",\"twitter-url\":\"http:\\\/\\\/www.lesch.com\\\/\",\"address\":\"230 Krajcik Locks Apt. 181\\nNew Gussiehaven, MD 81233-6458\",\"city\":\"North D'angelo\",\"state\":\"\",\"zip\":\"05624-0612\",\"country\":\"HUN\",\"created-at\":\"2022-01-25T18:06:14+00:00\",\"updated-at\":\"2022-01-25T18:06:14+00:00\"},{\"id\":244,\"name\":\"Langworth, Pouros and Mayer\",\"founded-at\":\"2015\",\"website-url\":\"http:\\\/\\\/anderson.biz\\\/aliquam-sit-ducimus-et-atque-aut.html\",\"twitter-url\":\"http:\\\/\\\/kihn.com\\\/sint-nobis-ratione-optio-tempora-nulla-nobis-eos-autem.html\",\"address\":\"6625 Macejkovic Mews\\nCarolinaview, TX 86253-4458\",\"city\":\"Kiehnchester\",\"state\":\"\",\"zip\":\"19450\",\"country\":\"FSM\",\"created-at\":\"2022-01-25T18:06:14+00:00\",\"updated-at\":\"2022-01-25T18:06:14+00:00\"}],\"links\":{\"first\":\"\\\/?page=1\",\"last\":\"\\\/?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"\\\/?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"\\\/\",\"per_page\":\"30\",\"to\":2,\"total\":2}}",
                             "name": ""
                         }
                     ]
                 },
                 {
-                    "name": "Create a new publisher",
+                    "name": "api\/v1\/publishers",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/publishers",
+                            "path": "api\/v1\/publishers",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/publishers"
+                            "raw": "{{baseUrl}}\/api\/v1\/publishers"
                         },
                         "method": "POST",
                         "header": [
@@ -116,15 +116,15 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"soluta\",\"founded_year\":104,\"founded_month\":4,\"founded_day\":1,\"website_url\":\"mlttstyyvmdvtbzwxfxqhpscwxlriyaydzxhwolqggsynwsvhejkhpjcvnxlvgdsyqfhjbeqvxzbmayvclhdyuphdjirkw\",\"twitter_url\":\"oivletfczkjwnjsevnnyauqfquqcuzuxlpjaxplbxgkxeqxmxgohbvdkbxmtdqosgmkwjdzjyguxoudmhzottauxhjnavmmhkfihhypqfosgctdqgvxuumqnvaoleqkwrr\"}"
+                            "raw": "{\"name\":\"quis\",\"founded_year\":893,\"founded_month\":11,\"founded_day\":16,\"website_url\":\"xcudyxjhixhwtndjpzxnguqjvqqbafaizsjddvlgyzimgheyvuysgdgtjqumdmdpmcjyeatlwddcwizuhwmfwhpmhppsmqdrjcssmsmzzfaqsqurmsbbxvuirlgmxlmwawgh\",\"twitter_url\":\"mytgicvnodqwolquaqdgrmkmoroaqqwswyintdloslsnptzvwjxzvikzjaemtrcvggezethypwhjkgkyath\"}"
                         },
-                        "description": "This endpoint will create a new publisher."
+                        "description": ""
                     },
                     "response": [
                         {
                             "header": [],
-                            "code": 200,
-                            "body": "{\n  \"data\": {\n    \"id\": 1,\n    \"name\": \"Publisher 1\",\n    \"founded-at\": \"1990\",\n    \"website-url\": \"http:\/\/www.publisher1.com\",\n    \"twitter-url\": \"http:\/\/www.twitter.com\/publisher1\",\n    \"address\": \"Address 1\",\n    \"city\": \"City 1\",\n    \"state\": \"State 1\",\n    \"zip\": \"12345\",\n    \"country\": \"DEU\",\n    \"created-at\": \"2020-01-01T00:00:00+00:00\",\n    \"updated-at\": \"2020-01-01T00:00:00+00:00\"\n  }\n}",
+                            "code": 202,
+                            "body": "{\n    \"message\": \"Accepted\"\n}",
                             "name": ""
                         },
                         {
@@ -136,18 +136,18 @@
                     ]
                 },
                 {
-                    "name": "Fetch a single publisher",
+                    "name": "api\/v1\/publishers\/{id}",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/publishers\/:id",
+                            "path": "api\/v1\/publishers\/:id",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/publishers\/:id",
+                            "raw": "{{baseUrl}}\/api\/v1\/publishers\/:id",
                             "variable": [
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "17",
+                                    "value": "16",
                                     "description": "The ID of the publisher."
                                 }
                             ]
@@ -164,30 +164,30 @@
                             }
                         ],
                         "body": null,
-                        "description": "This endpoint will return a single publisher specified by the id."
+                        "description": ""
                     },
                     "response": [
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\n  \"data\": {\n    \"id\": 1,\n    \"name\": \"Publisher 1\",\n    \"founded-at\": \"1990\",\n    \"website-url\": \"http:\/\/www.publisher1.com\",\n    \"twitter-url\": \"http:\/\/www.twitter.com\/publisher1\",\n    \"address\": \"Address 1\",\n    \"city\": \"City 1\",\n    \"state\": \"State 1\",\n    \"zip\": \"12345\",\n    \"country\": \"DEU\",\n    \"created-at\": \"2020-01-01T00:00:00+00:00\",\n    \"updated-at\": \"2020-01-01T00:00:00+00:00\"\n  }\n}",
+                            "body": "{\"data\":{\"id\":245,\"name\":\"Block-Schuppe\",\"founded-at\":\"2016\",\"website-url\":\"https:\\\/\\\/www.nitzsche.com\\\/ipsam-atque-iure-eius-nesciunt-non-at-et-iste\",\"twitter-url\":\"http:\\\/\\\/purdy.biz\\\/et-nam-et-sit-sunt.html\",\"address\":\"26939 Adolf Walk Apt. 779\\nPort Hermanland, AR 29755\",\"city\":\"Stammshire\",\"state\":\"\",\"zip\":\"66493-3912\",\"country\":\"SXM\",\"created-at\":\"2022-01-25T18:06:14+00:00\",\"updated-at\":\"2022-01-25T18:06:14+00:00\"}}",
                             "name": ""
                         }
                     ]
                 },
                 {
-                    "name": "Update an existing publisher",
+                    "name": "api\/v1\/publishers\/{id}",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/publishers\/:id",
+                            "path": "api\/v1\/publishers\/:id",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/publishers\/:id",
+                            "raw": "{{baseUrl}}\/api\/v1\/publishers\/:id",
                             "variable": [
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "12",
+                                    "value": "14",
                                     "description": "The ID of the publisher."
                                 }
                             ]
@@ -205,15 +205,15 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"dd\",\"founded_year\":1705,\"founded_month\":9,\"founded_day\":24,\"website_url\":\"gulpkrzrnwohrjckeqmiyhevcqfmlgobkxfhznzyutwohrromjpiurqtbugpphgaxcfqkmyxqwxpspubnefnlhliupwdghucusvpndtxmzavrnbekfnyikjawirwqosogxrmoejhszyaeyfwvzclrxywbptskdinaetrysartuncwujkajhnvgvcsqppdjwvgmfhnrhfiroezlgnrzaxncxbujimfucmbqhzcgkms\",\"twitter_url\":\"qhwfpynbnkkiea\"}"
+                            "raw": "{\"name\":\"cwppekgrjziqnzdxgspkxfrpypmidbeajkrumxftjvlofgfpxdsnleozsznnyviuzsshypxjqjelgelidjpqq\",\"founded_year\":1477,\"founded_month\":12,\"founded_day\":25,\"website_url\":\"fjewfnskuqdiqklmucsulmlxznrwhgykrzldwjtmjaovwiaofjrmxoimfmvmzeuvmoyiisksbwmeppnbythtzurrvedidieobeghkuhhkv\",\"twitter_url\":\"vlqkadv\"}"
                         },
-                        "description": "This endpoint will update an existing publisher."
+                        "description": ""
                     },
                     "response": [
                         {
                             "header": [],
-                            "code": 200,
-                            "body": "{\n  \"data\": {\n    \"id\": 1,\n    \"name\": \"Publisher 1\",\n    \"founded-at\": \"1990\",\n    \"website-url\": \"http:\/\/www.publisher1.com\",\n    \"twitter-url\": \"http:\/\/www.twitter.com\/publisher1\",\n    \"address\": \"Address 1\",\n    \"city\": \"City 1\",\n    \"state\": \"State 1\",\n    \"zip\": \"12345\",\n    \"country\": \"DEU\",\n    \"created-at\": \"2020-01-01T00:00:00+00:00\",\n    \"updated-at\": \"2020-01-01T00:00:00+00:00\"\n  }\n}",
+                            "code": 202,
+                            "body": "{\n    \"message\": \"Accepted\"\n}",
                             "name": ""
                         },
                         {
@@ -225,18 +225,18 @@
                     ]
                 },
                 {
-                    "name": "Delete an existing publisher",
+                    "name": "api\/v1\/publishers\/{id}",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/publishers\/:id",
+                            "path": "api\/v1\/publishers\/:id",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/publishers\/:id",
+                            "raw": "{{baseUrl}}\/api\/v1\/publishers\/:id",
                             "variable": [
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "16",
+                                    "value": "12",
                                     "description": "The ID of the publisher."
                                 }
                             ]
@@ -253,13 +253,13 @@
                             }
                         ],
                         "body": null,
-                        "description": "This endpoint will delete an existing publisher."
+                        "description": ""
                     },
                     "response": [
                         {
                             "header": [],
-                            "code": 200,
-                            "body": "{\n  \"data\": {\n    \"id\": 1,\n    \"name\": \"Publisher 1\",\n    \"founded-at\": \"1990\",\n    \"website-url\": \"http:\/\/www.publisher1.com\",\n    \"twitter-url\": \"http:\/\/www.twitter.com\/publisher1\",\n    \"address\": \"Address 1\",\n    \"city\": \"City 1\",\n    \"state\": \"State 1\",\n    \"zip\": \"12345\",\n    \"country\": \"DEU\",\n    \"created-at\": \"2020-01-01T00:00:00+00:00\",\n    \"updated-at\": \"2020-01-01T00:00:00+00:00\"\n  }\n}",
+                            "code": 202,
+                            "body": "{\n    \"message\": \"Accepted\"\n}",
                             "name": ""
                         },
                         {
@@ -279,19 +279,38 @@
             ]
         },
         {
-            "name": "User management",
+            "name": "Serie",
             "description": "",
             "item": [
                 {
-                    "name": "Register a new user",
+                    "name": "api\/v1\/series",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/register",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/register"
+                            "path": "api\/v1\/series",
+                            "query": [
+                                {
+                                    "key": "sort",
+                                    "value": "title",
+                                    "description": "The field to sort the list by.",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "page%5Bnumber%5D",
+                                    "value": "2",
+                                    "description": "The page number (default 1).",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "page%5Bsize%5D",
+                                    "value": "10",
+                                    "description": "The page size (default 30).",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/v1\/series?sort=title&page%5Bnumber%5D=2&page%5Bsize%5D=10"
                         },
-                        "method": "POST",
+                        "method": "GET",
                         "header": [
                             {
                                 "key": "Content-Type",
@@ -302,26 +321,14 @@
                                 "value": "application\/json"
                             }
                         ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"name\":\"ccbtylfdmwaznloncencoxjxxhrxvhyknyvbmkiaruggrzgieoavqvqumuifihzmyilivqpickodhrnuywhdvucfoshwchheuwdawfmtxmycumzjjmvvogatmaexzaadcadpecqstwsheshswzrvuubllbamzkhnnoanjcgmfknertqkuukijdcnleqypacwqakvnkthhiqeokjftuzavpzftnamqxuazxmngagsfanlbtawylmvie\",\"email\":\"amcdermott@example.org\",\"password\":\"yfzngglkclqqndfsoztyauzhowwtdrdhholjigiclfvqfscvyvrdxsnrvroqiugrkbglgtntmmwspdlupoklptdcxnmlfvofpjvyexrnqztctfjptejyrugniekqtdkslglqgxdktmhnqhhbnkqljdqm\"}"
-                        },
-                        "description": "This endpoint allows you to register a new user. The email address must be unique or you will get a 422 with an\nerror message that the email address has already been taken.",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "body": null,
+                        "description": ""
                     },
                     "response": [
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\n    \"access_token\": \"token\",\n    \"token_type\": \"Bearer\",\n}",
-                            "name": ""
-                        },
-                        {
-                            "header": [],
-                            "code": 422,
-                            "body": "{\n  \"message\": \"The given data was invalid.\",\n  \"errors\": {\n  \"name\": [\n    \"Error message.\"\n  ]\n}",
+                            "body": "{\"data\":[{\"id\":4,\"title\":\"Denis Steuber\",\"volume\":71,\"description\":\"Adipisci corrupti minima repudiandae quo corporis. Quae voluptas et beatae accusantium. Et nesciunt sed sit et. Ut facere voluptates cumque nostrum exercitationem est ut.\",\"start-year\":\"2011\",\"end-year\":\"2020\",\"rating\":\"perspiciatis\",\"created-at\":\"2016-04-26T21:15:06+00:00\",\"updated-at\":\"1983-05-22T15:09:21+00:00\",\"publisher\":{\"id\":246,\"name\":\"Sporer-Predovic\",\"founded-at\":\"1971\",\"website-url\":\"http:\\\/\\\/roberts.com\\\/minima-dolores-magnam-laborum-unde\",\"twitter-url\":\"http:\\\/\\\/www.sipes.net\\\/qui-in-quidem-deserunt-ut\",\"address\":\"618 Koelpin Trace\\nLake Timothyport, IA 00708-0685\",\"city\":\"Lake Shakiratown\",\"state\":\"\",\"zip\":\"01768-7098\",\"country\":\"MNG\",\"created-at\":\"2022-01-25T18:06:14+00:00\",\"updated-at\":\"2022-01-25T18:06:14+00:00\"}},{\"id\":5,\"title\":\"Mrs. Kathryne Flatley\",\"volume\":20,\"description\":\"Enim quas nostrum pariatur a ut. Est et numquam ex consequatur repudiandae. Ab id et neque aut sed enim.\",\"start-year\":\"2010\",\"end-year\":\"2008\",\"rating\":\"aliquid\",\"created-at\":\"1992-05-02T11:36:56+00:00\",\"updated-at\":\"2005-06-04T12:39:24+00:00\",\"publisher\":{\"id\":247,\"name\":\"Rogahn, Gerlach and Stoltenberg\",\"founded-at\":\"2005\",\"website-url\":\"http:\\\/\\\/gutmann.biz\\\/\",\"twitter-url\":\"http:\\\/\\\/www.collier.net\\\/quas-cum-et-qui-rerum-est-iure-sit-non.html\",\"address\":\"7236 Beatty Vista\\nJoanneport, NV 09103-8279\",\"city\":\"Jonathonville\",\"state\":\"\",\"zip\":\"28869-0540\",\"country\":\"ALA\",\"created-at\":\"2022-01-25T18:06:14+00:00\",\"updated-at\":\"2022-01-25T18:06:14+00:00\"}}],\"links\":{\"first\":\"\\\/?page=1\",\"last\":\"\\\/?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"\\\/?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"\\\/\",\"per_page\":\"30\",\"to\":2,\"total\":2}}",
                             "name": ""
                         }
                     ]

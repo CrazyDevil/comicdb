@@ -8,18 +8,14 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Hash;
 
 /**
- * @group User management
+ * @group Private
  * @header Accept application/json
  */
 class RegisterController extends Controller
 {
     /**
-     * Register a new user
-     *
-     * This endpoint allows you to register a new user. The email address must be unique or you will get a 422 with an
-     * error message that the email address has already been taken.
-     *
      * @unauthenticated
+     * @group Public
      *
      * @header Accept application/json
      *
