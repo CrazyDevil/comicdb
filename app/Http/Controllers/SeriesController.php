@@ -24,7 +24,9 @@ class SeriesController extends Controller
      *
      * @header Accept application/json
      *
-     * @queryParam sort The field to sort the list by. Example: title
+     * @queryParam sort The field to sort the list by (title, start_year)
+     * @queryParam filter[title] Filter the list by title
+     * @queryParam filter[start_year] Filter the list by start year
      * @queryParam page[number] int The page number (default 1). Example: 2
      * @queryParam page[size] int The page size (default 30). Example: 10
      *
@@ -40,9 +42,12 @@ class SeriesController extends Controller
             ])
             ->allowedFilters([
                 AllowedFilter::partial('title'),
-                AllowedFilter::scope('active'),
+                AllowedFilter::exact('start_year'),
             ])
-            ->when($publisher, function ($query) use ($publisher) {
+            ->allowedIncludes([
+                'publisher',
+            ])
+            ->when($publisher->id, function ($query) use ($publisher) {
                 return $query->where('publisher_id', $publisher->id);
             })
             ->jsonPaginate()

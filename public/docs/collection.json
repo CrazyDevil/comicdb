@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "f5e0ad6a-35d3-4697-8e64-e26b6f8dd736",
+        "_postman_id": "b7335b29-d760-4c68-8fee-34b563d41a4e",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -89,7 +89,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\"data\":[{\"id\":342,\"name\":\"Bernhard, Harvey and Dicki\",\"founded-at\":\"2020\",\"website-url\":\"http:\\\/\\\/www.feil.com\\\/in-saepe-officiis-voluptates\",\"twitter-url\":\"http:\\\/\\\/green.com\\\/tempora-ea-velit-corrupti-et-molestias-dicta-molestias.html\",\"address\":\"3275 Leuschke Pines Apt. 875\\nOsbaldohaven, NY 88441\",\"city\":\"New Lee\",\"state\":\"\",\"zip\":\"43707-8655\",\"country\":\"IOT\",\"created-at\":\"2022-01-25T20:07:06+00:00\",\"updated-at\":\"2022-01-25T20:07:06+00:00\"},{\"id\":343,\"name\":\"Metz Inc\",\"founded-at\":\"2018\",\"website-url\":\"https:\\\/\\\/www.lesch.biz\\\/et-molestiae-sapiente-repellendus-assumenda-modi-dolor-sed\",\"twitter-url\":\"http:\\\/\\\/watsica.com\\\/blanditiis-voluptas-amet-suscipit-eveniet-perferendis-harum-et\",\"address\":\"12280 Dortha Island\\nEast Estevanchester, AL 36471\",\"city\":\"New Emely\",\"state\":\"\",\"zip\":\"87741-7112\",\"country\":\"JPN\",\"created-at\":\"2022-01-25T20:07:06+00:00\",\"updated-at\":\"2022-01-25T20:07:06+00:00\"}],\"links\":{\"first\":\"\\\/?page=1\",\"last\":\"\\\/?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"\\\/?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"\\\/\",\"per_page\":\"30\",\"to\":2,\"total\":2}}",
+                            "body": "{\"data\":[{\"id\":467,\"name\":\"White, Cummerata and Abshire\",\"founded-at\":\"1976\",\"website-url\":\"http:\\\/\\\/bogan.org\\\/quia-et-similique-quaerat-esse-sit-sunt-rerum\",\"twitter-url\":\"http:\\\/\\\/harvey.biz\\\/eum-ea-in-ad-tenetur\",\"address\":\"148 Bartoletti Island Suite 971\\nWilliamsonmouth, ID 39121-2639\",\"city\":\"Millerport\",\"state\":\"\",\"zip\":\"27606-5577\",\"country\":\"IOT\",\"created-at\":\"2022-01-26T18:10:42+00:00\",\"updated-at\":\"2022-01-26T18:10:42+00:00\"},{\"id\":468,\"name\":\"Lang-Heathcote\",\"founded-at\":\"1983\",\"website-url\":\"http:\\\/\\\/smith.com\\\/tempora-accusamus-aut-vel-necessitatibus.html\",\"twitter-url\":\"http:\\\/\\\/dietrich.net\\\/fugiat-dolor-molestiae-blanditiis-quia-deserunt\",\"address\":\"34807 Kirlin Mall\\nConsidineview, OR 90100-5103\",\"city\":\"North Jefferey\",\"state\":\"\",\"zip\":\"37137\",\"country\":\"IRN\",\"created-at\":\"2022-01-26T18:10:42+00:00\",\"updated-at\":\"2022-01-26T18:10:42+00:00\"}],\"links\":{\"first\":\"\\\/?page=1\",\"last\":\"\\\/?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"\\\/?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"\\\/\",\"per_page\":\"30\",\"to\":2,\"total\":2}}",
                             "name": ""
                         }
                     ]
@@ -116,7 +116,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"iusto\",\"founded_year\":896,\"founded_month\":12,\"founded_day\":3,\"website_url\":\"hrhfefakzfjksisgqymeoivrvvnfinlvdxrodwdmgiq\",\"twitter_url\":\"hrzekcfmmvdcwssajxinnhezzeoqvztctbiqqzxtbjbyggnkpaxjyygvhumgmbqipxa\"}"
+                            "raw": "{\"name\":\"ullam\",\"founded_year\":587,\"founded_month\":6,\"founded_day\":28,\"website_url\":\"rjlypiborjdfkorgtcexdtmnrmcglsnhvohyvncnwsrbudsfawrixyboxbapzcfitzqslncolvpxdfkuhztuw\",\"twitter_url\":\"nfcfdurqmzltbqpvzltcglvhldsdtwitdlgscyfdscliylharvdpqxxwivzkbxxozrouoadmvzfjxerrhrxyqrkoqtgdddtvdcywplxykbrxdfapflisciyhivnusllujslpnypfisxtjbhfpzanagclzcuflhjjfplzrvwwypwldfkytejnsmcirqtxwpsxwruikgxv\"}"
                         },
                         "description": ""
                     },
@@ -147,7 +147,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "20",
+                                    "value": "17",
                                     "description": "The ID of the publisher."
                                 }
                             ]
@@ -170,7 +170,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\"data\":{\"id\":344,\"name\":\"Hackett, Schmidt and Flatley\",\"founded-at\":\"1979\",\"website-url\":\"http:\\\/\\\/www.kohler.com\\\/nihil-occaecati-ut-odio-nihil-possimus\",\"twitter-url\":\"https:\\\/\\\/schmidt.com\\\/soluta-fuga-fugiat-voluptatibus-aut-officia.html\",\"address\":\"28948 Friedrich Road Apt. 389\\nNew Kiel, RI 51868\",\"city\":\"Markusborough\",\"state\":\"\",\"zip\":\"45343\",\"country\":\"BRA\",\"created-at\":\"2022-01-25T20:07:06+00:00\",\"updated-at\":\"2022-01-25T20:07:06+00:00\"}}",
+                            "body": "{\"data\":{\"id\":469,\"name\":\"Gislason-Frami\",\"founded-at\":\"1983\",\"website-url\":\"https:\\\/\\\/www.balistreri.com\\\/ut-autem-est-commodi-eos-exercitationem\",\"twitter-url\":\"http:\\\/\\\/www.frami.org\\\/itaque-sit-autem-qui-molestiae-officiis-ex-officia\",\"address\":\"675 Runolfsdottir Meadows Apt. 072\\nLake Oletaport, ND 38048-8315\",\"city\":\"West Alberthaburgh\",\"state\":\"\",\"zip\":\"48698\",\"country\":\"KEN\",\"created-at\":\"2022-01-26T18:10:42+00:00\",\"updated-at\":\"2022-01-26T18:10:42+00:00\"}}",
                             "name": ""
                         }
                     ]
@@ -187,7 +187,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "1",
+                                    "value": "12",
                                     "description": "The ID of the publisher."
                                 }
                             ]
@@ -205,7 +205,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"ztkcqazfvtnfioilfr\",\"founded_year\":537,\"founded_month\":0,\"founded_day\":21,\"website_url\":\"cuoustipavqalgzuhsnkjbjywhglujlbcoqndakgnaltzsgdcnpppmrihswqoxxbdgrssebonbjsbfzgymezxtxfysxfgxdbrqlqhkmhpxjhpnnloohdkqgjwnsgjlbxgpqfssdvhcsmkneruzibqipqtn\",\"twitter_url\":\"ujsrlnpzrwbtdrmxjhdgrdqwcugeasqmnxvsfhyqnvsjtbhpfyimldmsxzxvttdzaupgsmqwajfnwwsaakkzkoiwelmwlufklnyelvv\"}"
+                            "raw": "{\"name\":\"xnardqyyyjnrzawglswlapbdzfephsmwcwvhqppnqgqkodiwcwhvyhi\",\"founded_year\":1974,\"founded_month\":9,\"founded_day\":11,\"website_url\":\"csoqtcppxaoizbcphtzmbotxpxnfynycgndafjuomhzdjwuamcqhfoqprjhbsrqcmuwqlamkofoezyjmxbzvaxubaphknqpyvdjxpjbckmelnilpyavluxshlgmjkntzhxdnwxlnxlkfzouvkvhwhntirbavlwqxtktytoccnqjglhqzddnvodrcsnnrhwcmfsbrlwzvbadphxxnakpphdayfvcltkybtvuhkqxcsxnzata\",\"twitter_url\":\"fzmfvhuvetecilsvcvwotxmsnyzpjbmp\"}"
                         },
                         "description": ""
                     },
@@ -236,7 +236,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "13",
+                                    "value": "12",
                                     "description": "The ID of the publisher."
                                 }
                             ]
@@ -285,8 +285,20 @@
                             "query": [
                                 {
                                     "key": "sort",
-                                    "value": "title",
-                                    "description": "The field to sort the list by.",
+                                    "value": "perspiciatis",
+                                    "description": "The field to sort the list by (title, start_year)",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "filter%5Btitle%5D",
+                                    "value": "qui",
+                                    "description": "Filter the list by title",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "filter%5Bstart_year%5D",
+                                    "value": "blanditiis",
+                                    "description": "Filter the list by start year",
                                     "disabled": false
                                 },
                                 {
@@ -302,7 +314,7 @@
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/v1\/series?sort=title&page%5Bnumber%5D=2&page%5Bsize%5D=10"
+                            "raw": "{{baseUrl}}\/api\/v1\/series?sort=perspiciatis&filter%5Btitle%5D=qui&filter%5Bstart_year%5D=blanditiis&page%5Bnumber%5D=2&page%5Bsize%5D=10"
                         },
                         "method": "GET",
                         "header": [
@@ -322,7 +334,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\"data\":[{\"id\":53,\"title\":\"Devan Wolf\",\"volume\":9,\"description\":\"Quia ut quos fugit voluptatem explicabo omnis. Ut delectus porro deleniti accusantium omnis. Ut quisquam animi occaecati dolorum deserunt dolorem. Velit assumenda natus culpa incidunt quo.\",\"start-year\":\"2021\",\"end-year\":\"1993\",\"rating\":\"aut\",\"created-at\":\"1976-01-26T12:52:34+00:00\",\"updated-at\":\"1970-05-10T09:06:26+00:00\",\"publisher\":{\"id\":347,\"name\":\"Gorczany PLC\",\"founded-at\":\"1973\",\"website-url\":\"http:\\\/\\\/www.marquardt.com\\\/molestiae-maxime-sed-et-quod-repudiandae\",\"twitter-url\":\"http:\\\/\\\/www.greenholt.com\\\/\",\"address\":\"65298 Zieme Underpass Suite 994\\nDemetrisbury, TX 27993-8207\",\"city\":\"Hintzland\",\"state\":\"\",\"zip\":\"86234-2772\",\"country\":\"ABW\",\"created-at\":\"2022-01-25T20:07:06+00:00\",\"updated-at\":\"2022-01-25T20:07:06+00:00\"}},{\"id\":54,\"title\":\"Antwan Connelly PhD\",\"volume\":66,\"description\":\"Et saepe veritatis nemo. Et sit voluptatibus et explicabo architecto. Eius repellat culpa et culpa. Aperiam adipisci maiores quasi provident doloribus.\",\"start-year\":\"1988\",\"end-year\":\"1978\",\"rating\":\"ea\",\"created-at\":\"2015-05-26T01:38:44+00:00\",\"updated-at\":\"1978-09-11T18:17:11+00:00\",\"publisher\":{\"id\":348,\"name\":\"O'Keefe-Klein\",\"founded-at\":\"2007\",\"website-url\":\"http:\\\/\\\/farrell.com\\\/harum-tempore-perferendis-ratione-eum-hic-dolor.html\",\"twitter-url\":\"http:\\\/\\\/www.schaefer.com\\\/aperiam-temporibus-nihil-voluptatem-voluptatem-quidem-quos-consequuntur\",\"address\":\"628 VonRueden Island\\nNicolashaven, MN 76531\",\"city\":\"Lake Elianeshire\",\"state\":\"\",\"zip\":\"98029-8391\",\"country\":\"PYF\",\"created-at\":\"2022-01-25T20:07:06+00:00\",\"updated-at\":\"2022-01-25T20:07:06+00:00\"}}],\"links\":{\"first\":\"\\\/?page=1\",\"last\":\"\\\/?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"\\\/?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"\\\/\",\"per_page\":\"30\",\"to\":2,\"total\":2}}",
+                            "body": "{\"data\":[{\"id\":null,\"title\":\"Tyson Stiedemann I\",\"volume\":52,\"description\":\"Quisquam et voluptatum laborum quasi assumenda sequi. Officia ratione laborum iure eos odit est. Et autem cum dolores inventore et id. Accusantium quo doloremque minus laudantium.\",\"start-year\":\"1986\",\"end-year\":\"2011\",\"rating\":\"consequuntur\",\"type\":\"\",\"created-at\":\"2017-05-18T11:28:50+00:00\",\"updated-at\":\"1993-01-13T13:22:32+00:00\",\"publisher\":{\"id\":475,\"name\":\"Reichel-Ortiz\",\"founded-at\":\"1982\",\"website-url\":\"http:\\\/\\\/www.beatty.biz\\\/voluptate-deleniti-qui-dicta-sed\",\"twitter-url\":\"http:\\\/\\\/miller.org\\\/maiores-natus-aut-porro-possimus-sunt-pariatur-illum\",\"address\":\"7268 Sally Expressway Apt. 010\\nNew Kathleenburgh, KY 36868\",\"city\":\"Helenafort\",\"state\":\"\",\"zip\":\"79904\",\"country\":\"BRN\",\"created-at\":\"2022-01-26T18:10:42+00:00\",\"updated-at\":\"2022-01-26T18:10:42+00:00\"}},{\"id\":null,\"title\":\"Terrill Mraz\",\"volume\":7,\"description\":\"Aspernatur error quos rem fugiat. Et cupiditate rerum neque commodi. Dolorem voluptas aspernatur rerum libero illo cum et qui. Tempore pariatur nesciunt blanditiis quibusdam ipsa.\",\"start-year\":\"1983\",\"end-year\":\"2017\",\"rating\":\"quis\",\"type\":\"\",\"created-at\":\"1974-01-10T21:10:40+00:00\",\"updated-at\":\"1980-07-05T09:07:16+00:00\",\"publisher\":{\"id\":477,\"name\":\"Dooley-Fisher\",\"founded-at\":\"1983\",\"website-url\":\"http:\\\/\\\/glover.com\\\/et-ipsum-sit-non-incidunt-occaecati\",\"twitter-url\":\"http:\\\/\\\/zieme.com\\\/quia-ducimus-sequi-qui-ipsa-qui-tenetur\",\"address\":\"65427 Marty Summit Suite 235\\nForrestville, KS 51405\",\"city\":\"Parkerborough\",\"state\":\"\",\"zip\":\"27632-0707\",\"country\":\"SLV\",\"created-at\":\"2022-01-26T18:10:42+00:00\",\"updated-at\":\"2022-01-26T18:10:42+00:00\"}}],\"links\":{\"first\":\"\\\/?page=1\",\"last\":\"\\\/?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"\\\/?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"\\\/\",\"per_page\":\"30\",\"to\":2,\"total\":2}}",
                             "name": ""
                         }
                     ]
@@ -339,7 +351,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "14",
+                                    "value": "7",
                                     "description": "The ID of the series."
                                 }
                             ]
@@ -362,7 +374,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\"data\":{\"id\":55,\"title\":\"Miss Ebba O'Hara\",\"volume\":80,\"description\":\"Iusto porro occaecati natus asperiores dicta ab blanditiis. Porro architecto architecto et. Nisi ut quia est quas voluptates qui voluptatem. Consectetur quia omnis voluptatibus deleniti illum.\",\"start-year\":\"2009\",\"end-year\":\"1974\",\"rating\":\"aut\",\"created-at\":\"2002-03-07T00:37:06+00:00\",\"updated-at\":\"2010-12-30T08:08:49+00:00\",\"publisher\":{\"id\":349,\"name\":\"Kuphal-Windler\",\"founded-at\":\"1994\",\"website-url\":\"http:\\\/\\\/mccullough.com\\\/vel-labore-non-distinctio-tenetur-fuga.html\",\"twitter-url\":\"http:\\\/\\\/corwin.info\\\/consequatur-unde-quos-rerum-neque-eius-saepe\",\"address\":\"184 Cristal Streets Suite 830\\nSouth Lamont, UT 74826\",\"city\":\"Gilesstad\",\"state\":\"\",\"zip\":\"46008-2201\",\"country\":\"UZB\",\"created-at\":\"2022-01-25T20:07:06+00:00\",\"updated-at\":\"2022-01-25T20:07:06+00:00\"}}}",
+                            "body": "{\"data\":{\"id\":null,\"title\":\"Dr. Liana Olson\",\"volume\":31,\"description\":\"Fuga non beatae architecto a consequatur qui et delectus. Magnam modi quia sint dolores accusamus minus qui aliquid. Quia perspiciatis qui maiores et. Ipsum enim eum et sint.\",\"start-year\":\"2001\",\"end-year\":\"2012\",\"rating\":\"libero\",\"type\":\"\",\"created-at\":\"1980-12-31T22:44:55+00:00\",\"updated-at\":\"2019-04-05T14:33:36+00:00\",\"publisher\":{\"id\":479,\"name\":\"Buckridge PLC\",\"founded-at\":\"1979\",\"website-url\":\"http:\\\/\\\/www.ryan.org\\\/magnam-molestiae-dolore-reprehenderit\",\"twitter-url\":\"http:\\\/\\\/welch.biz\\\/rerum-voluptate-tempore-quas-libero.html\",\"address\":\"44928 Reid Tunnel\\nReichelville, AR 93407-8296\",\"city\":\"Muellertown\",\"state\":\"\",\"zip\":\"52171-8604\",\"country\":\"GMB\",\"created-at\":\"2022-01-26T18:10:42+00:00\",\"updated-at\":\"2022-01-26T18:10:42+00:00\"}}}",
                             "name": ""
                         }
                     ]
@@ -379,7 +391,7 @@
                                 {
                                     "id": "publisher",
                                     "key": "publisher",
-                                    "value": "14",
+                                    "value": "15",
                                     "description": ""
                                 }
                             ]
@@ -397,56 +409,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"pertoudoudnsfsrvbprbemlletxdmgwecekniuoozmlswiyfkgdxzxlbekwybyatlzxcfdsmaorgvonvlnhuppslhflb\",\"volume\":0,\"description\":\"qfwetjtgrdelrkwajrjhenpiprudgupcmcuxzsxdvhgltqzpgdnwdrscugqkdesncjikjrjxhgqxppclwkcbyzcoqxzutuotelrpolfckshaieridfurviumkvimzpgbdjtlhyinbooxyrkifngtsgavwmvmcnekqdbkdqjgtjwqrsqjgiiyegqisrkawelopygdglfxnquynjqtuxhwbqxtdzlpdvdokakezlzydcakntzkgqlgprkmozlgxdfbiwxupgtqrwhlefcjzdyrmxmxyedkypdqbakhqjq\",\"start_year\":450,\"end_year\":352,\"rating\":\"btbugufuvlhcz\"}"
-                        },
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [],
-                            "code": 202,
-                            "body": "{\n    \"message\": \"Accepted\"\n}",
-                            "name": ""
-                        },
-                        {
-                            "header": [],
-                            "code": 422,
-                            "body": "{\n    \"message\": \"The given data was invalid.\",\n    \"errors\": {\n        \"field\": [\n            \"Error message\"\n        ]\n    }\n}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "api\/v1\/series\/{id}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/v1\/series\/:id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/series\/:id",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "6",
-                                    "description": "The ID of the series."
-                                }
-                            ]
-                        },
-                        "method": "PUT",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"title\":\"hvcjxkyuyfmaaepfhnietoltrqewsvtuqicyocziltpufqrybpvywqlgzzuazepusrywqttatmxehxtowzkfmsrbblsdluumzjafe\",\"volume\":0,\"description\":\"mnbxnizjhkwwjeibnxfldyykrbgjrqrhqcezdorqflfxdthzgvwnureiquqlxqzrcfkvjucyvrahvrjcibgfjgtsmjlroodcgbjbvkoyzblcrkxtxcbpwwiqldkvxusqlrkbkxhrstmxdmtiszktycmjudrsffucfuojsagfqdzeapvpsuoigrdlzonpybqfsxxtdfeqbdptdkliefrwizukavoratzmszzxusvxejqywt\",\"start_year\":254,\"end_year\":190,\"rating\":\"ugrspjpoeuivbtjdykwnogfdbvuy\"}"
+                            "raw": "{\"title\":\"hjhzdwdlapzbdssxajyciwhgnfurbfbcnukxfxpwozvucejpneluxwuwtdutaogmtuooiiiwpzvpfwufpdrzzcfnttofmkfvtwwugty\",\"volume\":1,\"description\":\"cxcduuiopeifezidyympkzaionyqtzgnvecoxkpcxbhhwshevfzzykfbfmmgkgwmjwecuytcyhqfbbjlybgngudzhzryctewomiyqqiiranifcfmnmuyamgfjnbjkmmwcpiertkyzbsylnijrfpawmknvjnusjajoyvpkcvxippcoqcnvnbkbtjmyudtkhgrejfripizownpacfzqeiokrraapsqchwmhjoxcxyshouasplmkhckfdmodyowwjwbizqpggeqeoepqppvldknktcwnixvmbkdamzgdrluaifosxcogihyfpesayvuedkrdttrlpgjgjqhixkrndmizkmbzonnmcrtplfilvaktrkvjilqjrtfskekhdgthiqepflxagabiyikrwwzofrvplqdslshpyatkhayaudktdeiapcokebzwuvdbdnvcwtuvpbcaixwkemruamhgltbchlmpqghvrpuwidudghrchrjvmblpytxqrmcsfoephejwetaeeqxpqpxlswemnrhnojiqnzbedlvaogxvnvlgbphakqygleexvmehorrymhrfzwxjhzoutchteolmaoutycsleoqwulrdhthlfzzxkbzixpjhdqgthyeedqikkynrgczyqkknygwwwcxjkyfgverfbrprlsxvpmtqtavdizyjhuzthgkmnde\",\"start_year\":1016,\"end_year\":680,\"rating\":\"unqywox\",\"type\":\"hp\"}"
                         },
                         "description": ""
                     },
@@ -478,6 +441,55 @@
                                     "id": "id",
                                     "key": "id",
                                     "value": "11",
+                                    "description": "The ID of the series."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"title\":\"qaoivetetqotwzjrnpwrbntfjylfuehirdhcgpjuaqldjawtkxlewniblqbgdwwtegtllgemaohvzxgwsbpyfvwhsmgjsoafs\",\"volume\":0,\"description\":\"lzxfdkgawdqwzxqgtkfuxurfaoamhsxagjfixsdwqgjvhebfbxufakgnsdylguertjaeczjiyullpwfglmxdsurtqlvheahgteibjcllzustzvsbmcoqhmgjixucszkoxlarg\",\"start_year\":201,\"end_year\":42,\"rating\":\"uunfxjtdhhvtuckhjknwfwqejkf\",\"type\":\"vdwisedvjocyyqissycj\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 202,
+                            "body": "{\n    \"message\": \"Accepted\"\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 422,
+                            "body": "{\n    \"message\": \"The given data was invalid.\",\n    \"errors\": {\n        \"field\": [\n            \"Error message\"\n        ]\n    }\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/v1\/series\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/series\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/series\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
                                     "description": "The ID of the series."
                                 }
                             ]
@@ -520,8 +532,20 @@
                             "query": [
                                 {
                                     "key": "sort",
-                                    "value": "title",
-                                    "description": "The field to sort the list by.",
+                                    "value": "id",
+                                    "description": "The field to sort the list by (title, start_year)",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "filter%5Btitle%5D",
+                                    "value": "quia",
+                                    "description": "Filter the list by title",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "filter%5Bstart_year%5D",
+                                    "value": "explicabo",
+                                    "description": "Filter the list by start year",
                                     "disabled": false
                                 },
                                 {
@@ -537,7 +561,7 @@
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/v1\/publishers\/:publisher\/series?sort=title&page%5Bnumber%5D=2&page%5Bsize%5D=10",
+                            "raw": "{{baseUrl}}\/api\/v1\/publishers\/:publisher\/series?sort=id&filter%5Btitle%5D=quia&filter%5Bstart_year%5D=explicabo&page%5Bnumber%5D=2&page%5Bsize%5D=10",
                             "variable": [
                                 {
                                     "id": "publisher",
@@ -565,7 +589,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\"data\":[{\"id\":51,\"title\":\"Mr. Devyn Conn\",\"volume\":88,\"description\":\"Molestiae et eius sunt placeat nostrum quasi. Doloremque culpa incidunt velit. Facere facilis esse sed totam tempore aliquid.\",\"start-year\":\"1992\",\"end-year\":\"2007\",\"rating\":\"laborum\",\"created-at\":\"1975-11-17T17:26:18+00:00\",\"updated-at\":\"1989-02-15T11:04:42+00:00\",\"publisher\":{\"id\":345,\"name\":\"Hilpert-Morar\",\"founded-at\":\"2012\",\"website-url\":\"http:\\\/\\\/lehner.net\\\/autem-at-neque-rem-dicta-molestias-dolorem-quidem\",\"twitter-url\":\"http:\\\/\\\/www.hauck.info\\\/sit-minus-alias-est-similique-eum-laborum.html\",\"address\":\"226 Kautzer Road Suite 502\\nDevonside, OH 22283-5743\",\"city\":\"East Johnpaulview\",\"state\":\"\",\"zip\":\"32779-5731\",\"country\":\"BFA\",\"created-at\":\"2022-01-25T20:07:06+00:00\",\"updated-at\":\"2022-01-25T20:07:06+00:00\"}},{\"id\":52,\"title\":\"Lorenzo Bahringer\",\"volume\":47,\"description\":\"Fugiat labore molestias pariatur doloribus molestiae. Dolores ex aliquid dolores ab ut sit. Quasi nisi accusamus occaecati cum et. Qui veniam soluta sequi optio porro aut cumque.\",\"start-year\":\"1994\",\"end-year\":\"1984\",\"rating\":\"ea\",\"created-at\":\"1976-05-26T10:33:40+00:00\",\"updated-at\":\"1986-07-31T01:52:40+00:00\",\"publisher\":{\"id\":346,\"name\":\"Donnelly-Parisian\",\"founded-at\":\"2001\",\"website-url\":\"https:\\\/\\\/www.wisoky.com\\\/omnis-rerum-architecto-et-eum-quae\",\"twitter-url\":\"https:\\\/\\\/price.com\\\/sed-debitis-temporibus-sapiente-facilis-vero-aut-accusamus.html\",\"address\":\"30427 Federico Pass Apt. 368\\nMarcside, WY 11907\",\"city\":\"East Muhammad\",\"state\":\"\",\"zip\":\"46191-4858\",\"country\":\"GTM\",\"created-at\":\"2022-01-25T20:07:06+00:00\",\"updated-at\":\"2022-01-25T20:07:06+00:00\"}}],\"links\":{\"first\":\"\\\/?page=1\",\"last\":\"\\\/?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"\\\/?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"\\\/\",\"per_page\":\"30\",\"to\":2,\"total\":2}}",
+                            "body": "{\"data\":[{\"id\":null,\"title\":\"Dr. Moises Keeling\",\"volume\":96,\"description\":\"Magni nesciunt exercitationem ipsam incidunt dicta ipsum doloribus. Ratione aspernatur qui earum repudiandae. Quam et officia dolore voluptatum quo dicta aut.\",\"start-year\":\"1996\",\"end-year\":\"1988\",\"rating\":\"velit\",\"type\":\"\",\"created-at\":\"2009-08-23T23:38:40+00:00\",\"updated-at\":\"2001-04-17T02:55:53+00:00\",\"publisher\":{\"id\":471,\"name\":\"Auer, Powlowski and Jacobs\",\"founded-at\":\"2014\",\"website-url\":\"http:\\\/\\\/www.rolfson.com\\\/praesentium-facilis-quia-libero-voluptas-fugit\",\"twitter-url\":\"http:\\\/\\\/www.raynor.info\\\/\",\"address\":\"992 Chauncey Heights\\nNew Yesseniaberg, MN 08243\",\"city\":\"Monahanville\",\"state\":\"\",\"zip\":\"99154-9146\",\"country\":\"DZA\",\"created-at\":\"2022-01-26T18:10:42+00:00\",\"updated-at\":\"2022-01-26T18:10:42+00:00\"}},{\"id\":null,\"title\":\"Opal Marquardt DVM\",\"volume\":21,\"description\":\"Consequuntur eos fugiat maiores. Accusantium reprehenderit nemo aspernatur saepe delectus non. Quia aut aut quisquam ducimus est praesentium. Voluptatem eos corrupti unde accusantium eum.\",\"start-year\":\"1981\",\"end-year\":\"2011\",\"rating\":\"est\",\"type\":\"\",\"created-at\":\"2009-01-22T22:21:37+00:00\",\"updated-at\":\"2011-09-06T06:33:19+00:00\",\"publisher\":{\"id\":473,\"name\":\"Schroeder-Dickinson\",\"founded-at\":\"1975\",\"website-url\":\"http:\\\/\\\/www.zemlak.com\\\/\",\"twitter-url\":\"http:\\\/\\\/www.osinski.com\\\/tempora-nostrum-qui-est-et-quae-qui-et\",\"address\":\"98774 Shields Mountain\\nKihnland, ID 62780-7240\",\"city\":\"North Kameronstad\",\"state\":\"\",\"zip\":\"08540\",\"country\":\"ABW\",\"created-at\":\"2022-01-26T18:10:42+00:00\",\"updated-at\":\"2022-01-26T18:10:42+00:00\"}}],\"links\":{\"first\":\"\\\/?page=1\",\"last\":\"\\\/?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"\\\/?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"\\\/\",\"per_page\":\"30\",\"to\":2,\"total\":2}}",
                             "name": ""
                         }
                     ]

@@ -22,6 +22,7 @@ class CreateSeriesTable extends Migration
             $table->integer('start_year');
             $table->integer('end_year')->nullable();
             $table->string('rating', 30)->nullable();
+            $table->string('type', 30);
             $table->timestamps();
         });
     }

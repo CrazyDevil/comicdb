@@ -17,12 +17,13 @@ class SeriesResource extends JsonResource
             'title' => $serie->title,
             'volume' => $serie->volume ?? 1,
             'description' => $serie->description ?? '',
-            'start-year' => $serie->start_year ?? 0,
-            'end-year' => $serie->end_year ?? 0,
+            'start-year' => $serie->start_year,
+            'end-year' => $serie->end_year,
             'rating' => $serie->rating ?? '',
+            'type' => $serie->type ?? '',
             'created-at' => $serie->created_at->toIso8601String(),
             'updated-at' => $serie->updated_at->toIso8601String(),
-            'publisher' => new PublisherResource($serie->publisher),
+            'publisher' => PublisherResource::make($this->whenLoaded('publisher'))
         ];
     }
 }

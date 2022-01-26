@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\SeriesTypes;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -13,14 +14,12 @@ class Series extends Model
 
     protected $guarded = [];
 
+    protected $casts = [
+        'type' => SeriesTypes::class,
+    ];
+
     public function publisher(): BelongsTo
     {
         return $this->belongsTo(Publisher::class);
-    }
-
-    public function scopeActive(Builder $builder): Builder
-    {
-        return $builder->whereNull('end_year')
-            ->orWhere('end_year', '>=', now()->year);
     }
 }
