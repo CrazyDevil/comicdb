@@ -20,6 +20,8 @@ Route::prefix('v1')->post('/register', [RegisterController::class, 'register']);
 
 Route::middleware('auth:sanctum')->prefix('v1')->group(function () {
     Route::apiResource('publishers', PublisherController::class);
+    Route::get('/publishers/{publisher}/series', [SeriesController::class, 'index']);
+
     Route::apiResource('series', SeriesController::class)->except(['store']);
     Route::post('publishers/{publisher}/series', [SeriesController::class, 'store']);
 });

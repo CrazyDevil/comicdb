@@ -11,6 +11,7 @@ use App\Models\Publisher;
 use App\Models\Series;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
+use Spatie\QueryBuilder\AllowedFilter;
 use Spatie\QueryBuilder\QueryBuilder;
 
 /**
@@ -30,12 +31,20 @@ class SeriesController extends Controller
      * @apiResourceCollection App\Http\Resources\SeriesResource
      * @apiResourceModel App\Models\Series paginate=30
      */
-    public function index(): AnonymousResourceCollection
+    public function index(Publisher $publisher): AnonymousResourceCollection
     {
         $series = QueryBuilder::for(Series::class)
             ->allowedSorts([
                 'title',
+                'start_year',
             ])
+            ->allowedFilters([
+                AllowedFilter::partial('title'),
+                AllowedFilter::scope('active'),
+            ])
+            ->when($publisher, function ($query) use ($publisher) {
+                return $query->where('publisher_id', $publisher->id);
+            })
             ->jsonPaginate()
             ->appends(request()->query());
 

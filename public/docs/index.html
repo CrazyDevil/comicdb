@@ -111,6 +111,9 @@
                                     <li class="tocify-item level-2" data-unique="series-DELETEapi-v1-series--id-">
                         <a href="#series-DELETEapi-v1-series--id-">DELETE api/v1/series/{id}</a>
                     </li>
+                                    <li class="tocify-item level-2" data-unique="series-GETapi-v1-publishers--publisher--series">
+                        <a href="#series-GETapi-v1-publishers--publisher--series">GET api/v1/publishers/{publisher}/series</a>
+                    </li>
                                                     </ul>
                             </ul>
         
@@ -140,7 +143,7 @@ You can switch the language used with the tabs at the top right (or from the nav
 <pre><code class="language-yaml">http://localhost</code></pre>
 
         <h1 id="authenticating-requests">Authenticating requests</h1>
-<p>This API is authenticated by sending an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer {YOUR_AUTH_KEY}"</code></strong>.</p>
+<p>To authenticate requests, include an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer {YOUR_AUTH_KEY}"</code></strong>.</p>
 <p>All authenticated endpoints are marked with a <code>requires authentication</code> badge in the documentation below.</p>
 <p>You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.</p>
 
@@ -203,32 +206,32 @@ print_r(json_decode((string) $body));</code></pre></div>
 <code class="language-json">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: 327,
-            &quot;name&quot;: &quot;Beatty-Yost&quot;,
-            &quot;founded-at&quot;: &quot;2003&quot;,
-            &quot;website-url&quot;: &quot;http://lindgren.com/ipsum-et-voluptatem-ut-harum-amet&quot;,
-            &quot;twitter-url&quot;: &quot;https://www.feest.com/illo-molestiae-laboriosam-rerum-incidunt-iusto-expedita&quot;,
-            &quot;address&quot;: &quot;8611 Jacobi Crest Suite 934\nGislasonfurt, NY 47888-3407&quot;,
-            &quot;city&quot;: &quot;North Berniefort&quot;,
+            &quot;id&quot;: 342,
+            &quot;name&quot;: &quot;Bernhard, Harvey and Dicki&quot;,
+            &quot;founded-at&quot;: &quot;2020&quot;,
+            &quot;website-url&quot;: &quot;http://www.feil.com/in-saepe-officiis-voluptates&quot;,
+            &quot;twitter-url&quot;: &quot;http://green.com/tempora-ea-velit-corrupti-et-molestias-dicta-molestias.html&quot;,
+            &quot;address&quot;: &quot;3275 Leuschke Pines Apt. 875\nOsbaldohaven, NY 88441&quot;,
+            &quot;city&quot;: &quot;New Lee&quot;,
             &quot;state&quot;: &quot;&quot;,
-            &quot;zip&quot;: &quot;89335&quot;,
-            &quot;country&quot;: &quot;BVT&quot;,
-            &quot;created-at&quot;: &quot;2022-01-25T19:59:07+00:00&quot;,
-            &quot;updated-at&quot;: &quot;2022-01-25T19:59:07+00:00&quot;
+            &quot;zip&quot;: &quot;43707-8655&quot;,
+            &quot;country&quot;: &quot;IOT&quot;,
+            &quot;created-at&quot;: &quot;2022-01-25T20:07:06+00:00&quot;,
+            &quot;updated-at&quot;: &quot;2022-01-25T20:07:06+00:00&quot;
         },
         {
-            &quot;id&quot;: 328,
-            &quot;name&quot;: &quot;Shields, Blick and Murray&quot;,
-            &quot;founded-at&quot;: &quot;1990&quot;,
-            &quot;website-url&quot;: &quot;https://www.nolan.net/nostrum-facere-dolorem-et-et&quot;,
-            &quot;twitter-url&quot;: &quot;http://www.christiansen.org/praesentium-et-sapiente-non-quibusdam.html&quot;,
-            &quot;address&quot;: &quot;94554 Tillman Centers Apt. 616\nEast Carmelberg, ME 97868-5739&quot;,
-            &quot;city&quot;: &quot;Port Marilieview&quot;,
+            &quot;id&quot;: 343,
+            &quot;name&quot;: &quot;Metz Inc&quot;,
+            &quot;founded-at&quot;: &quot;2018&quot;,
+            &quot;website-url&quot;: &quot;https://www.lesch.biz/et-molestiae-sapiente-repellendus-assumenda-modi-dolor-sed&quot;,
+            &quot;twitter-url&quot;: &quot;http://watsica.com/blanditiis-voluptas-amet-suscipit-eveniet-perferendis-harum-et&quot;,
+            &quot;address&quot;: &quot;12280 Dortha Island\nEast Estevanchester, AL 36471&quot;,
+            &quot;city&quot;: &quot;New Emely&quot;,
             &quot;state&quot;: &quot;&quot;,
-            &quot;zip&quot;: &quot;96720&quot;,
-            &quot;country&quot;: &quot;KIR&quot;,
-            &quot;created-at&quot;: &quot;2022-01-25T19:59:07+00:00&quot;,
-            &quot;updated-at&quot;: &quot;2022-01-25T19:59:07+00:00&quot;
+            &quot;zip&quot;: &quot;87741-7112&quot;,
+            &quot;country&quot;: &quot;JPN&quot;,
+            &quot;created-at&quot;: &quot;2022-01-25T20:07:06+00:00&quot;,
+            &quot;updated-at&quot;: &quot;2022-01-25T20:07:06+00:00&quot;
         }
     ],
     &quot;links&quot;: {
@@ -405,12 +408,12 @@ print_r(json_decode((string) $body));</code></pre></div>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"ullam\",
-    \"founded_year\": 564,
-    \"founded_month\": 7,
-    \"founded_day\": 13,
-    \"website_url\": \"prjmqxcffcrhdpdjpqisgbatuuyvtgjehvvwfrdahrvvbbljyszwokjhfkxzuuxqehtsncnpvkkaybyzsdr\",
-    \"twitter_url\": \"frrlxvvoetvmgzwejlhtzwrfqcckizndrlmybceclfvohmkbrderyckokleoxqugnobtyzadjugbbfjctpdertkqhqomrrklcqrmncrgfvtyobmtwwqpkwicczzlivxba\"
+    \"name\": \"iusto\",
+    \"founded_year\": 896,
+    \"founded_month\": 12,
+    \"founded_day\": 3,
+    \"website_url\": \"hrhfefakzfjksisgqymeoivrvvnfinlvdxrodwdmgiq\",
+    \"twitter_url\": \"hrzekcfmmvdcwssajxinnhezzeoqvztctbiqqzxtbjbyggnkpaxjyygvhumgmbqipxa\"
 }"
 </code></pre></div>
 
@@ -426,12 +429,12 @@ $response = $client-&gt;post(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'name' =&gt; 'ullam',
-            'founded_year' =&gt; 564,
-            'founded_month' =&gt; 7,
-            'founded_day' =&gt; 13,
-            'website_url' =&gt; 'prjmqxcffcrhdpdjpqisgbatuuyvtgjehvvwfrdahrvvbbljyszwokjhfkxzuuxqehtsncnpvkkaybyzsdr',
-            'twitter_url' =&gt; 'frrlxvvoetvmgzwejlhtzwrfqcckizndrlmybceclfvohmkbrderyckokleoxqugnobtyzadjugbbfjctpdertkqhqomrrklcqrmncrgfvtyobmtwwqpkwicczzlivxba',
+            'name' =&gt; 'iusto',
+            'founded_year' =&gt; 896,
+            'founded_month' =&gt; 12,
+            'founded_day' =&gt; 3,
+            'website_url' =&gt; 'hrhfefakzfjksisgqymeoivrvvnfinlvdxrodwdmgiq',
+            'twitter_url' =&gt; 'hrzekcfmmvdcwssajxinnhezzeoqvztctbiqqzxtbjbyggnkpaxjyygvhumgmbqipxa',
         ],
     ]
 );
@@ -518,7 +521,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="text"
                name="name"
                data-endpoint="POSTapi-v1-publishers"
-               value="ullam"
+               value="iusto"
                data-component="body" hidden>
     <br>
 <p>The name of the publisher.</p>
@@ -528,7 +531,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="number"
                name="founded_year"
                data-endpoint="POSTapi-v1-publishers"
-               value="564"
+               value="896"
                data-component="body" hidden>
     <br>
 <p>Must be at least 1900. Must not be greater than 2022.</p>
@@ -538,7 +541,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="number"
                name="founded_month"
                data-endpoint="POSTapi-v1-publishers"
-               value="7"
+               value="12"
                data-component="body" hidden>
     <br>
 <p>Must be at least 1. Must not be greater than 12.</p>
@@ -548,7 +551,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="number"
                name="founded_day"
                data-endpoint="POSTapi-v1-publishers"
-               value="13"
+               value="3"
                data-component="body" hidden>
     <br>
 <p>Must be at least 1. Must not be greater than 31.</p>
@@ -558,7 +561,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="text"
                name="website_url"
                data-endpoint="POSTapi-v1-publishers"
-               value="prjmqxcffcrhdpdjpqisgbatuuyvtgjehvvwfrdahrvvbbljyszwokjhfkxzuuxqehtsncnpvkkaybyzsdr"
+               value="hrhfefakzfjksisgqymeoivrvvnfinlvdxrodwdmgiq"
                data-component="body" hidden>
     <br>
 <p>Must be a valid URL. Must not be greater than 255 characters.</p>
@@ -568,7 +571,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="text"
                name="twitter_url"
                data-endpoint="POSTapi-v1-publishers"
-               value="frrlxvvoetvmgzwejlhtzwrfqcckizndrlmybceclfvohmkbrderyckokleoxqugnobtyzadjugbbfjctpdertkqhqomrrklcqrmncrgfvtyobmtwwqpkwicczzlivxba"
+               value="hrzekcfmmvdcwssajxinnhezzeoqvztctbiqqzxtbjbyggnkpaxjyygvhumgmbqipxa"
                data-component="body" hidden>
     <br>
 <p>Must be a valid URL. Must not be greater than 255 characters.</p>
@@ -589,7 +592,7 @@ print_r(json_decode((string) $body));</code></pre></div>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/v1/publishers/18" \
+    --get "http://localhost/api/v1/publishers/20" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -598,7 +601,7 @@ print_r(json_decode((string) $body));</code></pre></div>
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost/api/v1/publishers/18',
+    'http://localhost/api/v1/publishers/20',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
@@ -620,18 +623,18 @@ print_r(json_decode((string) $body));</code></pre></div>
 
 <code class="language-json">{
     &quot;data&quot;: {
-        &quot;id&quot;: 329,
-        &quot;name&quot;: &quot;Hickle, Erdman and Jerde&quot;,
-        &quot;founded-at&quot;: &quot;1989&quot;,
-        &quot;website-url&quot;: &quot;http://www.moore.com/&quot;,
-        &quot;twitter-url&quot;: &quot;http://www.hettinger.biz/assumenda-dignissimos-tempora-quaerat-libero-aut-sint-et&quot;,
-        &quot;address&quot;: &quot;4715 Bernhard Pines\nSouth Madyson, GA 76347&quot;,
-        &quot;city&quot;: &quot;Oberbrunnerhaven&quot;,
+        &quot;id&quot;: 344,
+        &quot;name&quot;: &quot;Hackett, Schmidt and Flatley&quot;,
+        &quot;founded-at&quot;: &quot;1979&quot;,
+        &quot;website-url&quot;: &quot;http://www.kohler.com/nihil-occaecati-ut-odio-nihil-possimus&quot;,
+        &quot;twitter-url&quot;: &quot;https://schmidt.com/soluta-fuga-fugiat-voluptatibus-aut-officia.html&quot;,
+        &quot;address&quot;: &quot;28948 Friedrich Road Apt. 389\nNew Kiel, RI 51868&quot;,
+        &quot;city&quot;: &quot;Markusborough&quot;,
         &quot;state&quot;: &quot;&quot;,
-        &quot;zip&quot;: &quot;70236-8006&quot;,
-        &quot;country&quot;: &quot;ECU&quot;,
-        &quot;created-at&quot;: &quot;2022-01-25T19:59:08+00:00&quot;,
-        &quot;updated-at&quot;: &quot;2022-01-25T19:59:08+00:00&quot;
+        &quot;zip&quot;: &quot;45343&quot;,
+        &quot;country&quot;: &quot;BRA&quot;,
+        &quot;created-at&quot;: &quot;2022-01-25T20:07:06+00:00&quot;,
+        &quot;updated-at&quot;: &quot;2022-01-25T20:07:06+00:00&quot;
     }
 }</code>
  </pre>
@@ -689,7 +692,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="number"
                name="id"
                data-endpoint="GETapi-v1-publishers--id-"
-               value="18"
+               value="20"
                data-component="url" hidden>
     <br>
 <p>The ID of the publisher.</p>
@@ -710,17 +713,17 @@ print_r(json_decode((string) $body));</code></pre></div>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost/api/v1/publishers/16" \
+    "http://localhost/api/v1/publishers/1" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"oqqkhmqojjeljhsrgvfwjekpvzxzthrdnafjghdgkpzblseqjjlyjdytmyicftyiagsovnceq\",
-    \"founded_year\": 1494,
-    \"founded_month\": 9,
-    \"founded_day\": 10,
-    \"website_url\": \"zbbigovhvhohwpdegqbkoopjmwrevxleabrklhgdbxpaapcnylzeodauaeyoiavnqkkqcmqjxjnumrffexddrnfdyoatrlsweqcjxgcvtqohrtxqqsijktutiucnzlrwcwfnuiqgetfgahmlwjzlfqqbunukeqgijfzdprfmeduxofmnwqgsngqpjleztgmvcmveqvhamfjaqbubmtjtpnmhvyzmsqe\",
-    \"twitter_url\": \"bwmzkefuzqguycbzzlqfiqhqakwwqgrkbfqhusojbuchatmcruumgucmmcituvbjixabteutjxmipxxpnpwtodifeoeokvdjzayeognfcdhjzujbhfhwfpfh\"
+    \"name\": \"ztkcqazfvtnfioilfr\",
+    \"founded_year\": 537,
+    \"founded_month\": 0,
+    \"founded_day\": 21,
+    \"website_url\": \"cuoustipavqalgzuhsnkjbjywhglujlbcoqndakgnaltzsgdcnpppmrihswqoxxbdgrssebonbjsbfzgymezxtxfysxfgxdbrqlqhkmhpxjhpnnloohdkqgjwnsgjlbxgpqfssdvhcsmkneruzibqipqtn\",
+    \"twitter_url\": \"ujsrlnpzrwbtdrmxjhdgrdqwcugeasqmnxvsfhyqnvsjtbhpfyimldmsxzxvttdzaupgsmqwajfnwwsaakkzkoiwelmwlufklnyelvv\"
 }"
 </code></pre></div>
 
@@ -728,7 +731,7 @@ print_r(json_decode((string) $body));</code></pre></div>
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;put(
-    'http://localhost/api/v1/publishers/16',
+    'http://localhost/api/v1/publishers/1',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
@@ -736,12 +739,12 @@ $response = $client-&gt;put(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'name' =&gt; 'oqqkhmqojjeljhsrgvfwjekpvzxzthrdnafjghdgkpzblseqjjlyjdytmyicftyiagsovnceq',
-            'founded_year' =&gt; 1494,
-            'founded_month' =&gt; 9,
-            'founded_day' =&gt; 10,
-            'website_url' =&gt; 'zbbigovhvhohwpdegqbkoopjmwrevxleabrklhgdbxpaapcnylzeodauaeyoiavnqkkqcmqjxjnumrffexddrnfdyoatrlsweqcjxgcvtqohrtxqqsijktutiucnzlrwcwfnuiqgetfgahmlwjzlfqqbunukeqgijfzdprfmeduxofmnwqgsngqpjleztgmvcmveqvhamfjaqbubmtjtpnmhvyzmsqe',
-            'twitter_url' =&gt; 'bwmzkefuzqguycbzzlqfiqhqakwwqgrkbfqhusojbuchatmcruumgucmmcituvbjixabteutjxmipxxpnpwtodifeoeokvdjzayeognfcdhjzujbhfhwfpfh',
+            'name' =&gt; 'ztkcqazfvtnfioilfr',
+            'founded_year' =&gt; 537,
+            'founded_month' =&gt; 0,
+            'founded_day' =&gt; 21,
+            'website_url' =&gt; 'cuoustipavqalgzuhsnkjbjywhglujlbcoqndakgnaltzsgdcnpppmrihswqoxxbdgrssebonbjsbfzgymezxtxfysxfgxdbrqlqhkmhpxjhpnnloohdkqgjwnsgjlbxgpqfssdvhcsmkneruzibqipqtn',
+            'twitter_url' =&gt; 'ujsrlnpzrwbtdrmxjhdgrdqwcugeasqmnxvsfhyqnvsjtbhpfyimldmsxzxvttdzaupgsmqwajfnwwsaakkzkoiwelmwlufklnyelvv',
         ],
     ]
 );
@@ -832,7 +835,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="number"
                name="id"
                data-endpoint="PUTapi-v1-publishers--id-"
-               value="16"
+               value="1"
                data-component="url" hidden>
     <br>
 <p>The ID of the publisher.</p>
@@ -843,7 +846,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="text"
                name="name"
                data-endpoint="PUTapi-v1-publishers--id-"
-               value="oqqkhmqojjeljhsrgvfwjekpvzxzthrdnafjghdgkpzblseqjjlyjdytmyicftyiagsovnceq"
+               value="ztkcqazfvtnfioilfr"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 100 characters.</p>
@@ -853,7 +856,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="number"
                name="founded_year"
                data-endpoint="PUTapi-v1-publishers--id-"
-               value="1494"
+               value="537"
                data-component="body" hidden>
     <br>
 <p>Must be at least 1900. Must not be greater than 2022.</p>
@@ -863,7 +866,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="number"
                name="founded_month"
                data-endpoint="PUTapi-v1-publishers--id-"
-               value="9"
+               value="0"
                data-component="body" hidden>
     <br>
 <p>Must be at least 1. Must not be greater than 12.</p>
@@ -873,7 +876,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="number"
                name="founded_day"
                data-endpoint="PUTapi-v1-publishers--id-"
-               value="10"
+               value="21"
                data-component="body" hidden>
     <br>
 <p>Must be at least 1. Must not be greater than 31.</p>
@@ -883,7 +886,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="text"
                name="website_url"
                data-endpoint="PUTapi-v1-publishers--id-"
-               value="zbbigovhvhohwpdegqbkoopjmwrevxleabrklhgdbxpaapcnylzeodauaeyoiavnqkkqcmqjxjnumrffexddrnfdyoatrlsweqcjxgcvtqohrtxqqsijktutiucnzlrwcwfnuiqgetfgahmlwjzlfqqbunukeqgijfzdprfmeduxofmnwqgsngqpjleztgmvcmveqvhamfjaqbubmtjtpnmhvyzmsqe"
+               value="cuoustipavqalgzuhsnkjbjywhglujlbcoqndakgnaltzsgdcnpppmrihswqoxxbdgrssebonbjsbfzgymezxtxfysxfgxdbrqlqhkmhpxjhpnnloohdkqgjwnsgjlbxgpqfssdvhcsmkneruzibqipqtn"
                data-component="body" hidden>
     <br>
 <p>Must be a valid URL. Must not be greater than 255 characters.</p>
@@ -893,7 +896,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="text"
                name="twitter_url"
                data-endpoint="PUTapi-v1-publishers--id-"
-               value="bwmzkefuzqguycbzzlqfiqhqakwwqgrkbfqhusojbuchatmcruumgucmmcituvbjixabteutjxmipxxpnpwtodifeoeokvdjzayeognfcdhjzujbhfhwfpfh"
+               value="ujsrlnpzrwbtdrmxjhdgrdqwcugeasqmnxvsfhyqnvsjtbhpfyimldmsxzxvttdzaupgsmqwajfnwwsaakkzkoiwelmwlufklnyelvv"
                data-component="body" hidden>
     <br>
 <p>Must be a valid URL. Must not be greater than 255 characters.</p>
@@ -914,7 +917,7 @@ print_r(json_decode((string) $body));</code></pre></div>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/v1/publishers/20" \
+    "http://localhost/api/v1/publishers/13" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -923,7 +926,7 @@ print_r(json_decode((string) $body));</code></pre></div>
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;delete(
-    'http://localhost/api/v1/publishers/20',
+    'http://localhost/api/v1/publishers/13',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
@@ -1010,7 +1013,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="number"
                name="id"
                data-endpoint="DELETEapi-v1-publishers--id-"
-               value="20"
+               value="13"
                data-component="url" hidden>
     <br>
 <p>The ID of the publisher.</p>
@@ -1072,53 +1075,53 @@ print_r(json_decode((string) $body));</code></pre></div>
 <code class="language-json">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: 41,
-            &quot;title&quot;: &quot;Gage Runolfsdottir&quot;,
-            &quot;volume&quot;: 98,
-            &quot;description&quot;: &quot;Soluta a esse laborum similique ad voluptate quas. Accusantium at pariatur deserunt ut nemo ipsa velit. Labore qui at eligendi. Suscipit nemo assumenda iusto est.&quot;,
-            &quot;start-year&quot;: &quot;1977&quot;,
-            &quot;end-year&quot;: &quot;1976&quot;,
-            &quot;rating&quot;: &quot;est&quot;,
-            &quot;created-at&quot;: &quot;2011-06-22T21:41:22+00:00&quot;,
-            &quot;updated-at&quot;: &quot;1985-02-10T14:56:58+00:00&quot;,
+            &quot;id&quot;: 53,
+            &quot;title&quot;: &quot;Devan Wolf&quot;,
+            &quot;volume&quot;: 9,
+            &quot;description&quot;: &quot;Quia ut quos fugit voluptatem explicabo omnis. Ut delectus porro deleniti accusantium omnis. Ut quisquam animi occaecati dolorum deserunt dolorem. Velit assumenda natus culpa incidunt quo.&quot;,
+            &quot;start-year&quot;: &quot;2021&quot;,
+            &quot;end-year&quot;: &quot;1993&quot;,
+            &quot;rating&quot;: &quot;aut&quot;,
+            &quot;created-at&quot;: &quot;1976-01-26T12:52:34+00:00&quot;,
+            &quot;updated-at&quot;: &quot;1970-05-10T09:06:26+00:00&quot;,
             &quot;publisher&quot;: {
-                &quot;id&quot;: 330,
-                &quot;name&quot;: &quot;Harvey-Gottlieb&quot;,
-                &quot;founded-at&quot;: &quot;2006&quot;,
-                &quot;website-url&quot;: &quot;http://www.vonrueden.com/&quot;,
-                &quot;twitter-url&quot;: &quot;http://www.hill.com/&quot;,
-                &quot;address&quot;: &quot;9318 Curtis Falls\nSouth Jeromytown, IL 37412-9730&quot;,
-                &quot;city&quot;: &quot;Devonburgh&quot;,
+                &quot;id&quot;: 347,
+                &quot;name&quot;: &quot;Gorczany PLC&quot;,
+                &quot;founded-at&quot;: &quot;1973&quot;,
+                &quot;website-url&quot;: &quot;http://www.marquardt.com/molestiae-maxime-sed-et-quod-repudiandae&quot;,
+                &quot;twitter-url&quot;: &quot;http://www.greenholt.com/&quot;,
+                &quot;address&quot;: &quot;65298 Zieme Underpass Suite 994\nDemetrisbury, TX 27993-8207&quot;,
+                &quot;city&quot;: &quot;Hintzland&quot;,
                 &quot;state&quot;: &quot;&quot;,
-                &quot;zip&quot;: &quot;57952-8236&quot;,
-                &quot;country&quot;: &quot;BLZ&quot;,
-                &quot;created-at&quot;: &quot;2022-01-25T19:59:08+00:00&quot;,
-                &quot;updated-at&quot;: &quot;2022-01-25T19:59:08+00:00&quot;
+                &quot;zip&quot;: &quot;86234-2772&quot;,
+                &quot;country&quot;: &quot;ABW&quot;,
+                &quot;created-at&quot;: &quot;2022-01-25T20:07:06+00:00&quot;,
+                &quot;updated-at&quot;: &quot;2022-01-25T20:07:06+00:00&quot;
             }
         },
         {
-            &quot;id&quot;: 42,
-            &quot;title&quot;: &quot;Christ Rodriguez&quot;,
-            &quot;volume&quot;: 4,
-            &quot;description&quot;: &quot;Cumque eos corporis voluptates harum quaerat culpa ex laudantium. Porro magni ipsam esse molestiae provident. Et voluptatum sunt voluptatem vitae.&quot;,
-            &quot;start-year&quot;: &quot;2000&quot;,
-            &quot;end-year&quot;: &quot;1995&quot;,
-            &quot;rating&quot;: &quot;consequatur&quot;,
-            &quot;created-at&quot;: &quot;1982-01-12T07:00:32+00:00&quot;,
-            &quot;updated-at&quot;: &quot;1991-11-27T17:52:19+00:00&quot;,
+            &quot;id&quot;: 54,
+            &quot;title&quot;: &quot;Antwan Connelly PhD&quot;,
+            &quot;volume&quot;: 66,
+            &quot;description&quot;: &quot;Et saepe veritatis nemo. Et sit voluptatibus et explicabo architecto. Eius repellat culpa et culpa. Aperiam adipisci maiores quasi provident doloribus.&quot;,
+            &quot;start-year&quot;: &quot;1988&quot;,
+            &quot;end-year&quot;: &quot;1978&quot;,
+            &quot;rating&quot;: &quot;ea&quot;,
+            &quot;created-at&quot;: &quot;2015-05-26T01:38:44+00:00&quot;,
+            &quot;updated-at&quot;: &quot;1978-09-11T18:17:11+00:00&quot;,
             &quot;publisher&quot;: {
-                &quot;id&quot;: 331,
-                &quot;name&quot;: &quot;Nikolaus-Hansen&quot;,
-                &quot;founded-at&quot;: &quot;2021&quot;,
-                &quot;website-url&quot;: &quot;https://emard.org/eligendi-ut-molestias-est-non.html&quot;,
-                &quot;twitter-url&quot;: &quot;http://www.hessel.com/dolor-hic-sed-qui-quas-repellat-libero-quos&quot;,
-                &quot;address&quot;: &quot;555 Cremin Walks\nWehnerfurt, RI 03091&quot;,
-                &quot;city&quot;: &quot;Crystelstad&quot;,
+                &quot;id&quot;: 348,
+                &quot;name&quot;: &quot;O&#039;Keefe-Klein&quot;,
+                &quot;founded-at&quot;: &quot;2007&quot;,
+                &quot;website-url&quot;: &quot;http://farrell.com/harum-tempore-perferendis-ratione-eum-hic-dolor.html&quot;,
+                &quot;twitter-url&quot;: &quot;http://www.schaefer.com/aperiam-temporibus-nihil-voluptatem-voluptatem-quidem-quos-consequuntur&quot;,
+                &quot;address&quot;: &quot;628 VonRueden Island\nNicolashaven, MN 76531&quot;,
+                &quot;city&quot;: &quot;Lake Elianeshire&quot;,
                 &quot;state&quot;: &quot;&quot;,
-                &quot;zip&quot;: &quot;31959&quot;,
-                &quot;country&quot;: &quot;ZAF&quot;,
-                &quot;created-at&quot;: &quot;2022-01-25T19:59:08+00:00&quot;,
-                &quot;updated-at&quot;: &quot;2022-01-25T19:59:08+00:00&quot;
+                &quot;zip&quot;: &quot;98029-8391&quot;,
+                &quot;country&quot;: &quot;PYF&quot;,
+                &quot;created-at&quot;: &quot;2022-01-25T20:07:06+00:00&quot;,
+                &quot;updated-at&quot;: &quot;2022-01-25T20:07:06+00:00&quot;
             }
         }
     ],
@@ -1251,7 +1254,7 @@ print_r(json_decode((string) $body));</code></pre></div>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/v1/series/11" \
+    --get "http://localhost/api/v1/series/14" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -1260,7 +1263,7 @@ print_r(json_decode((string) $body));</code></pre></div>
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost/api/v1/series/11',
+    'http://localhost/api/v1/series/14',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
@@ -1282,28 +1285,28 @@ print_r(json_decode((string) $body));</code></pre></div>
 
 <code class="language-json">{
     &quot;data&quot;: {
-        &quot;id&quot;: 43,
-        &quot;title&quot;: &quot;Mrs. Ciara Maggio&quot;,
-        &quot;volume&quot;: 42,
-        &quot;description&quot;: &quot;Omnis quo harum facere. Qui quaerat inventore voluptas at fugit ex quo. Ut et alias voluptas et. Ullam sed laborum architecto dolores nostrum.&quot;,
+        &quot;id&quot;: 55,
+        &quot;title&quot;: &quot;Miss Ebba O&#039;Hara&quot;,
+        &quot;volume&quot;: 80,
+        &quot;description&quot;: &quot;Iusto porro occaecati natus asperiores dicta ab blanditiis. Porro architecto architecto et. Nisi ut quia est quas voluptates qui voluptatem. Consectetur quia omnis voluptatibus deleniti illum.&quot;,
         &quot;start-year&quot;: &quot;2009&quot;,
-        &quot;end-year&quot;: &quot;2008&quot;,
-        &quot;rating&quot;: &quot;est&quot;,
-        &quot;created-at&quot;: &quot;1982-08-25T13:38:35+00:00&quot;,
-        &quot;updated-at&quot;: &quot;1992-11-17T06:13:04+00:00&quot;,
+        &quot;end-year&quot;: &quot;1974&quot;,
+        &quot;rating&quot;: &quot;aut&quot;,
+        &quot;created-at&quot;: &quot;2002-03-07T00:37:06+00:00&quot;,
+        &quot;updated-at&quot;: &quot;2010-12-30T08:08:49+00:00&quot;,
         &quot;publisher&quot;: {
-            &quot;id&quot;: 332,
-            &quot;name&quot;: &quot;Connelly Ltd&quot;,
+            &quot;id&quot;: 349,
+            &quot;name&quot;: &quot;Kuphal-Windler&quot;,
             &quot;founded-at&quot;: &quot;1994&quot;,
-            &quot;website-url&quot;: &quot;http://www.erdman.com/&quot;,
-            &quot;twitter-url&quot;: &quot;http://mckenzie.com/&quot;,
-            &quot;address&quot;: &quot;182 Schuster Shoals Apt. 566\nEast Rory, MO 74860&quot;,
-            &quot;city&quot;: &quot;Larkinside&quot;,
+            &quot;website-url&quot;: &quot;http://mccullough.com/vel-labore-non-distinctio-tenetur-fuga.html&quot;,
+            &quot;twitter-url&quot;: &quot;http://corwin.info/consequatur-unde-quos-rerum-neque-eius-saepe&quot;,
+            &quot;address&quot;: &quot;184 Cristal Streets Suite 830\nSouth Lamont, UT 74826&quot;,
+            &quot;city&quot;: &quot;Gilesstad&quot;,
             &quot;state&quot;: &quot;&quot;,
-            &quot;zip&quot;: &quot;56643&quot;,
-            &quot;country&quot;: &quot;LCA&quot;,
-            &quot;created-at&quot;: &quot;2022-01-25T19:59:08+00:00&quot;,
-            &quot;updated-at&quot;: &quot;2022-01-25T19:59:08+00:00&quot;
+            &quot;zip&quot;: &quot;46008-2201&quot;,
+            &quot;country&quot;: &quot;UZB&quot;,
+            &quot;created-at&quot;: &quot;2022-01-25T20:07:06+00:00&quot;,
+            &quot;updated-at&quot;: &quot;2022-01-25T20:07:06+00:00&quot;
         }
     }
 }</code>
@@ -1362,7 +1365,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="number"
                name="id"
                data-endpoint="GETapi-v1-series--id-"
-               value="11"
+               value="14"
                data-component="url" hidden>
     <br>
 <p>The ID of the series.</p>
@@ -1383,17 +1386,17 @@ print_r(json_decode((string) $body));</code></pre></div>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/v1/publishers/8/series" \
+    "http://localhost/api/v1/publishers/14/series" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"title\": \"hnvbjutxvwnonwfbmkgaiuezpozehrkeygmhrzyryuergbudpfumpbknrcgiuguwphelbwriyqugqfshitimcbyhxntdlwrjwkuitikeakipsdlgfmqtsb\",
-    \"volume\": 1,
-    \"description\": \"xjrsacyvchofybxoynnhcpzjznajtjxozbktnklqupxivhxiprjlcpswinxtdqiscsnslxgnalpcfoixgnnvkkoznojzigszbvfycjaqoqwxrdlvhegehxxjkoasyc\",
-    \"start_year\": 1069,
-    \"end_year\": 477,
-    \"rating\": \"ighqzxihbd\"
+    \"title\": \"pertoudoudnsfsrvbprbemlletxdmgwecekniuoozmlswiyfkgdxzxlbekwybyatlzxcfdsmaorgvonvlnhuppslhflb\",
+    \"volume\": 0,
+    \"description\": \"qfwetjtgrdelrkwajrjhenpiprudgupcmcuxzsxdvhgltqzpgdnwdrscugqkdesncjikjrjxhgqxppclwkcbyzcoqxzutuotelrpolfckshaieridfurviumkvimzpgbdjtlhyinbooxyrkifngtsgavwmvmcnekqdbkdqjgtjwqrsqjgiiyegqisrkawelopygdglfxnquynjqtuxhwbqxtdzlpdvdokakezlzydcakntzkgqlgprkmozlgxdfbiwxupgtqrwhlefcjzdyrmxmxyedkypdqbakhqjq\",
+    \"start_year\": 450,
+    \"end_year\": 352,
+    \"rating\": \"btbugufuvlhcz\"
 }"
 </code></pre></div>
 
@@ -1401,7 +1404,7 @@ print_r(json_decode((string) $body));</code></pre></div>
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;post(
-    'http://localhost/api/v1/publishers/8/series',
+    'http://localhost/api/v1/publishers/14/series',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
@@ -1409,12 +1412,12 @@ $response = $client-&gt;post(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'title' =&gt; 'hnvbjutxvwnonwfbmkgaiuezpozehrkeygmhrzyryuergbudpfumpbknrcgiuguwphelbwriyqugqfshitimcbyhxntdlwrjwkuitikeakipsdlgfmqtsb',
-            'volume' =&gt; 1,
-            'description' =&gt; 'xjrsacyvchofybxoynnhcpzjznajtjxozbktnklqupxivhxiprjlcpswinxtdqiscsnslxgnalpcfoixgnnvkkoznojzigszbvfycjaqoqwxrdlvhegehxxjkoasyc',
-            'start_year' =&gt; 1069,
-            'end_year' =&gt; 477,
-            'rating' =&gt; 'ighqzxihbd',
+            'title' =&gt; 'pertoudoudnsfsrvbprbemlletxdmgwecekniuoozmlswiyfkgdxzxlbekwybyatlzxcfdsmaorgvonvlnhuppslhflb',
+            'volume' =&gt; 0,
+            'description' =&gt; 'qfwetjtgrdelrkwajrjhenpiprudgupcmcuxzsxdvhgltqzpgdnwdrscugqkdesncjikjrjxhgqxppclwkcbyzcoqxzutuotelrpolfckshaieridfurviumkvimzpgbdjtlhyinbooxyrkifngtsgavwmvmcnekqdbkdqjgtjwqrsqjgiiyegqisrkawelopygdglfxnquynjqtuxhwbqxtdzlpdvdokakezlzydcakntzkgqlgprkmozlgxdfbiwxupgtqrwhlefcjzdyrmxmxyedkypdqbakhqjq',
+            'start_year' =&gt; 450,
+            'end_year' =&gt; 352,
+            'rating' =&gt; 'btbugufuvlhcz',
         ],
     ]
 );
@@ -1501,7 +1504,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="number"
                name="publisher"
                data-endpoint="POSTapi-v1-publishers--publisher--series"
-               value="8"
+               value="14"
                data-component="url" hidden>
     <br>
 
@@ -1512,7 +1515,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="text"
                name="title"
                data-endpoint="POSTapi-v1-publishers--publisher--series"
-               value="hnvbjutxvwnonwfbmkgaiuezpozehrkeygmhrzyryuergbudpfumpbknrcgiuguwphelbwriyqugqfshitimcbyhxntdlwrjwkuitikeakipsdlgfmqtsb"
+               value="pertoudoudnsfsrvbprbemlletxdmgwecekniuoozmlswiyfkgdxzxlbekwybyatlzxcfdsmaorgvonvlnhuppslhflb"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 150 characters.</p>
@@ -1522,7 +1525,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="number"
                name="volume"
                data-endpoint="POSTapi-v1-publishers--publisher--series"
-               value="1"
+               value="0"
                data-component="body" hidden>
     <br>
 <p>Must be at least 1.</p>
@@ -1532,7 +1535,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="text"
                name="description"
                data-endpoint="POSTapi-v1-publishers--publisher--series"
-               value="xjrsacyvchofybxoynnhcpzjznajtjxozbktnklqupxivhxiprjlcpswinxtdqiscsnslxgnalpcfoixgnnvkkoznojzigszbvfycjaqoqwxrdlvhegehxxjkoasyc"
+               value="qfwetjtgrdelrkwajrjhenpiprudgupcmcuxzsxdvhgltqzpgdnwdrscugqkdesncjikjrjxhgqxppclwkcbyzcoqxzutuotelrpolfckshaieridfurviumkvimzpgbdjtlhyinbooxyrkifngtsgavwmvmcnekqdbkdqjgtjwqrsqjgiiyegqisrkawelopygdglfxnquynjqtuxhwbqxtdzlpdvdokakezlzydcakntzkgqlgprkmozlgxdfbiwxupgtqrwhlefcjzdyrmxmxyedkypdqbakhqjq"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 1000 characters.</p>
@@ -1542,7 +1545,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="number"
                name="start_year"
                data-endpoint="POSTapi-v1-publishers--publisher--series"
-               value="1069"
+               value="450"
                data-component="body" hidden>
     <br>
 <p>Must be at least 1900. Must not be greater than 2023.</p>
@@ -1552,7 +1555,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="number"
                name="end_year"
                data-endpoint="POSTapi-v1-publishers--publisher--series"
-               value="477"
+               value="352"
                data-component="body" hidden>
     <br>
 <p>Must be at least 1900. Must not be greater than 2023.</p>
@@ -1562,7 +1565,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="text"
                name="rating"
                data-endpoint="POSTapi-v1-publishers--publisher--series"
-               value="ighqzxihbd"
+               value="btbugufuvlhcz"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 30 characters.</p>
@@ -1583,17 +1586,17 @@ print_r(json_decode((string) $body));</code></pre></div>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost/api/v1/series/3" \
+    "http://localhost/api/v1/series/6" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"title\": \"cnfwvgexjpylidfrciyiptjzyclizxtlug\",
+    \"title\": \"hvcjxkyuyfmaaepfhnietoltrqewsvtuqicyocziltpufqrybpvywqlgzzuazepusrywqttatmxehxtowzkfmsrbblsdluumzjafe\",
     \"volume\": 0,
-    \"description\": \"xuvmnvwkghtomteyxgpnunwzobfhavbhwriskwulbpzrcjndfoffqlsnyhvwirrbldutndprsdskxosxbfngyanwxbqqwnrfxdxcrgmnwhprfhibflzhyzljhsfxijrpexbfacjaamyvdiqvxtskgluannfxskbqrsnyvotlcsyyaausfdkhefaemwhzicgvaecatlpjlorpiodsywqxywaxegugcntmyuozygyxqvixxacjbgqfddjpgjluccgqnkcsilcjsmxidkyrehzywkkkvlwabwbrbbwazjscffomydrbwilsabgpqkxsnpriaggarxpdilndmygdkafpssjmstpdmhpkxcrlcigileyujkwbnodocavoftbisndpwcuzvj\",
-    \"start_year\": 1017,
-    \"end_year\": 219,
-    \"rating\": \"ageibnwvwcoeasnzcclthonxdru\"
+    \"description\": \"mnbxnizjhkwwjeibnxfldyykrbgjrqrhqcezdorqflfxdthzgvwnureiquqlxqzrcfkvjucyvrahvrjcibgfjgtsmjlroodcgbjbvkoyzblcrkxtxcbpwwiqldkvxusqlrkbkxhrstmxdmtiszktycmjudrsffucfuojsagfqdzeapvpsuoigrdlzonpybqfsxxtdfeqbdptdkliefrwizukavoratzmszzxusvxejqywt\",
+    \"start_year\": 254,
+    \"end_year\": 190,
+    \"rating\": \"ugrspjpoeuivbtjdykwnogfdbvuy\"
 }"
 </code></pre></div>
 
@@ -1601,7 +1604,7 @@ print_r(json_decode((string) $body));</code></pre></div>
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;put(
-    'http://localhost/api/v1/series/3',
+    'http://localhost/api/v1/series/6',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
@@ -1609,12 +1612,12 @@ $response = $client-&gt;put(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'title' =&gt; 'cnfwvgexjpylidfrciyiptjzyclizxtlug',
+            'title' =&gt; 'hvcjxkyuyfmaaepfhnietoltrqewsvtuqicyocziltpufqrybpvywqlgzzuazepusrywqttatmxehxtowzkfmsrbblsdluumzjafe',
             'volume' =&gt; 0,
-            'description' =&gt; 'xuvmnvwkghtomteyxgpnunwzobfhavbhwriskwulbpzrcjndfoffqlsnyhvwirrbldutndprsdskxosxbfngyanwxbqqwnrfxdxcrgmnwhprfhibflzhyzljhsfxijrpexbfacjaamyvdiqvxtskgluannfxskbqrsnyvotlcsyyaausfdkhefaemwhzicgvaecatlpjlorpiodsywqxywaxegugcntmyuozygyxqvixxacjbgqfddjpgjluccgqnkcsilcjsmxidkyrehzywkkkvlwabwbrbbwazjscffomydrbwilsabgpqkxsnpriaggarxpdilndmygdkafpssjmstpdmhpkxcrlcigileyujkwbnodocavoftbisndpwcuzvj',
-            'start_year' =&gt; 1017,
-            'end_year' =&gt; 219,
-            'rating' =&gt; 'ageibnwvwcoeasnzcclthonxdru',
+            'description' =&gt; 'mnbxnizjhkwwjeibnxfldyykrbgjrqrhqcezdorqflfxdthzgvwnureiquqlxqzrcfkvjucyvrahvrjcibgfjgtsmjlroodcgbjbvkoyzblcrkxtxcbpwwiqldkvxusqlrkbkxhrstmxdmtiszktycmjudrsffucfuojsagfqdzeapvpsuoigrdlzonpybqfsxxtdfeqbdptdkliefrwizukavoratzmszzxusvxejqywt',
+            'start_year' =&gt; 254,
+            'end_year' =&gt; 190,
+            'rating' =&gt; 'ugrspjpoeuivbtjdykwnogfdbvuy',
         ],
     ]
 );
@@ -1705,7 +1708,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="number"
                name="id"
                data-endpoint="PUTapi-v1-series--id-"
-               value="3"
+               value="6"
                data-component="url" hidden>
     <br>
 <p>The ID of the series.</p>
@@ -1716,7 +1719,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="text"
                name="title"
                data-endpoint="PUTapi-v1-series--id-"
-               value="cnfwvgexjpylidfrciyiptjzyclizxtlug"
+               value="hvcjxkyuyfmaaepfhnietoltrqewsvtuqicyocziltpufqrybpvywqlgzzuazepusrywqttatmxehxtowzkfmsrbblsdluumzjafe"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 150 characters.</p>
@@ -1736,7 +1739,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="text"
                name="description"
                data-endpoint="PUTapi-v1-series--id-"
-               value="xuvmnvwkghtomteyxgpnunwzobfhavbhwriskwulbpzrcjndfoffqlsnyhvwirrbldutndprsdskxosxbfngyanwxbqqwnrfxdxcrgmnwhprfhibflzhyzljhsfxijrpexbfacjaamyvdiqvxtskgluannfxskbqrsnyvotlcsyyaausfdkhefaemwhzicgvaecatlpjlorpiodsywqxywaxegugcntmyuozygyxqvixxacjbgqfddjpgjluccgqnkcsilcjsmxidkyrehzywkkkvlwabwbrbbwazjscffomydrbwilsabgpqkxsnpriaggarxpdilndmygdkafpssjmstpdmhpkxcrlcigileyujkwbnodocavoftbisndpwcuzvj"
+               value="mnbxnizjhkwwjeibnxfldyykrbgjrqrhqcezdorqflfxdthzgvwnureiquqlxqzrcfkvjucyvrahvrjcibgfjgtsmjlroodcgbjbvkoyzblcrkxtxcbpwwiqldkvxusqlrkbkxhrstmxdmtiszktycmjudrsffucfuojsagfqdzeapvpsuoigrdlzonpybqfsxxtdfeqbdptdkliefrwizukavoratzmszzxusvxejqywt"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 1000 characters.</p>
@@ -1746,7 +1749,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="number"
                name="start_year"
                data-endpoint="PUTapi-v1-series--id-"
-               value="1017"
+               value="254"
                data-component="body" hidden>
     <br>
 <p>Must be at least 1900. Must not be greater than 2023.</p>
@@ -1756,7 +1759,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="number"
                name="end_year"
                data-endpoint="PUTapi-v1-series--id-"
-               value="219"
+               value="190"
                data-component="body" hidden>
     <br>
 <p>Must be at least 1900. Must not be greater than 2023.</p>
@@ -1766,7 +1769,7 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="text"
                name="rating"
                data-endpoint="PUTapi-v1-series--id-"
-               value="ageibnwvwcoeasnzcclthonxdru"
+               value="ugrspjpoeuivbtjdykwnogfdbvuy"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 30 characters.</p>
@@ -1787,7 +1790,7 @@ print_r(json_decode((string) $body));</code></pre></div>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/v1/series/15" \
+    "http://localhost/api/v1/series/11" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -1796,7 +1799,7 @@ print_r(json_decode((string) $body));</code></pre></div>
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;delete(
-    'http://localhost/api/v1/series/15',
+    'http://localhost/api/v1/series/11',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
@@ -1883,12 +1886,239 @@ print_r(json_decode((string) $body));</code></pre></div>
                 <input type="number"
                name="id"
                data-endpoint="DELETEapi-v1-series--id-"
-               value="15"
+               value="11"
                data-component="url" hidden>
     <br>
 <p>The ID of the series.</p>
             </p>
                     </form>
+
+            <h2 id="series-GETapi-v1-publishers--publisher--series">GET api/v1/publishers/{publisher}/series</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-GETapi-v1-publishers--publisher--series">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/api/v1/publishers/19/series?sort=title&amp;page[number]=2&amp;page[size]=10" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost/api/v1/publishers/19/series',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+        'query' =&gt; [
+            'sort'=&gt; 'title',
+            'page[number]'=&gt; '2',
+            'page[size]'=&gt; '10',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-v1-publishers--publisher--series">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 51,
+            &quot;title&quot;: &quot;Mr. Devyn Conn&quot;,
+            &quot;volume&quot;: 88,
+            &quot;description&quot;: &quot;Molestiae et eius sunt placeat nostrum quasi. Doloremque culpa incidunt velit. Facere facilis esse sed totam tempore aliquid.&quot;,
+            &quot;start-year&quot;: &quot;1992&quot;,
+            &quot;end-year&quot;: &quot;2007&quot;,
+            &quot;rating&quot;: &quot;laborum&quot;,
+            &quot;created-at&quot;: &quot;1975-11-17T17:26:18+00:00&quot;,
+            &quot;updated-at&quot;: &quot;1989-02-15T11:04:42+00:00&quot;,
+            &quot;publisher&quot;: {
+                &quot;id&quot;: 345,
+                &quot;name&quot;: &quot;Hilpert-Morar&quot;,
+                &quot;founded-at&quot;: &quot;2012&quot;,
+                &quot;website-url&quot;: &quot;http://lehner.net/autem-at-neque-rem-dicta-molestias-dolorem-quidem&quot;,
+                &quot;twitter-url&quot;: &quot;http://www.hauck.info/sit-minus-alias-est-similique-eum-laborum.html&quot;,
+                &quot;address&quot;: &quot;226 Kautzer Road Suite 502\nDevonside, OH 22283-5743&quot;,
+                &quot;city&quot;: &quot;East Johnpaulview&quot;,
+                &quot;state&quot;: &quot;&quot;,
+                &quot;zip&quot;: &quot;32779-5731&quot;,
+                &quot;country&quot;: &quot;BFA&quot;,
+                &quot;created-at&quot;: &quot;2022-01-25T20:07:06+00:00&quot;,
+                &quot;updated-at&quot;: &quot;2022-01-25T20:07:06+00:00&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 52,
+            &quot;title&quot;: &quot;Lorenzo Bahringer&quot;,
+            &quot;volume&quot;: 47,
+            &quot;description&quot;: &quot;Fugiat labore molestias pariatur doloribus molestiae. Dolores ex aliquid dolores ab ut sit. Quasi nisi accusamus occaecati cum et. Qui veniam soluta sequi optio porro aut cumque.&quot;,
+            &quot;start-year&quot;: &quot;1994&quot;,
+            &quot;end-year&quot;: &quot;1984&quot;,
+            &quot;rating&quot;: &quot;ea&quot;,
+            &quot;created-at&quot;: &quot;1976-05-26T10:33:40+00:00&quot;,
+            &quot;updated-at&quot;: &quot;1986-07-31T01:52:40+00:00&quot;,
+            &quot;publisher&quot;: {
+                &quot;id&quot;: 346,
+                &quot;name&quot;: &quot;Donnelly-Parisian&quot;,
+                &quot;founded-at&quot;: &quot;2001&quot;,
+                &quot;website-url&quot;: &quot;https://www.wisoky.com/omnis-rerum-architecto-et-eum-quae&quot;,
+                &quot;twitter-url&quot;: &quot;https://price.com/sed-debitis-temporibus-sapiente-facilis-vero-aut-accusamus.html&quot;,
+                &quot;address&quot;: &quot;30427 Federico Pass Apt. 368\nMarcside, WY 11907&quot;,
+                &quot;city&quot;: &quot;East Muhammad&quot;,
+                &quot;state&quot;: &quot;&quot;,
+                &quot;zip&quot;: &quot;46191-4858&quot;,
+                &quot;country&quot;: &quot;GTM&quot;,
+                &quot;created-at&quot;: &quot;2022-01-25T20:07:06+00:00&quot;,
+                &quot;updated-at&quot;: &quot;2022-01-25T20:07:06+00:00&quot;
+            }
+        }
+    ],
+    &quot;links&quot;: {
+        &quot;first&quot;: &quot;/?page=1&quot;,
+        &quot;last&quot;: &quot;/?page=1&quot;,
+        &quot;prev&quot;: null,
+        &quot;next&quot;: null
+    },
+    &quot;meta&quot;: {
+        &quot;current_page&quot;: 1,
+        &quot;from&quot;: 1,
+        &quot;last_page&quot;: 1,
+        &quot;links&quot;: [
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;/?page=1&quot;,
+                &quot;label&quot;: &quot;1&quot;,
+                &quot;active&quot;: true
+            },
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
+                &quot;active&quot;: false
+            }
+        ],
+        &quot;path&quot;: &quot;/&quot;,
+        &quot;per_page&quot;: &quot;30&quot;,
+        &quot;to&quot;: 2,
+        &quot;total&quot;: 2
+    }
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-v1-publishers--publisher--series" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-v1-publishers--publisher--series"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-v1-publishers--publisher--series"></code></pre>
+</span>
+<span id="execution-error-GETapi-v1-publishers--publisher--series" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-v1-publishers--publisher--series"></code></pre>
+</span>
+<form id="form-GETapi-v1-publishers--publisher--series" data-method="GET"
+      data-path="api/v1/publishers/{publisher}/series"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-v1-publishers--publisher--series', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-v1-publishers--publisher--series"
+                    onclick="tryItOut('GETapi-v1-publishers--publisher--series');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-v1-publishers--publisher--series"
+                    onclick="cancelTryOut('GETapi-v1-publishers--publisher--series');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-v1-publishers--publisher--series" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/v1/publishers/{publisher}/series</code></b>
+        </p>
+                <p>
+            <label id="auth-GETapi-v1-publishers--publisher--series" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="GETapi-v1-publishers--publisher--series"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>publisher</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="publisher"
+               data-endpoint="GETapi-v1-publishers--publisher--series"
+               value="19"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                        <h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
+                    <p>
+                <b><code>sort</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="sort"
+               data-endpoint="GETapi-v1-publishers--publisher--series"
+               value="title"
+               data-component="query" hidden>
+    <br>
+<p>The field to sort the list by.</p>
+            </p>
+                    <p>
+                <b><code>page[number]</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="page[number]"
+               data-endpoint="GETapi-v1-publishers--publisher--series"
+               value="2"
+               data-component="query" hidden>
+    <br>
+<p>The page number (default 1).</p>
+            </p>
+                    <p>
+                <b><code>page[size]</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="page[size]"
+               data-endpoint="GETapi-v1-publishers--publisher--series"
+               value="10"
+               data-component="query" hidden>
+    <br>
+<p>The page size (default 30).</p>
+            </p>
+                </form>
 
     
 
