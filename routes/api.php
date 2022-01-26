@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::prefix('v1')->post('/register', [RegisterController::class, 'register']);
+Route::post('v1/register', [RegisterController::class, 'register']);
 
 Route::middleware('auth:sanctum')->prefix('v1')->group(function () {
     Route::apiResource('publishers', PublisherController::class);
