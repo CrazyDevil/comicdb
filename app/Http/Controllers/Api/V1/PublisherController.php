@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api\V1;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\PublisherRequest;
 use App\Http\Resources\PublisherResource;
 use App\Jobs\CreatePublisher;

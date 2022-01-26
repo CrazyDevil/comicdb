@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Controllers\PublisherController;
-use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\SeriesController;
+use App\Http\Controllers\Api\V1\PublisherController;
+use App\Http\Controllers\Api\V1\RegisterController;
+use App\Http\Controllers\Api\V1\SeriesController;
 use Illuminate\Support\Facades\Route;
 
 /*
