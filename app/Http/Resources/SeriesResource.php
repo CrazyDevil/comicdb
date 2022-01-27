@@ -23,7 +23,7 @@ class SeriesResource extends JsonResource
             'type' => $serie->type ?? '',
             'created-at' => $serie->created_at->toIso8601String(),
             'updated-at' => $serie->updated_at->toIso8601String(),
-            'publisher' => PublisherResource::make($this->whenLoaded('publisher'))
+            'publisher' => PublisherResource::make($this->whenLoaded('publisher')),
         ];
     }
 }
