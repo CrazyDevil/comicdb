@@ -29,6 +29,7 @@ class PublisherController extends Controller
                 'name',
                 'founded_year',
             ])
+            ->with('series')
             ->jsonPaginate()
             ->appends(request()->query());
 

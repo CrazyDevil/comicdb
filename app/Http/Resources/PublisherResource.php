@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use App\Http\Requests\SeriesRequest;
 use App\Models\Publisher;
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -15,18 +16,19 @@ class PublisherResource extends JsonResource
         return [
             'id' => $publisher->id,
             'name' => $publisher->name,
-            'founded-at' => $publisher->founded_year
+            'foundedAt' => $publisher->founded_year
                 . ($publisher->founded_month ? '-' . $publisher->founded_month : '')
                 . ($publisher->founded_day ? '-' . $publisher->founded_day : ''),
-            'website-url' => $publisher->website_url ?? '',
-            'twitter-url' => $publisher->twitter_url ?? '',
+            'websiteUrl' => $publisher->website_url ?? '',
+            'twitterUrl' => $publisher->twitter_url ?? '',
             'address' => $publisher->address ?? '',
             'city' => $publisher->city ?? '',
             'state' => $publisher->state ?? '',
             'zip' => $publisher->zip ?? '',
             'country' => $publisher->country ?? '',
-            'created-at' => $publisher->created_at->toIso8601String(),
-            'updated-at' => $publisher->updated_at->toIso8601String(),
+            'createdAt' => $publisher->created_at->toIso8601String(),
+            'updatedAt' => $publisher->updated_at->toIso8601String(),
+            'series' => SeriesSimpleResource::collection($publisher->series),
         ];
     }
 }

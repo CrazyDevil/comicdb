@@ -28,9 +28,7 @@ class SeriesController extends Controller
                 AllowedFilter::partial('title'),
                 AllowedFilter::exact('start_year'),
             ])
-            ->allowedIncludes([
-                'publisher',
-            ])
+            ->with('publisher')
             ->when($publisher->id, function ($query) use ($publisher) {
                 return $query->where('publisher_id', $publisher->id);
             })
