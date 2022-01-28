@@ -2,28 +2,27 @@
 
 namespace App\Jobs;
 
-use App\Models\Publisher;
+use App\Models\Comic;
 use Illuminate\Bus\Queueable;
+use Illuminate\Contracts\Queue\ShouldBeUnique;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 
-class UpdatePublisher implements ShouldQueue
+class DeleteComic implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-    private Publisher $publisher;
-    private array $requestData;
+    private Comic $comic;
 
-    public function __construct(Publisher $publisher, array $requestData)
+    public function __construct(Comic $comic)
     {
-        $this->publisher = $publisher;
-        $this->requestData = $requestData;
+        $this->comic = $comic;
     }
 
     public function handle()
     {
-        $this->publisher->update($this->requestData);
+        $this->comic->delete();
     }
 }

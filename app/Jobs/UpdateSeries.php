@@ -14,7 +14,6 @@ class UpdateSeries implements ShouldQueue
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
     private Series $series;
-
     private array $requestData;
 
     public function __construct(Series $series, array $requestData)

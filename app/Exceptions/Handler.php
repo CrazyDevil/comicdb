@@ -46,14 +46,8 @@ class Handler extends ExceptionHandler
             return response()->json([
                 'message' => 'Resource not found',
             ], 404);
-        } else {
-            if ($request->wantsJson()) {
-                return response()->json([
-                    'message' => $e->getMessage(),
-                ], 400);
-            }
-
-            return parent::render($request, $e);
         }
+
+        return parent::render($request, $e);
     }
 }

@@ -45,9 +45,7 @@ class SeriesController extends Controller
 
     public function store(SeriesRequest $request, Publisher $publisher)
     {
-        $request->merge(['publisher_id' => $publisher->id]);
-
-        CreateSeries::dispatch($request->all());
+        CreateSeries::dispatch($publisher, $request->all());
 
         return response()->json(['message' => 'Accepted'], 202);
     }
