@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api\V1;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ComicRequest;
 use App\Http\Resources\ComicResource;
+use App\Jobs\CreateComic;
 use App\Jobs\DeleteComic;
 use App\Jobs\UpdateComic;
 use App\Models\Comic;
@@ -45,9 +46,9 @@ class ComicController extends Controller
     public function store(ComicRequest $request, Series $series): JsonResponse
     {
         $request->merge(['title' => $series->title . ' #' . $request->issue_number]);
-        $series->comics()->create($request->all());
+        CreateComic::dispatch($series, $request->all());
 
-        return response()->json(['message' => 'Comic created successfully']);
+        return response()->json(['message' => 'Accepted'], 202);
     }
 
     public function update(ComicRequest $request, Comic $comic): JsonResponse
