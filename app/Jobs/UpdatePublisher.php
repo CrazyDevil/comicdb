@@ -14,6 +14,7 @@ class UpdatePublisher implements ShouldQueue
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
     private Publisher $publisher;
+
     private array $requestData;
 
     public function __construct(Publisher $publisher, array $requestData)

@@ -2,19 +2,23 @@
 
 namespace App\Http\Resources;
 
+use App\Models\Comic;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class ComicResource extends JsonResource
 {
     public function toArray($request): array
     {
+        /** @var Comic $comic */
+        $comic = $this;
+
         return [
-            'id' => $this->id,
-            'title' => $this->title,
-            'issueNumber' => $this->issue_number,
-            'description' => $this->description ?? '',
-            'format' => $this->format,
-            'series' => SeriesSimpleResource::make($this->series),
+            'id' => $comic->id,
+            'title' => $comic->title,
+            'issueNumber' => $comic->issue_number,
+            'description' => $comic->description ?? '',
+            'format' => $comic->format,
+            'series' => SeriesSimpleResource::make($comic->series),
         ];
     }
 }

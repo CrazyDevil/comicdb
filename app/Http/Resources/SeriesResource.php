@@ -9,22 +9,22 @@ class SeriesResource extends JsonResource
 {
     public function toArray($request)
     {
-        /** @var Series $serie */
-        $serie = $this;
+        /** @var Series $series */
+        $series = $this;
 
         return [
-            'id' => $serie->id,
-            'title' => $serie->title,
-            'volume' => $serie->volume ?? 1,
-            'description' => $serie->description ?? '',
-            'startYear' => $serie->start_year,
-            'endYear' => $serie->end_year,
-            'rating' => $serie->rating ?? '',
-            'type' => $serie->type ?? '',
-            'createdAt' => $serie->created_at->toIso8601String(),
-            'updatedAt' => $serie->updated_at->toIso8601String(),
-            'publisher' => PublisherSimpleResource::make($serie->publisher),
-            'comics' => ComicSimpleResource::collection($serie->comics),
+            'id' => $series->id,
+            'title' => $series->title,
+            'volume' => $series->volume ?? 1,
+            'description' => $series->description ?? '',
+            'startYear' => $series->start_year,
+            'endYear' => $series->end_year,
+            'rating' => $series->rating ?? '',
+            'type' => $series->type ?? '',
+            'createdAt' => $series->created_at->toIso8601String(),
+            'updatedAt' => $series->updated_at->toIso8601String(),
+            'publisher' => PublisherSimpleResource::make($series->publisher),
+            'comics' => ComicSimpleResource::collection($series->comics),
         ];
     }
 }

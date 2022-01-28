@@ -3,7 +3,6 @@
 namespace App\Jobs;
 
 use App\Models\Publisher;
-use App\Models\Series;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
@@ -15,6 +14,7 @@ class CreateSeries implements ShouldQueue
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
     private Publisher $publisher;
+
     private array $requestData;
 
     public function __construct(Publisher $publisher, array $requestData)

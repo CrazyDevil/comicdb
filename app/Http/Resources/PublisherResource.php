@@ -2,7 +2,6 @@
 
 namespace App\Http\Resources;
 
-use App\Http\Requests\SeriesRequest;
 use App\Models\Publisher;
 use Illuminate\Http\Resources\Json\JsonResource;
 

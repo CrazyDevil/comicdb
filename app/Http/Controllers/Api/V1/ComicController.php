@@ -6,11 +6,10 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\ComicRequest;
 use App\Http\Resources\ComicResource;
 use App\Jobs\DeleteComic;
-use App\Jobs\DeletePublisher;
 use App\Jobs\UpdateComic;
 use App\Models\Comic;
 use App\Models\Series;
-use Illuminate\Http\Request;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Spatie\QueryBuilder\AllowedFilter;
 use Spatie\QueryBuilder\QueryBuilder;
@@ -43,22 +42,22 @@ class ComicController extends Controller
         return new ComicResource($comic);
     }
 
-    public function store(ComicRequest $request, Series $series)
+    public function store(ComicRequest $request, Series $series): JsonResponse
     {
-        $request->merge(['title' => $series->title . ' #' . $request->issue_number], $request->validated());
+        $request->merge(['title' => $series->title . ' #' . $request->issue_number]);
         $series->comics()->create($request->all());
 
         return response()->json(['message' => 'Comic created successfully']);
     }
 
-    public function update(ComicRequest $request, Comic $comic)
+    public function update(ComicRequest $request, Comic $comic): JsonResponse
     {
         UpdateComic::dispatch($comic, $request->validated());
 
         return response()->json(['message' => 'Accepted'], 202);
     }
 
-    public function destroy(Comic $comic)
+    public function destroy(Comic $comic): JsonResponse
     {
         DeleteComic::dispatch($comic);
 
