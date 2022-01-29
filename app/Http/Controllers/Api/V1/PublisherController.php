@@ -5,33 +5,23 @@ namespace App\Http\Controllers\Api\V1;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PublisherRequest;
 use App\Http\Resources\PublisherResource;
-use App\Jobs\CreatePublisher;
-use App\Jobs\DeletePublisher;
-use App\Jobs\UpdatePublisher;
 use App\Models\Publisher;
+use App\Services\PublisherService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
-use Spatie\QueryBuilder\AllowedFilter;
-use Spatie\QueryBuilder\QueryBuilder;
 
 class PublisherController extends Controller
 {
+    private PublisherService $publisherService;
+
+    public function __construct(PublisherService $publisherService)
+    {
+        $this->publisherService = $publisherService;
+    }
+
     public function index(): AnonymousResourceCollection
     {
-        $publishers = QueryBuilder::for(Publisher::class)
-            ->allowedFilters([
-                AllowedFilter::partial('name'),
-                AllowedFilter::exact('country'),
-                AllowedFilter::scope('founded-year-between'),
-                AllowedFilter::scope('founded-year'),
-            ])
-            ->allowedSorts([
-                'name',
-                'founded_year',
-            ])
-            ->with('series', 'series.comics')
-            ->jsonPaginate()
-            ->appends(request()->query());
+        $publishers = $this->publisherService->getPublishersList();
 
         return PublisherResource::collection($publishers);
     }
@@ -43,21 +33,21 @@ class PublisherController extends Controller
 
     public function store(PublisherRequest $request): JsonResponse
     {
-        CreatePublisher::dispatch($request->validated());
+        $this->publisherService->createPublisher($request->validated());
 
         return response()->json(['message' => 'Accepted'], 202);
     }
 
     public function update(PublisherRequest $request, Publisher $publisher): JsonResponse
     {
-        UpdatePublisher::dispatch($publisher, $request->validated());
+        $this->publisherService->updatePublisher($publisher, $request->validated());
 
         return response()->json(['message' => 'Accepted'], 202);
     }
 
     public function destroy(Publisher $publisher): JsonResponse
     {
-        DeletePublisher::dispatch($publisher);
+        $this->publisherService->deletePublisher($publisher);
 
         return response()->json(['message' => 'Accepted'], 202);
     }
