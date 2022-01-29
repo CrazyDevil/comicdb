@@ -43,7 +43,7 @@ class SeriesController extends Controller
         return new SeriesResource($series);
     }
 
-    public function store(SeriesRequest $request, Publisher $publisher)
+    public function store(SeriesRequest $request, Publisher $publisher): JsonResponse
     {
         CreateSeries::dispatch($publisher, $request->all());
 
