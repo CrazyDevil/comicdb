@@ -2,7 +2,7 @@
 
 namespace App\Enums;
 
-enum SeriesTypes: string
+enum SeriesType: string
 {
     case Collection = 'collection';
     case OneShot = 'one shot';
