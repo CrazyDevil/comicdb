@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Enums\SeriesTypes;
+use App\Enums\SeriesType;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -15,7 +15,7 @@ class Series extends Model
     protected $guarded = [];
 
     protected $casts = [
-        'type' => SeriesTypes::class,
+        'type' => SeriesType::class,
     ];
 
     public function publisher(): BelongsTo

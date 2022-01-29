@@ -23,7 +23,7 @@ class SeriesRequest extends FormRequest
             'start_year' => [$requiredRule, 'integer', 'min:1900', 'max:' . Carbon::now()->addYear()->year],
             'end_year' => ['nullable', 'integer', 'min:1900', 'max:' . Carbon::now()->addYear()->year],
             'rating' => ['nullable', 'string', 'max:30'],
-            'type' => ['required', 'string', 'max:30'],
+            'type' => [$requiredRule, 'string', 'max:30'],
         ];
     }
 }

@@ -15,13 +15,14 @@ class ComicRequest extends FormRequest
 
     public function rules(): array
     {
-        /** @var Series $series */
+        /** @var Series|null $series */
         $series = $this->route('series');
+
         $requiredRule = $this->method() === 'POST' ? 'required' : 'sometimes';
 
         return [
             'title' => ['sometimes', 'string', 'max:200'],
-            'issue_number' => [$requiredRule, 'integer', 'min:0', Rule::unique('comics', 'issue_number')->where('series_id', $series->id)],
+            'issue_number' => [$requiredRule, 'integer', 'min:0', Rule::unique('comics', 'issue_number')->where('series_id', $series?->id)],
             'description' => ['nullable', 'string', 'max:1000'],
             'format' => [$requiredRule, 'string', 'max:50'],
             'page_count' => ['nullable', 'integer', 'min:2', 'max:1000'],
