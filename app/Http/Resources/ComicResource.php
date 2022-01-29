@@ -16,8 +16,10 @@ class ComicResource extends JsonResource
             'id' => $comic->id,
             'title' => $comic->title,
             'issueNumber' => $comic->issue_number,
-            'description' => $comic->description ?? '',
+            'description' => $comic->description,
             'format' => $comic->format,
+            'createdAt' => $comic->created_at->toIso8601String(),
+            'updatedAt' => $comic->updated_at->toIso8601String(),
             'series' => SeriesSimpleResource::make($comic->series),
         ];
     }
