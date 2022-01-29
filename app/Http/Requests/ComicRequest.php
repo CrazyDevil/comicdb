@@ -17,6 +17,7 @@ class ComicRequest extends FormRequest
     {
         /** @var Series|null $series */
         $series = $this->route('series');
+
         $requiredRule = $this->method() === 'POST' ? 'required' : 'sometimes';
 
         return [
