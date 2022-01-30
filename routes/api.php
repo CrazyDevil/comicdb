@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\V1\ComicController;
+use App\Http\Controllers\Api\V1\CoverController;
 use App\Http\Controllers\Api\V1\PublisherController;
 use App\Http\Controllers\Api\V1\RegisterController;
 use App\Http\Controllers\Api\V1\SeriesController;
@@ -29,4 +30,7 @@ Route::middleware('auth:sanctum')->prefix('v1')->group(function () {
 
     Route::apiResource('comics', ComicController::class)->except(['store']);
     Route::post('series/{series}/comics', [ComicController::class, 'store']);
+
+    Route::apiResource('covers', CoverController::class)->except(['store']);
+    Route::post('comics/{comic}/covers', [CoverController::class, 'store']);
 });

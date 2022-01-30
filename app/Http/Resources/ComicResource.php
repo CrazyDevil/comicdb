@@ -21,6 +21,7 @@ class ComicResource extends JsonResource
             'createdAt' => $comic->created_at->toIso8601String(),
             'updatedAt' => $comic->updated_at->toIso8601String(),
             'series' => SeriesSimpleResource::make($comic->series),
+            'covers' => CoverSimpleResource::collection($comic->covers),
         ];
     }
 }
