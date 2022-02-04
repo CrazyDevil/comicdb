@@ -7,16 +7,16 @@
     >
         <div class="px-6 py-4">
             <div class="text-lg">
-                <slot name="title"> </slot>
+                <slot name="title"></slot>
             </div>
 
             <div class="mt-4">
-                <slot name="content"> </slot>
+                <slot name="content"></slot>
             </div>
         </div>
 
-        <div class="flex flex-row justify-end px-6 py-4 bg-gray-100 text-right">
-            <slot name="footer"> </slot>
+        <div class="flex flex-row justify-end bg-gray-100 px-6 py-4 text-right">
+            <slot name="footer"></slot>
         </div>
     </modal>
 </template>

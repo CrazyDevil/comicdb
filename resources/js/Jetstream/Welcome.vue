@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="p-6 sm:px-20 bg-white border-b border-gray-200">
+        <div class="border-b border-gray-200 bg-white p-6 sm:px-20">
             <div>
                 <jet-application-logo class="block h-12 w-auto" />
             </div>
@@ -20,11 +20,11 @@
             </div>
         </div>
 
-        <div class="bg-gray-200 bg-opacity-25 grid grid-cols-1 md:grid-cols-2">
+        <div class="grid grid-cols-1 bg-gray-200 bg-opacity-25 md:grid-cols-2">
             <div class="p-6">
                 <div class="flex items-center">
                     <svg
-                        class="w-8 h-8 text-gray-400"
+                        class="h-8 w-8 text-gray-400"
                         fill="none"
                         stroke="currentColor"
                         stroke-linecap="round"
@@ -37,7 +37,7 @@
                         ></path>
                     </svg>
                     <div
-                        class="ml-4 text-lg text-gray-600 leading-7 font-semibold"
+                        class="ml-4 text-lg font-semibold leading-7 text-gray-600"
                     >
                         <a href="https://laravel.com/docs">Documentation</a>
                     </div>
@@ -59,7 +59,7 @@
 
                             <div class="ml-1 text-indigo-500">
                                 <svg
-                                    class="w-4 h-4"
+                                    class="h-4 w-4"
                                     fill="currentColor"
                                     viewBox="0 0 20 20"
                                 >
@@ -75,10 +75,10 @@
                 </div>
             </div>
 
-            <div class="p-6 border-t border-gray-200 md:border-t-0 md:border-l">
+            <div class="border-t border-gray-200 p-6 md:border-t-0 md:border-l">
                 <div class="flex items-center">
                     <svg
-                        class="w-8 h-8 text-gray-400"
+                        class="h-8 w-8 text-gray-400"
                         fill="none"
                         stroke="currentColor"
                         stroke-linecap="round"
@@ -92,7 +92,7 @@
                         <path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path>
                     </svg>
                     <div
-                        class="ml-4 text-lg text-gray-600 leading-7 font-semibold"
+                        class="ml-4 text-lg font-semibold leading-7 text-gray-600"
                     >
                         <a href="https://laracasts.com">Laracasts</a>
                     </div>
@@ -114,7 +114,7 @@
 
                             <div class="ml-1 text-indigo-500">
                                 <svg
-                                    class="w-4 h-4"
+                                    class="h-4 w-4"
                                     fill="currentColor"
                                     viewBox="0 0 20 20"
                                 >
@@ -130,10 +130,10 @@
                 </div>
             </div>
 
-            <div class="p-6 border-t border-gray-200">
+            <div class="border-t border-gray-200 p-6">
                 <div class="flex items-center">
                     <svg
-                        class="w-8 h-8 text-gray-400"
+                        class="h-8 w-8 text-gray-400"
                         fill="none"
                         stroke="currentColor"
                         stroke-linecap="round"
@@ -146,7 +146,7 @@
                         ></path>
                     </svg>
                     <div
-                        class="ml-4 text-lg text-gray-600 leading-7 font-semibold"
+                        class="ml-4 text-lg font-semibold leading-7 text-gray-600"
                     >
                         <a href="https://tailwindcss.com/">Tailwind</a>
                     </div>
@@ -163,10 +163,10 @@
                 </div>
             </div>
 
-            <div class="p-6 border-t border-gray-200 md:border-l">
+            <div class="border-t border-gray-200 p-6 md:border-l">
                 <div class="flex items-center">
                     <svg
-                        class="w-8 h-8 text-gray-400"
+                        class="h-8 w-8 text-gray-400"
                         fill="none"
                         stroke="currentColor"
                         stroke-linecap="round"
@@ -179,7 +179,7 @@
                         ></path>
                     </svg>
                     <div
-                        class="ml-4 text-lg text-gray-600 leading-7 font-semibold"
+                        class="ml-4 text-lg font-semibold leading-7 text-gray-600"
                     >
                         Authentication
                     </div>

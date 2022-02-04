@@ -1,6 +1,6 @@
 <template>
     <jet-form-section @submitted="updateProfileInformation">
-        <template #title> Profile Information </template>
+        <template #title> Profile Information</template>
 
         <template #description>
             Update your account's profile information and email address.
@@ -27,7 +27,7 @@
                     <img
                         :alt="user.name"
                         :src="user.profile_photo_url"
-                        class="rounded-full h-20 w-20 object-cover"
+                        class="h-20 w-20 rounded-full object-cover"
                     />
                 </div>
 
@@ -37,7 +37,7 @@
                         :style="
                             'background-image: url(\'' + photoPreview + '\');'
                         "
-                        class="block rounded-full w-20 h-20 bg-cover bg-no-repeat bg-center"
+                        class="block h-20 w-20 rounded-full bg-cover bg-center bg-no-repeat"
                     >
                     </span>
                 </div>

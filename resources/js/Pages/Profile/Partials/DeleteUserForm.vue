@@ -1,8 +1,8 @@
 <template>
     <jet-action-section>
-        <template #title> Delete Account </template>
+        <template #title> Delete Account</template>
 
-        <template #description> Permanently delete your account. </template>
+        <template #description> Permanently delete your account.</template>
 
         <template #content>
             <div class="max-w-xl text-sm text-gray-600">
@@ -22,7 +22,7 @@
                 :show="confirmingUserDeletion"
                 @close="closeModal"
             >
-                <template #title> Delete Account </template>
+                <template #title> Delete Account</template>
 
                 <template #content>
                     Are you sure you want to delete your account? Once your

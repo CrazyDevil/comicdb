@@ -1,6 +1,6 @@
 <template>
     <jet-action-section>
-        <template #title> Browser Sessions </template>
+        <template #title> Browser Sessions</template>
 
         <template #description>
             Manage and log out your active sessions on other browsers and
@@ -26,7 +26,7 @@
                     <div>
                         <svg
                             v-if="session.agent.is_desktop"
-                            class="w-8 h-8 text-gray-500"
+                            class="h-8 w-8 text-gray-500"
                             fill="none"
                             stroke="currentColor"
                             stroke-linecap="round"
@@ -41,7 +41,7 @@
 
                         <svg
                             v-else
-                            class="w-8 h-8 text-gray-500"
+                            class="h-8 w-8 text-gray-500"
                             fill="none"
                             stroke="currentColor"
                             stroke-linecap="round"
@@ -83,7 +83,7 @@
 
                                 <span
                                     v-if="session.is_current_device"
-                                    class="text-green-500 font-semibold"
+                                    class="font-semibold text-green-500"
                                     >This device</span
                                 >
                                 <span v-else
@@ -95,7 +95,7 @@
                 </div>
             </div>
 
-            <div class="flex items-center mt-5">
+            <div class="mt-5 flex items-center">
                 <jet-button @click="confirmLogout">
                     Log Out Other Browser Sessions
                 </jet-button>
@@ -107,7 +107,7 @@
 
             <!-- Log Out Other Devices Confirmation Modal -->
             <jet-dialog-modal :show="confirmingLogout" @close="closeModal">
-                <template #title> Log Out Other Browser Sessions </template>
+                <template #title> Log Out Other Browser Sessions</template>
 
                 <template #content>
                     Please enter your password to confirm you would like to log
