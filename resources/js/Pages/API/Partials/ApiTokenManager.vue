@@ -2,7 +2,7 @@
     <div>
         <!-- Generate API Token -->
         <jet-form-section @submitted="createApiToken">
-            <template #title> Create API Token </template>
+            <template #title> Create API Token</template>
 
             <template #description>
                 API tokens allow third-party services to authenticate with our
@@ -30,7 +30,7 @@
                 <div v-if="availablePermissions.length > 0" class="col-span-6">
                     <jet-label for="permissions" value="Permissions" />
 
-                    <div class="mt-2 grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="mt-2 grid grid-cols-1 gap-4 md:grid-cols-2">
                         <div
                             v-for="permission in availablePermissions"
                             :key="permission"
@@ -74,7 +74,7 @@
             <!-- Manage API Tokens -->
             <div class="mt-10 sm:mt-0">
                 <jet-action-section>
-                    <template #title> Manage API Tokens </template>
+                    <template #title> Manage API Tokens</template>
 
                     <template #description>
                         You may delete any of your existing tokens if they are
@@ -103,7 +103,7 @@
 
                                     <button
                                         v-if="availablePermissions.length > 0"
-                                        class="cursor-pointer ml-6 text-sm text-gray-400 underline"
+                                        class="ml-6 cursor-pointer text-sm text-gray-400 underline"
                                         @click="
                                             manageApiTokenPermissions(token)
                                         "
@@ -112,7 +112,7 @@
                                     </button>
 
                                     <button
-                                        class="cursor-pointer ml-6 text-sm text-red-500"
+                                        class="ml-6 cursor-pointer text-sm text-red-500"
                                         @click="confirmApiTokenDeletion(token)"
                                     >
                                         Delete
@@ -130,7 +130,7 @@
             :show="displayingToken"
             @close="displayingToken = false"
         >
-            <template #title> API Token </template>
+            <template #title> API Token</template>
 
             <template #content>
                 <div>
@@ -140,7 +140,7 @@
 
                 <div
                     v-if="$page.props.jetstream.flash.token"
-                    class="mt-4 bg-gray-100 px-4 py-2 rounded font-mono text-sm text-gray-500"
+                    class="mt-4 rounded bg-gray-100 px-4 py-2 font-mono text-sm text-gray-500"
                 >
                     {{ $page.props.jetstream.flash.token }}
                 </div>
@@ -158,10 +158,10 @@
             :show="managingPermissionsFor"
             @close="managingPermissionsFor = null"
         >
-            <template #title> API Token Permissions </template>
+            <template #title> API Token Permissions</template>
 
             <template #content>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
                     <div
                         v-for="permission in availablePermissions"
                         :key="permission"
@@ -200,7 +200,7 @@
             :show="apiTokenBeingDeleted"
             @close="apiTokenBeingDeleted = null"
         >
-            <template #title> Delete API Token </template>
+            <template #title> Delete API Token</template>
 
             <template #content>
                 Are you sure you would like to delete this API token?

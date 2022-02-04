@@ -1,6 +1,6 @@
 <template>
     <jet-form-section @submitted="updatePassword">
-        <template #title> Update Password </template>
+        <template #title> Update Password</template>
 
         <template #description>
             Ensure your account is using a long, random password to stay secure.

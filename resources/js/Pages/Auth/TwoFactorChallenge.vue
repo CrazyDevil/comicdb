@@ -47,15 +47,15 @@
                 />
             </div>
 
-            <div class="flex items-center justify-end mt-4">
+            <div class="mt-4 flex items-center justify-end">
                 <button
-                    class="text-sm text-gray-600 hover:text-gray-900 underline cursor-pointer"
+                    class="cursor-pointer text-sm text-gray-600 underline hover:text-gray-900"
                     type="button"
                     @click.prevent="toggleRecovery"
                 >
-                    <template v-if="!recovery"> Use a recovery code </template>
+                    <template v-if="!recovery"> Use a recovery code</template>
 
-                    <template v-else> Use an authentication code </template>
+                    <template v-else> Use an authentication code</template>
                 </button>
 
                 <jet-button
