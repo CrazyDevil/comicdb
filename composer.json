@@ -2,7 +2,10 @@
     "name": "laravel/laravel",
     "type": "project",
     "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
@@ -13,6 +16,8 @@
         "laravel/jetstream": "^2.6",
         "laravel/sanctum": "^2.8",
         "laravel/tinker": "^2.5",
+        "mll-lab/laravel-graphql-playground": "^2.5",
+        "nuwave/lighthouse": "^5.38",
         "spatie/laravel-json-api-paginate": "^1.11",
         "spatie/laravel-query-builder": "^4.0",
         "tightenco/ziggy": "^1.0"
